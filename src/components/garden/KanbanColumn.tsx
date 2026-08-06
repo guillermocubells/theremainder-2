@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { PlantItem } from '@/hooks/garden/types';
-import { KanbanPlantCard } from './KanbanPlantCard';
+import { PlantItemCard } from './PlantItemCard';
 import { cn } from '@/lib/utils';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -95,7 +95,7 @@ export const KanbanColumn = ({
               </div>
             ) : (
               items.map(item => (
-                <KanbanPlantCard key={item.id} item={item} />
+                <PlantItemCard key={item.id} item={item} variant="kanban" />
               ))
             )}
           </div>

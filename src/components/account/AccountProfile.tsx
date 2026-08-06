@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useProfile, useUpdateProfile } from '@/hooks/useProfile';
+import { useProfile, useUpdateProfile } from '@/hooks/account';
 import { useAuth } from '@/contexts/AuthContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

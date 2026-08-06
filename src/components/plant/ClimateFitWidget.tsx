@@ -5,8 +5,8 @@ import { Progress } from "@/components/ui/progress";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-import { useClimateFit, type ClimateFitData, type HardinessBadge, type ClimateFitWarning } from "@/hooks/useClimateFit";
-import { useLocationPreference } from "@/hooks/useLocationPreference";
+import { useClimateFit, type ClimateFitData, type HardinessBadge, type ClimateFitWarning } from "@/hooks/catalog";
+import { useLocationPreference } from "@/hooks/shared";
 import LocationEmptyState from "@/components/location/LocationEmptyState";
 import LocationSelector from "@/components/search/LocationSelector";
 

@@ -6,8 +6,8 @@ import {
   ShoppingBag, Truck, Receipt, User,
 } from "lucide-react";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -16,8 +16,8 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import AddObservationDialog from "@/components/collection/AddObservationDialog";
 import { useOwnedPlants } from "@/hooks/collection/useOwnedPlants";
-import { useOrderBySession } from "@/hooks/useOrderBySession";
-import type { ShippingAddress } from "@/hooks/useOrders";
+import { useOrderBySession } from "@/hooks/checkout";
+import type { ShippingAddress } from "@/hooks/checkout";
 
 const CheckoutSuccess = () => {
   const { t } = useTranslation();

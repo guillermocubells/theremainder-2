@@ -7,11 +7,8 @@
  *  3. analyzePostalCodeClimate returns climate data for a known code
  */
 import { describe, it, expect } from "vitest";
-import {
-  filtersFromSearchParams,
-  filtersToSearchParams,
-  type SearchFilters,
-} from "@/hooks/useSearchCatalog";
+import { filtersFromSearchParams, filtersToSearchParams } from "@/hooks/catalog";
+import type { SearchFilters } from "@/hooks/catalog";
 import { analyzePostalCodeClimate } from "@/utils/viabilityCalculator";
 
 // ── Re-implement the pure helpers locally so we can unit-test them ────

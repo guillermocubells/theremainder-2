@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSavedSearches, useUpdateSavedSearch, useDeleteSavedSearch, SavedSearch } from '@/hooks/useSavedSearches';
+import { useSavedSearches, useUpdateSavedSearch, useDeleteSavedSearch, SavedSearch } from '@/hooks/catalog';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

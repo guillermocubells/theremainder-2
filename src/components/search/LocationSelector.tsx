@@ -13,7 +13,7 @@ import {
   useLocationPreference,
   type LocationPreference,
   type GeoPermission,
-} from "@/hooks/useLocationPreference";
+} from "@/hooks/shared";
 import { useAuth } from "@/contexts/AuthContext";
 import { useGardenAddresses } from "@/components/account/ActiveGardenSelector";
 

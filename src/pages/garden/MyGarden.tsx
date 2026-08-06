@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useMyGarden, useGardenStats } from '@/hooks/garden';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 import { GardenKanban, GardenEmptyState } from '@/components/garden';
 import { ShareSearchListButton } from '@/components/garden/ShareSearchListButton';
 import AddPlantDialog from '@/components/collection/AddPlantDialog';
@@ -12,7 +12,7 @@ import { useSpeciesInsights } from '@/hooks/garden/useSpeciesInsights';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Leaf, Plus, Search, Loader2, ArrowLeft } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { useIsMobile } from '@/hooks/shared';
 
 const MyGarden = () => {
   const navigate = useNavigate();

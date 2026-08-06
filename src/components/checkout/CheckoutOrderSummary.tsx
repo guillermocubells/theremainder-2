@@ -3,10 +3,10 @@ import { ShoppingBag, Truck, Lock, Loader2, ChevronDown, ChevronUp } from "lucid
 import { Separator } from "@/components/ui/separator";
 import { CartItem } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
-import { ShippingQuote } from "@/hooks/useShippingQuote";
+import { ShippingQuote } from "@/hooks/checkout";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import CompleteYourOrder from "@/components/CompleteYourOrder";
+import CompleteYourOrder from "@/components/catalog/CompleteYourOrder";
 
 interface CheckoutOrderSummaryProps {
   items: CartItem[];

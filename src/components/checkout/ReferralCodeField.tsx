@@ -4,7 +4,7 @@ import { Gift, X, Check, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import { getPendingReferral, clearPendingReferral } from "@/hooks/useReferral";
+import { getPendingReferral, clearPendingReferral } from "@/hooks/referral";
 
 interface ReferralCodeFieldProps {
   appliedCode: string | null;

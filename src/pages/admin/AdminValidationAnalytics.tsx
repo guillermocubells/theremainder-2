@@ -5,7 +5,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   AreaChart, Area, PieChart, Pie, Cell,
 } from 'recharts';
-import { useValidationAnalytics } from '@/hooks/useValidationAnalytics';
+import { useValidationAnalytics } from '@/hooks/reviews';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useState } from 'react';
 

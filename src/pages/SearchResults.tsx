@@ -3,8 +3,8 @@ import { useSearchParams, Link } from "react-router-dom";
 import {
   Search, X, Sparkles, ArrowUpDown,
 } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 import { PageSEO } from "@/components/seo";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -20,9 +20,9 @@ import {
 } from "@/components/ui/pagination";
 import {
   useSearchCatalog, SearchPlant, SortKey, SearchFilters,
-  filtersFromSearchParams, filtersToSearchParams,
-} from "@/hooks/useSearchCatalog";
-import { useIsMobile } from "@/hooks/use-mobile";
+} from "@/hooks/catalog";
+import { filtersFromSearchParams, filtersToSearchParams } from "@/hooks/catalog";
+import { useIsMobile } from "@/hooks/shared";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { ActiveFilterChips, FacetSidebar, MobileFacetDrawer } from "@/components/search";
 import ZeroResultsRecovery from "@/components/search/ZeroResultsRecovery";

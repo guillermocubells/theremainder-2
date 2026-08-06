@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 import { useAuth } from '@/contexts/AuthContext';
 import { useWishlistItems, useWishlistStats } from '@/hooks/wishlist';
 import { WishlistKanban } from '@/components/wishlist/WishlistKanban';

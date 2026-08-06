@@ -2,7 +2,7 @@ import { MapPin, Navigation, Pencil, ShieldAlert, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useLocationPreference, type GeoPermission } from "@/hooks/useLocationPreference";
+import { useLocationPreference, type GeoPermission } from "@/hooks/shared";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Check, Loader2 } from "lucide-react";

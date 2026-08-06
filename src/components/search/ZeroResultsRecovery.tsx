@@ -6,7 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import type { SearchFilters } from "@/hooks/useSearchCatalog";
+import type { SearchFilters } from "@/hooks/catalog";
 
 // ── Suggested queries when search returns nothing ────────────────────
 const POPULAR_QUERIES = [

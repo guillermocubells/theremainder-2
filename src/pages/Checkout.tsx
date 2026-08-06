@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next";
 import { ArrowLeft, ShoppingBag, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
-import { Address } from "@/hooks/useAddresses";
+import { Address } from "@/hooks/account";
 import SavedAddressSelector from "@/components/checkout/SavedAddressSelector";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -19,7 +19,7 @@ import { CountrySelector } from "@/components/checkout/CountrySelector";
 import { ShippingPreview } from "@/components/checkout/ShippingPreview";
 import { StripeEmbeddedCheckout } from "@/components/checkout/StripeEmbeddedCheckout";
 import { CheckoutOrderSummary } from "@/components/checkout/CheckoutOrderSummary";
-import { useShippingQuote } from "@/hooks/useShippingQuote";
+import { useShippingQuote } from "@/hooks/checkout";
 import { COUNTRY_NAMES } from "@/utils/shippingCalculator";
 import {
   CheckoutAccordionItem,
@@ -28,9 +28,9 @@ import {
   STEP_ICONS,
 } from "@/components/checkout/CheckoutAccordion";
 import ReferralCodeField from "@/components/checkout/ReferralCodeField";
-import ReferralBanner from "@/components/ReferralBanner";
+import ReferralBanner from "@/components/shared/ReferralBanner";
 import { CheckoutConsent, ConsentState, INITIAL_CONSENT, validateConsent } from "@/components/checkout/CheckoutConsent";
-import { logConsent } from "@/hooks/useConsentLog";
+import { logConsent } from "@/hooks/shared";
 
 // ── Postal code patterns by country ──
 const POSTAL_CODE_PATTERNS: Record<string, RegExp> = {

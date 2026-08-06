@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ViabilityFactors } from "@/hooks/useRecommendPlants";
+import { ViabilityFactors } from "@/hooks/catalog";
 import { Info } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/shared";
 
 interface ViabilityFactorsTableProps {
   factors: ViabilityFactors;

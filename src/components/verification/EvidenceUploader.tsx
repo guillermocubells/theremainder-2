@@ -1,6 +1,6 @@
 import { useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useEvidenceUpload, type FileWithProgress } from "@/hooks/useEvidenceUpload";
+import { useEvidenceUpload, type FileWithProgress } from "@/hooks/shared";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import {

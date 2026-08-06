@@ -14,7 +14,7 @@ import {
   Sprout,
   type LucideIcon,
 } from "lucide-react";
-import type { UserBadge } from "@/hooks/useUserReputation";
+import type { UserBadge } from "@/hooks/account";
 
 const ICON_MAP: Record<string, LucideIcon> = {
   award: Award,

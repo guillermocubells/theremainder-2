@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { User, Pencil, Trash2, MessageSquare, CornerDownRight, Flag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
-import { ReviewComment, useDeleteComment, useUpdateComment } from '@/hooks/useReviewComments';
+import { ReviewComment, useDeleteComment, useUpdateComment } from '@/hooks/reviews';
 import CommentComposer from './CommentComposer';
 import ReportModal from './ReportModal';
 import { toast } from 'sonner';

@@ -1,2 +1,1 @@
-export { default as MobilePlantCard } from './MobilePlantCard';
-export { default as DesktopPlantCard } from './DesktopPlantCard';
+export { default as PlantCard } from './PlantCard';

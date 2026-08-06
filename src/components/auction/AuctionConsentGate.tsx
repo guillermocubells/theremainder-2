@@ -1,4 +1,4 @@
-import { useAuctionConsent, type AuctionConsentType } from '@/hooks/useAuctionConsent';
+import { useAuctionConsent, type AuctionConsentType } from '@/hooks/auction';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Checkbox } from '@/components/ui/checkbox';

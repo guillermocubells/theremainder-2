@@ -1,0 +1,13 @@
+export { default as Header } from './Header';
+export { default as Footer } from './Footer';
+export { default as HeroSection } from './HeroSection';
+export { default as ScrollToTopButton } from './ScrollToTopButton';
+export { default as WhatsAppButton } from './WhatsAppButton';
+export { CurrencySelector } from './CurrencySelector';
+export { default as LanguageSwitcher } from './LanguageSwitcher';
+export { default as ProtectedRoute } from './ProtectedRoute';
+export { default as SectionErrorBoundary } from './SectionErrorBoundary';
+export { default as CartDrawer } from './CartDrawer';
+export { default as ReferralBanner } from './ReferralBanner';
+export { default as SocialShareButtons } from './SocialShareButtons';
+export { default as TrustBadges } from './TrustBadges';

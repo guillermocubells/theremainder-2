@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useAddresses, useCreateAddress, useUpdateAddress, useDeleteAddress, Address, AddressInput } from '@/hooks/useAddresses';
+import { useAddresses, useCreateAddress, useUpdateAddress, useDeleteAddress, Address, AddressInput } from '@/hooks/account';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

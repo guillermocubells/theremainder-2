@@ -24,9 +24,6 @@ export interface Plant {
   weightGrams?: number;
 }
 
-// Re-export helper functions from hardinessZones utility
-export { formatHardinessZones, getZoneCountLabel } from '@/utils/hardinessZones';
-
 export const plants: Plant[] = [{
   id: "ptychosperma-caryotoides",
   name: "Ptychosperma caryotoides",

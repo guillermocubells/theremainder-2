@@ -4,7 +4,7 @@ import {
   useUserReputation,
   useUserBadges,
   useRecentContributions,
-} from "@/hooks/useUserReputation";
+} from "@/hooks/account";
 import { ConfidenceMeter, ContributorBadges } from "@/components/reputation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";

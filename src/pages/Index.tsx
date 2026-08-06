@@ -1,10 +1,10 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import PlantsGrid from "@/components/PlantsGrid";
-import Footer from "@/components/Footer";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
-import SectionErrorBoundary from "@/components/SectionErrorBoundary";
-import { useReferralTracking, cleanExpiredReferral } from "@/hooks/useReferralTracking";
+import Header from "@/components/shared/Header";
+import HeroSection from "@/components/shared/HeroSection";
+import PlantsGrid from "@/components/catalog/PlantsGrid";
+import Footer from "@/components/shared/Footer";
+import ScrollToTopButton from "@/components/shared/ScrollToTopButton";
+import SectionErrorBoundary from "@/components/shared/SectionErrorBoundary";
+import { useReferralTracking, cleanExpiredReferral } from "@/hooks/referral";
 import { useEffect } from "react";
 import { PageSEO } from "@/components/seo";
 import { STORE_BRAND } from "@/config/store";

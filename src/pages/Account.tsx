@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 import { Button } from '@/components/ui/button';
 import { 
   LayoutDashboard, 
@@ -20,7 +20,7 @@ import {
   Bell,
   AlertTriangle
 } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { useIsMobile } from '@/hooks/shared';
 import { useGardenStats } from '@/hooks/garden';
 import AccountDashboard from '@/components/account/AccountDashboard';
 import AccountOrders from '@/components/account/AccountOrders';
@@ -32,7 +32,7 @@ import AccountReferrals from '@/components/account/AccountReferrals';
 import AccountInquiries from '@/components/account/AccountInquiries';
 import MobileAccountHub from '@/components/account/MobileAccountHub';
 import MobileAccountSection from '@/components/account/MobileAccountSection';
-import ReferralBanner from '@/components/ReferralBanner';
+import ReferralBanner from '@/components/shared/ReferralBanner';
 import SellerDashboard from '@/components/seller/SellerDashboard';
 import AccountNotifications from '@/components/account/AccountNotifications';
 import AccountDisputes from '@/components/account/AccountDisputes';

@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/contexts/AuthContext';
-import { useProfile } from '@/hooks/useProfile';
-import { useOrders } from '@/hooks/useOrders';
+import { useProfile } from '@/hooks/account';
+import { useOrders } from '@/hooks/checkout';
 import { useGardenStats } from '@/hooks/garden';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';

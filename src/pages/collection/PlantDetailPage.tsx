@@ -4,8 +4,8 @@ import { useOwnedPlant, useUpdateOwnedPlant, useDeleteOwnedPlant } from '@/hooks
 import { useObservations } from '@/hooks/collection/useObservations';
 import { usePlantNotes, useCreatePlantNote, useDeletePlantNote } from '@/hooks/collection/usePlantNotes';
 import { usePublicSlug, useCreatePublicSlug, useTogglePublicSharing } from '@/hooks/collection/usePublicSharing';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';

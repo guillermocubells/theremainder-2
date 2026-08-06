@@ -10,7 +10,7 @@ import {
   type ContentReport,
   type VerificationRequest,
   type ModerationTab,
-} from "@/hooks/useModerationQueue";
+} from "@/hooks/reviews";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";

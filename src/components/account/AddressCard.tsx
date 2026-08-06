@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Edit2, Trash2, Star, Leaf, Sun, Droplets } from 'lucide-react';
-import { Address } from '@/hooks/useAddresses';
+import { Address } from '@/hooks/account';
 
 const sunExposureLabels: Record<string, string> = {
   full_sun: 'Pleno sol',

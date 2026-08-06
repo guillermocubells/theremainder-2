@@ -11,8 +11,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
-import { useCareNotes, type CareNote } from "@/hooks/useCareNotes";
-import { useLocationPreference } from "@/hooks/useLocationPreference";
+import { useCareNotes, type CareNote } from "@/hooks/catalog";
+import { useLocationPreference } from "@/hooks/shared";
 import LocationEmptyState from "@/components/location/LocationEmptyState";
 
 // ── Category config ──────────────────────────────────────────────────

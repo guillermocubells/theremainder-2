@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useSellerProfile } from '@/hooks/useSellerProfile';
+import { useSellerProfile } from '@/hooks/account';
 import SellerOnboardingForm from './SellerOnboardingForm';
 import LotSubmissionForm from './LotSubmissionForm';
 import SellerAuctions from './SellerAuctions';

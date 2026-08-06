@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import { useTranslation } from 'react-i18next';
-import { ClimateInfo } from "@/hooks/useAISearch";
+import { ClimateInfo } from "@/hooks/catalog";
 
 interface ClimateInfoCardProps {
   climateInfo: ClimateInfo;

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useAddresses, Address } from "@/hooks/useAddresses";
+import { useAddresses, Address } from "@/hooks/account";
 import { useAuth } from "@/contexts/AuthContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";

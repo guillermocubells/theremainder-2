@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useRecommendPlants, RecommendFilters, CatalogPlant } from "@/hooks/useRecommendPlants";
+import { useRecommendPlants, RecommendFilters, CatalogPlant } from "@/hooks/catalog";
 import { CatalogFilters, CatalogPlant as FilterCatalogPlant } from "@/utils/catalogFilters";
 import { getFilteredCatalog } from "@/utils/catalogFilters";
 import RecommendationCard from "./RecommendationCard";

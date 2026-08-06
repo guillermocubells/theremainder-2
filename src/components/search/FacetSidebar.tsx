@@ -7,8 +7,8 @@ import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import FacetSection from "./FacetSection";
-import type { SearchFilters, FacetBuckets } from "@/hooks/useSearchCatalog";
-import { useLocationPreference } from "@/hooks/useLocationPreference";
+import type { SearchFilters, FacetBuckets } from "@/hooks/catalog";
+import { useLocationPreference } from "@/hooks/shared";
 import LocationSelector from "./LocationSelector";
 import { useTranslation } from "react-i18next";
 

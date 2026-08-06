@@ -13,7 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
-import { useCreateReport, useHasReported, ReportReason, ReportEntityType } from '@/hooks/useContentReport';
+import { useCreateReport, useHasReported, ReportReason, ReportEntityType } from '@/hooks/reviews';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 

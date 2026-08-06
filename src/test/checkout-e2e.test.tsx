@@ -109,7 +109,7 @@ const SPAIN_QUOTE = {
 let mockShippingQuote: any = null;
 let mockIsQuoteLoading = false;
 
-vi.mock("@/hooks/useShippingQuote", () => ({
+vi.mock("@/hooks/checkout/useShippingQuote", () => ({
   useShippingQuote: () => ({
     quote: mockShippingQuote,
     isLoading: mockIsQuoteLoading,
@@ -140,7 +140,7 @@ vi.mock("@stripe/stripe-js", () => ({
 // ── Imports after mocks ──────────────────────────────────
 import Checkout from "@/pages/Checkout";
 import CheckoutSuccess from "@/pages/CheckoutSuccess";
-import AddToCartButton from "@/components/AddToCartButton";
+import AddToCartButton from "@/components/catalog/AddToCartButton";
 import { calculateTax } from "@/contexts/CartContext";
 
 // ── Helpers ──────────────────────────────────────────────

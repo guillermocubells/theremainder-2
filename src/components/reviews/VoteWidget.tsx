@@ -1,6 +1,6 @@
 import { ThumbsUp, ThumbsDown } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
-import { useCastVote } from '@/hooks/useReviewVotes';
+import { useCastVote } from '@/hooks/reviews';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';

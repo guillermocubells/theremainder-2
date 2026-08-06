@@ -7,7 +7,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { BadgeCheck, ExternalLink } from "lucide-react";
-import type { VerificationStatus } from "@/hooks/useUserReputation";
+import type { VerificationStatus } from "@/hooks/account";
 
 interface VerificationBadgeProps {
   verification: VerificationStatus | null | undefined;

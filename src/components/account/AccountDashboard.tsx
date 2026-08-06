@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/contexts/AuthContext';
-import { useProfile } from '@/hooks/useProfile';
-import { useOrders } from '@/hooks/useOrders';
-import { useAddresses } from '@/hooks/useAddresses';
+import { useProfile } from '@/hooks/account';
+import { useOrders } from '@/hooks/checkout';
+import { useAddresses } from '@/hooks/account';
 import { useGardenStats } from '@/hooks/garden';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Package, MapPin, User, Clock, Leaf, ArrowRight, Heart, Search as SearchIcon, Gift } from 'lucide-react';
-import { useWallet } from '@/hooks/useReferral';
+import { useWallet } from '@/hooks/referral';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 

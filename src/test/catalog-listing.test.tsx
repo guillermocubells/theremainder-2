@@ -100,7 +100,7 @@ vi.mock("@/hooks/useCatalogPlants", () => ({
   }),
 }));
 
-import PlantsGrid from "@/components/PlantsGrid";
+import PlantsGrid from "@/components/catalog/PlantsGrid";
 
 function renderGrid() {
   const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });

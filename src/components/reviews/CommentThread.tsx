@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { MessageSquare, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useReviewComments, useCreateComment } from '@/hooks/useReviewComments';
+import { useReviewComments, useCreateComment } from '@/hooks/reviews';
 import CommentComposer from './CommentComposer';
 import CommentNode from './CommentNode';
 import { useAuth } from '@/contexts/AuthContext';

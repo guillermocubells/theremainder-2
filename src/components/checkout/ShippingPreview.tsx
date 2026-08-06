@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Truck, Gift, Package, Loader2 } from "lucide-react";
-import { ShippingQuote } from "@/hooks/useShippingQuote";
+import { ShippingQuote } from "@/hooks/checkout";
 
 interface ShippingPreviewProps {
   quote: ShippingQuote | null;

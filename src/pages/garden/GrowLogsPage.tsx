@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 import { useGrowLogs, useCreateGrowLog } from "@/hooks/garden/useGrowLogs";
 import GrowLogCard from "@/components/garden/GrowLogCard";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,7 @@ import {
   Search,
   X,
 } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/shared";
 import { toast } from "sonner";
 
 const GrowLogsPage = () => {

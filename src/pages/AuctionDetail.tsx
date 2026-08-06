@@ -3,8 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 import { PageSEO } from '@/components/seo';
 import BiddingPanel from '@/components/auction/BiddingPanel';
 import { Badge } from '@/components/ui/badge';
@@ -22,7 +22,7 @@ import { format, isPast, isFuture, formatDistanceToNow } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { useIsMobile } from '@/hooks/shared';
 
 interface AuctionFull {
   id: string;

@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { CartItem } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
-import { ShippingQuote } from "@/hooks/useShippingQuote";
+import { ShippingQuote } from "@/hooks/checkout";
 
 interface OrderSummaryProps {
   items: CartItem[];

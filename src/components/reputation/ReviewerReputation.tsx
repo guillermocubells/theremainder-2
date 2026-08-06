@@ -1,4 +1,4 @@
-import { useUserReputation, useUserBadges } from "@/hooks/useUserReputation";
+import { useUserReputation, useUserBadges } from "@/hooks/account";
 import { ConfidenceMeter, ContributorBadges } from "@/components/reputation";
 
 interface ReviewerReputationProps {

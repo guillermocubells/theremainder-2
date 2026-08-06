@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { PlantRecommendation, CatalogPlant } from "@/hooks/useRecommendPlants";
+import { PlantRecommendation, CatalogPlant } from "@/hooks/catalog";
 import { useCatalogFavorite } from "@/hooks/wishlist";
 import { useAuth } from "@/contexts/AuthContext";
 import { cn } from "@/lib/utils";

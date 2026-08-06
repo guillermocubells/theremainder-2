@@ -12,7 +12,7 @@ import {
   useReferralRewards,
   useWalletTransactions,
   useReferralSettings,
-} from "@/hooks/useReferral";
+} from "@/hooks/referral";
 import { format } from "date-fns";
 import { es, enUS } from "date-fns/locale";
 

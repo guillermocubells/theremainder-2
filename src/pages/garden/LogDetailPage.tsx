@@ -3,8 +3,8 @@ import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { useOwnedPlant } from '@/hooks/collection/useOwnedPlants';
 import { useObservations, useDeleteObservation, type Observation } from '@/hooks/collection/useObservations';
 import { usePublicSlug, useCreatePublicSlug, useTogglePublicSharing } from '@/hooks/collection/usePublicSharing';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';

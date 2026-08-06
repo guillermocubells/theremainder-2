@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useOrders, Order } from '@/hooks/useOrders';
+import { useOrders, Order } from '@/hooks/checkout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';

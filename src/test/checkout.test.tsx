@@ -96,7 +96,7 @@ const mockQuote = {
 let mockShippingQuote: any = null;
 let mockIsQuoteLoading = false;
 
-vi.mock("@/hooks/useShippingQuote", () => ({
+vi.mock("@/hooks/checkout/useShippingQuote", () => ({
   useShippingQuote: () => ({
     quote: mockShippingQuote,
     isLoading: mockIsQuoteLoading,

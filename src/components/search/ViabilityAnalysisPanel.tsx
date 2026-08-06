@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Plant } from "@/data/plants";
 import { calculateViability, analyzePlantCare } from "@/utils/viabilityCalculator";
-import ViabilityScale from "@/components/ViabilityScale";
+import ViabilityScale from "@/components/catalog/ViabilityScale";
 
 const RESULTS_INCREMENT = 3;
 
