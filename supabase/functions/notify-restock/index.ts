@@ -104,7 +104,7 @@ serve(async (req: Request) => {
     }
 
     // Build plant URL
-    const siteUrl = Deno.env.get("SITE_URL") || "https://frondaprima.lovable.app";
+    const siteUrl = Deno.env.get("SITE_URL") || "https://theremainder.pl";
     const plantUrl = `${siteUrl}/plant/${plant_slug}`;
 
     // Send emails

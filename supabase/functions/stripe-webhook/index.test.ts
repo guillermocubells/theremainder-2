@@ -114,7 +114,7 @@ Deno.test("Webhook handles OPTIONS (CORS preflight)", async () => {
   const res = await fetch(WEBHOOK_URL, {
     method: "OPTIONS",
     headers: {
-      Origin: "https://theremainder.lovable.app",
+      Origin: "https://theremainder.pl",
       "Access-Control-Request-Method": "POST",
     },
   });

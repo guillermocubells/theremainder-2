@@ -58,7 +58,7 @@ const PublicPlantPage = () => {
 
   const pageTitle = `${plant.nickname}${plant.scientific_name ? ` (${plant.scientific_name})` : ''} | The Remainder`;
   const pageDescription = `Ficha de ${plant.nickname}${plant.scientific_name ? `, ${plant.scientific_name}` : ''} — colección de plantas en The Remainder.`;
-  const pageUrl = `https://theremainder.lovable.app/p/${slug}`;
+  const pageUrl = `https://theremainder.pl/p/${slug}`;
   const ogImage = plant.photos?.[0];
 
   return (
@@ -152,7 +152,7 @@ const PublicPlantPage = () => {
           <p className="text-sm text-muted-foreground">
             Página generada con{' '}
             <a 
-              href="https://theremainder.lovable.app" 
+              href="https://theremainder.pl" 
               className="text-primary hover:underline"
               target="_blank"
               rel="noopener noreferrer"

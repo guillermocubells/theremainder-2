@@ -326,7 +326,7 @@ serve(async (req) => {
       }
     }
 
-    const origin = req.headers.get("origin") || "https://theremainder.lovable.app";
+    const origin = req.headers.get("origin") || "https://theremainder.pl";
 
     const getAbsoluteImageUrl = (imageUrl: string | undefined): string[] | undefined => {
       if (!imageUrl) return undefined;

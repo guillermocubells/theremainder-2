@@ -208,7 +208,7 @@ serve(async (req) => {
     const chargeAmountCents = hammerPriceCents - depositDeductCents;
     const platformFeeCents = Math.round(platformFeeAmount * 100);
 
-    const origin = req.headers.get("origin") || "https://theremainder.lovable.app";
+    const origin = req.headers.get("origin") || "https://theremainder.pl";
 
     if (chargeAmountCents > 0) {
       // Create a PaymentIntent with application_fee and transfer

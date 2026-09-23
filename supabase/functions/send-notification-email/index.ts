@@ -24,7 +24,7 @@ const wrapHtml = (body: string) => `
     ${body}
     <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0 16px;" />
     <p style="font-size: 11px; color: #999; text-align: center;">
-      © ${new Date().getFullYear()} The Remainder · theremainder.lovable.app
+      © ${new Date().getFullYear()} The Remainder · theremainder.pl
     </p>
   </div>
 `;
@@ -214,7 +214,7 @@ const templates: Record<string, TemplateGenerator> = {
           <p style="margin: 0; color: #666; font-size: 13px;">${data.shipping_address || ""}</p>
         </div>
 
-        ${ctaButton(String(data.account_url || "https://theremainder.lovable.app/account"), isEn ? "View my orders" : "Ver mis pedidos")}
+        ${ctaButton(String(data.account_url || "https://theremainder.pl/account"), isEn ? "View my orders" : "Ver mis pedidos")}
 
         <p style="margin-top: 30px; color: #888; font-size: 12px;">
           ${isEn ? "You'll receive an email when your order is shipped." : "Recibirás un email cuando tu pedido sea enviado."}

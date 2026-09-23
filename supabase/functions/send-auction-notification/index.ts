@@ -94,7 +94,7 @@ function getEmailContent(type: string, data: Record<string, unknown>, lang: stri
             <p style="margin: 8px 0 0 0;"><strong>${isEn ? "Your highest bid:" : "Tu puja más alta:"}</strong> ${data.your_bid}€</p>
           </div>
           <p>${isEn ? "Don't worry, more auctions are coming soon!" : "¡No te preocupes, pronto habrá más subastas!"}</p>
-          ${cta("https://theremainder.lovable.app", isEn ? "Browse catalog" : "Ver catálogo")}
+          ${cta("https://theremainder.pl", isEn ? "Browse catalog" : "Ver catálogo")}
         `),
       };
 
@@ -192,7 +192,7 @@ serve(async (req: Request) => {
       return new Response(JSON.stringify({ error: "Auction not found" }), { status: 404, headers: corsHeaders });
     }
 
-    const auctionUrl = `https://theremainder.lovable.app/subastas/${auction.slug}`;
+    const auctionUrl = `https://theremainder.pl/subastas/${auction.slug}`;
 
     // Determine which users to notify based on type
     let targetUserIds: string[] = user_ids || [];

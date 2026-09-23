@@ -1037,7 +1037,7 @@ async function handleCheckoutCompleted(
               tax_amount: taxAmount,
               shipping_name: shippingAddress.full_name,
               shipping_address: `${shippingAddress.street}${shippingAddress.apartment ? ', ' + shippingAddress.apartment : ''}, ${shippingAddress.postal_code} ${shippingAddress.city}, ${shippingAddress.province}, ${shippingAddress.country}`,
-              account_url: "https://theremainder.lovable.app/account",
+              account_url: "https://theremainder.pl/account",
             },
           }),
         });

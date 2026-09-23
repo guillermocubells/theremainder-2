@@ -144,7 +144,7 @@ const PublicCollectionPage = () => {
           <p className="text-sm text-muted-foreground">
             Compartida con{' '}
             <a
-              href="https://theremainder.lovable.app"
+              href="https://theremainder.pl"
               className="text-primary hover:underline"
               target="_blank"
               rel="noopener noreferrer"

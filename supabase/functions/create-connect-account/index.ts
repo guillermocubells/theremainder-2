@@ -82,7 +82,7 @@ serve(async (req) => {
       }
 
       // Create onboarding link
-      const origin = req.headers.get("origin") || "https://theremainder.lovable.app";
+      const origin = req.headers.get("origin") || "https://theremainder.pl";
       const accountLink = await stripe.accountLinks.create({
         account: stripeAccountId,
         refresh_url: `${origin}/account?tab=seller&refresh=true`,

@@ -198,7 +198,7 @@ const SharedSearchListPage = () => {
   const listTitle = sharedList.title || 'Lista de búsqueda';
   const pageTitle = `${listTitle} | The Remainder`;
   const pageDescription = sharedList.description || `${uniqueItems.length} plantas en búsqueda — lista compartida en The Remainder.`;
-  const pageUrl = `https://theremainder.lovable.app/garden/shared/${slug}`;
+  const pageUrl = `https://theremainder.pl/garden/shared/${slug}`;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">

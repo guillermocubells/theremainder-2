@@ -8,7 +8,7 @@ export const STORE_BRAND = {
   name: "The Remainder",
   tagline: "Plantas de altura. Germinadas y compartidas una vez",
   legalName: "The Remainder",
-  url: "https://theremainder.lovable.app",
+  url: "https://theremainder.pl",
 } as const;
 
 // ─── Contact ───
@@ -20,7 +20,7 @@ export const STORE_CONTACT = {
 
 // ─── SEO defaults ───
 export const STORE_SEO = {
-  defaultOgImage: "https://theremainder.lovable.app/pwa-512x512.png",
+  defaultOgImage: "https://theremainder.pl/pwa-512x512.png",
   locale: "es_ES",
 } as const;
 

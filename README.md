@@ -1,73 +1,153 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# The Remainder
 
-**URL**: https://lovable.dev/projects/a647a891-0cf1-49a5-af12-0e56ddc89e2f
+**Tienda online de plantas de altura — palmeras, cícadas y helechos arbóreos
+germinados y compartidos una vez.**
 
-## How can I edit this code?
+[**theremainder.pl**](https://theremainder.pl) · Envío a España y Europa
 
-There are several ways of editing your application.
+</div>
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a647a891-0cf1-49a5-af12-0e56ddc89e2f) and start prompting.
+## Qué es esto
 
-Changes made via Lovable will be committed automatically to this repo.
+The Remainder es un **e-commerce en producción**. Vende ejemplares raros de
+plantas de alta montaña: especies de selva nublada, palmeras de altura y
+coníferas que no se encuentran en un centro de jardinería.
 
-**Use your preferred IDE**
+El catálogo no es infinito a propósito. Cada especie se germina en pequeñas
+tandas y se comparte una vez — de ahí el nombre, y de ahí que las fichas lleven
+un contador de existencias real (`2x`, `3x`) en lugar de un "disponible"
+genérico.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+La tienda está viva y operativa en **[theremainder.pl](https://theremainder.pl)**.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## Cómo se ve
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Catálogo
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Portada con el catálogo completo, navegación por categorías (palmeras, cícadas,
+árboles y arbustos ornamentales, helechos arbóreos, bambús, suculentas) y
+buscador.
 
-# Step 3: Install the necessary dependencies.
-npm i
+![Portada de The Remainder](docs/screenshots/01-catalogo-home.jpg)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Búsqueda y filtros
+
+Buscador por nombre, filtros por características de cultivo y un recomendador
+asistido por IA para quien no sabe qué especie encaja con su clima. Cada tarjeta
+muestra nombre científico, nombre común, precio, existencias y las dos
+condiciones que más importan: exposición solar y velocidad de crecimiento.
+
+![Catálogo con filtros](docs/screenshots/02-catalogo-filtros.jpg)
+
+### Ficha de planta
+
+Cada ejemplar lleva su ficha de cultivo completa: exposición, frecuencia de
+riego, ritmo de crecimiento, clima de origen, **zonas de rusticidad USDA** y
+tamaño del contenedor. Si está agotado, se puede pedir aviso de reposición.
+
+![Ficha de una planta](docs/screenshots/03-ficha-planta.jpg)
+
+---
+
+## Qué hace
+
+| Área | Detalle |
+|---|---|
+| **Catálogo** | Búsqueda con sinónimos, filtros por condiciones de cultivo, categorías, recomendador por IA |
+| **Venta** | Carrito, checkout con Stripe, reservas de stock, cálculo de envío, facturación con numeración por series |
+| **Subastas** | Ejemplares únicos con pujas, depósito, cierre automático y liquidación |
+| **Jardín** | Colecciones privadas y compartibles, registro de germinación, diarios de cultivo, listas de deseos |
+| **Confianza** | Verificación de vendedores, reputación, moderación de contenido, disputas y detección de fraude |
+| **Operación** | Back-office con pedidos, inventario, roles y permisos, auditoría y analítica |
+| **Idiomas** | Español e inglés |
+
+---
+
+## Stack
+
+**Frontend** — React 18 · TypeScript · Vite 5 · Tailwind CSS · shadcn/ui ·
+React Router · TanStack Query · i18next · Zod
+
+**Backend** — Supabase (PostgreSQL + Auth + Storage) con **40 edge functions**
+en Deno y **128 migraciones** versionadas
+
+**Pagos** — Stripe (checkout, Connect para vendedores, webhooks)
+
+Toda la lógica sensible —precios, stock, pujas, liquidaciones, facturas— vive en
+el servidor. El cliente nunca es la fuente de verdad, y el acceso a datos está
+cerrado con RLS a nivel de fila.
+
+---
+
+## Arrancar en local
+
+```bash
+git clone https://github.com/guillermocubells/theremainder-2.git
+cd theremainder-2
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Necesitas un `.env` con las credenciales de tu propio proyecto de Supabase:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+VITE_SUPABASE_URL=https://<tu-proyecto>.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=<tu-clave-anon>
+VITE_SUPABASE_PROJECT_ID=<tu-project-id>
+```
 
-**Use GitHub Codespaces**
+Las migraciones de `supabase/migrations/` reconstruyen el esquema completo, y
+`scripts/seed-categories.sql` siembra las categorías iniciales.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| Comando | Qué hace |
+|---|---|
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm run preview` | Sirve el build localmente |
+| `npm run lint` | ESLint |
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## Estructura
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+  components/     Componentes por dominio (garden, wishlist, admin, shared…)
+  pages/          Una página por ruta
+  hooks/          Lógica de datos y estado
+  config/         Configuración centralizada de la tienda
+  i18n/locales/   Traducciones es / en
+supabase/
+  functions/      40 edge functions (Deno)
+  migrations/     128 migraciones SQL
+docs/             Documentación y capturas
+scripts/          Semillas y utilidades
+```
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/a647a891-0cf1-49a5-af12-0e56ddc89e2f) and click on Share -> Publish.
+## Estado
 
-## Can I connect a custom domain to my Lovable project?
+En producción. El repositorio es público como muestra de trabajo; no busca
+contribuciones externas.
 
-Yes, you can!
+Hay 15 ficheros de test y un `vitest.config.ts`, pero **vitest no está declarado
+en `devDependencies`** — hace falta añadirlo antes de poder ejecutarlos.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Legal
+
+Tienda operada desde España, sujeta a la normativa española y europea de
+comercio electrónico y protección de datos. Las condiciones de venta, la
+política de privacidad y la información de envíos están publicadas en
+[theremainder.pl](https://theremainder.pl).
+
+El código se publica como muestra de trabajo. La marca, los textos y las
+fotografías de las plantas no son de uso libre.

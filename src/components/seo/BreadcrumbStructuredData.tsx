@@ -12,7 +12,7 @@ interface BreadcrumbStructuredDataProps {
 
 const BreadcrumbStructuredData = ({ 
   items, 
-  baseUrl = "https://theremainder.lovable.app" 
+  baseUrl = "https://theremainder.pl" 
 }: BreadcrumbStructuredDataProps) => {
   if (items.length === 0) return null;
 
