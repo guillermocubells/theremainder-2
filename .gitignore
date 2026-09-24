@@ -26,3 +26,8 @@ dist-ssr
 
 # Artefactos del CLI de Supabase
 supabase/.temp/
+
+.vercel
+
+# Configuracion local: las variables viven en Vercel
+.env
