@@ -26,3 +26,5 @@ dist-ssr
 
 # Artefactos del CLI de Supabase
 supabase/.temp/
+
+.vercel
