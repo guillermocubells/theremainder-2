@@ -447,6 +447,3 @@ serve(async (req) => {
     return handleError(error, { ...corsHeaders, "Content-Type": "application/json" }, requestId, log);
   }
 });
-    );
-  }
-});
