@@ -99,6 +99,15 @@ if (familiaMal.length) {
   console.log(`  OK   familia coherente con el genero en las ${plantas.length} filas`)
 }
 
+// Tipos de las columnas que la interfaz recorre con .map(). Una cadena donde se
+// espera un array deja la ficha de producto en blanco y no lo delata ningun
+// recuento: la fila existe y el campo no es nulo.
+const malTipo = await uno(`SELECT count(*)::int n FROM public.plants
+  WHERE jsonb_typeof(curious_facts) NOT IN ('array','null')
+     OR jsonb_typeof(care_instructions) NOT IN ('array','null')`)
+console.log(`  ${malTipo.n === 0 ? 'OK  ' : 'MAL '} jsonb_map_seguro  = ${malTipo.n}   esperado 0`)
+if (malTipo.n !== 0) malas++
+
 const pr = await uno('SELECT min(price)::text a, max(price)::text b FROM public.plants')
 console.log(`  precios: ${pr.a} - ${pr.b}`)
 

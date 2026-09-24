@@ -49,7 +49,16 @@ const lit = (col, v) => {
   if (JSONB.has(col)) {
     if (typeof v === 'object') return q(JSON.stringify(v)) + '::jsonb'
     try { JSON.parse(v); return q(v) + '::jsonb' }
-    catch { return q(JSON.stringify(String(v))) + '::jsonb' }
+    catch {
+      // OJO: care_instructions y curious_facts vienen como texto con los valores
+      // separados por "|". Envolverlos como CADENA jsonb rompe la ficha de
+      // producto: PlantCuriousFacts.tsx:17 hace .map() y lanza
+      // "TypeError: e.map is not a function", dejando la pagina en blanco.
+      // specifications si es un objeto de verdad y no lleva "|".
+      const s = String(v)
+      if (s.includes('|')) return q(JSON.stringify(s.split('|').map(x => x.trim()).filter(Boolean))) + '::jsonb'
+      return q(JSON.stringify([s])) + '::jsonb'
+    }
   }
   if (NUMS.has(col)) { const n = Number(v); return Number.isFinite(n) ? String(n) : 'NULL' }
   if (typeof v === 'boolean') return v ? 'TRUE' : 'FALSE'
