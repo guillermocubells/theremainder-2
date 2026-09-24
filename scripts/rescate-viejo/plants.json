@@ -1,0 +1,2993 @@
+[
+ {
+  "id": "8f2ef1cf-6dac-4d9f-9570-4df2f86a7c63",
+  "name": "Araucaria angustifolia",
+  "scientific_name": "Araucaria angustifolia",
+  "slug": "araucaria-angustifolia",
+  "description": "Conífera majestuosa de Sudamérica, de crecimiento lento y gran valor paisajístico y ecológico.",
+  "short_description": "Conífera monumental sudamericana de porte único",
+  "category_id": "715d7016-135a-4a23-95cc-97c97b9e7ce5",
+  "price": 28,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "0.8L",
+  "germination_date": "2023",
+  "growth_rate": "medium",
+  "mature_height": "30-40m",
+  "mature_width": "8-12m",
+  "origin_country": "BR",
+  "origin_region": "Sur de Brasil",
+  "native_habitat": "Bosques montanos subtropicales",
+  "care_instructions": [
+   "Suelo profundo drenado",
+   "Riego regular joven",
+   "Pleno sol",
+   "Evitar caliza"
+  ],
+  "curious_facts": [
+   "Piñones comestibles",
+   "Longeva",
+   "En peligro"
+  ],
+  "specifications": {
+   "soil": "ácido-drenado",
+   "wind": "media",
+   "growth": "medio"
+  },
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Auraucaria_angsmall1.jpg/1280px-Auraucaria_angsmall1.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Arauc%C3%A1ria_da_serra_ga%C3%BAcha.jpg/1280px-Arauc%C3%A1ria_da_serra_ga%C3%BAcha.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Itaimbezinho_-_Parque_Nacional_Aparados_da_Serra_33.JPG/2560px-Itaimbezinho_-_Parque_Nacional_Aparados_da_Serra_33.JPG",
+   "https://suehs.netlify.app/project/araucaria/featured_hu442460516f9ba3207d9db1b23058bc3e_1113678_720x0_resize_q90_lanczos.jpg"
+  ],
+  "meta_title": "Araucaria angustifolia: conífera monumental",
+  "meta_description": "Conífera sudamericana de gran porte y copa en candelabro, ideal para jardines amplios y colecciones.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 1,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-07T12:23:37.597078+00:00",
+  "common_name": "Paraná pine",
+  "plant_type": "tree",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "subtropical"
+  ],
+  "min_temp_c": -8,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "rare",
+  "difficulty": "intermediate",
+  "notes": "Sus semillas eran un alimento básico de pueblos indígenas y su recolección marcaba ciclos sociales y rituales.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "2bd740d1-e242-4f19-85de-f6f91845561a",
+  "name": "Archontophoenix cunninghamiana",
+  "scientific_name": "Archontophoenix cunninghamiana",
+  "slug": "archontophoenix-cunninghamiana",
+  "description": "Palmera elegante y de rápido crecimiento, con tronco liso y copa plumosa, muy usada en climas templados y subtropicales.",
+  "short_description": "Palmera elegante y de rápido crecimiento",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 16,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "1L",
+  "germination_date": "2024",
+  "growth_rate": "fast",
+  "mature_height": "20-25m",
+  "mature_width": "4-6m",
+  "origin_country": "AU",
+  "origin_region": "Queensland/NSW",
+  "native_habitat": "Bosques húmedos y riberas",
+  "care_instructions": [
+   "Suelo fértil",
+   "Riego frecuente",
+   "Proteger heladas",
+   "Evitar sequía"
+  ],
+  "curious_facts": [
+   "Crecimiento rápido",
+   "Muy ornamental"
+  ],
+  "specifications": {
+   "salt": "baja",
+   "soil": "fértil-húmedo",
+   "wind": "baja"
+  },
+  "images": [
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/558874792/original.jpg",
+   "https://www.plantswhitsunday.com.au/wp-content/uploads/2020/03/Archontophoenix-Cunninghamiana.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/c/c0/Archontophoenix_cunninghamiana_-_Pillnitz.jpg",
+   "https://www.palmerasyjardines.com/wp-content/uploads/2019/01/100384.jpg"
+  ],
+  "meta_title": "Archontophoenix cunninghamiana, palmera elegante",
+  "meta_description": "Palmera de crecimiento rápido y tronco liso, perfecta para climas suaves con humedad.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 2,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-07T12:23:37.597078+00:00",
+  "common_name": "Bangalow palm",
+  "plant_type": "palm",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "subtropical"
+  ],
+  "min_temp_c": -3,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "intermediate",
+  "notes": "En algunos países se considera invasora por su alta capacidad de germinación en riberas.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "9b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "fb1b6b16-b516-4d38-87e9-2d5eac61f343",
+  "name": "Bentinckia condapanna",
+  "scientific_name": "Bentinckia condapanna",
+  "slug": "bentinckia-condapanna",
+  "description": "Palmera alta y esbelta del sur de la India, adaptada a climas montanos húmedos.",
+  "short_description": "Palmera alta tropical de montaña",
+  "category_id": null,
+  "price": 55,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "medium",
+  "mature_height": "15-20m",
+  "mature_width": "3-5m",
+  "origin_country": "IN",
+  "origin_region": "Ghats Occidentales",
+  "native_habitat": "Bosques montanos húmedos",
+  "care_instructions": [
+   "Humedad constante",
+   "Suelo profundo",
+   "Sombra ligera joven"
+  ],
+  "curious_facts": [
+   "Palmera montana",
+   "Muy poco común"
+  ],
+  "specifications": {
+   "soil": "profundo-húmedo",
+   "wind": "media",
+   "growth": "medio"
+  },
+  "images": [
+   "https://palmpedia.net/wiki/images/thumb/6/6f/B._condapanna3.jpg/248px-B._condapanna3.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2016_09/P1030440.jpg.4aebd10403fc1c9ac0e3599fb3567c1c.jpg",
+   "https://www.floribunda.xyz/wp-content/uploads/2019/02/bencon.jpg",
+   "https://alchetron.com/cdn/bentinckia-condapanna-1cc98eaa-dec9-473c-944c-39cf7e37798-resize-750.jpeg"
+  ],
+  "meta_title": "Bentinckia condapanna, palmera montana",
+  "meta_description": "Palmera tropical de montaña que requiere humedad ambiental y temperaturas suaves.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 3,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-27T21:53:32.560398+00:00",
+  "common_name": "Hill areca nut",
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical",
+   "montano"
+  ],
+  "min_temp_c": 5,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "rare",
+  "difficulty": "advanced",
+  "notes": "Crece de forma natural en pendientes muy pronunciadas, donde pocas palmeras sobreviven.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "e6e556cc-cbe2-4f93-9d1c-f08b76c1bbd7",
+  "name": "Burretiokentia hapala",
+  "scientific_name": "Burretiokentia hapala",
+  "slug": "burretiokentia-hapala",
+  "description": "Palmera rara de Nueva Caledonia, de crecimiento lento y gran interés para coleccionistas.",
+  "short_description": "Palmera rara de Nueva Caledonia",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 50,
+  "sale_price": null,
+  "stock_qty": 4,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "slow",
+  "mature_height": "8-12m",
+  "mature_width": "3-4m",
+  "origin_country": "NC",
+  "origin_region": "Nueva Caledonia",
+  "native_habitat": "Bosques húmedos y laderas",
+  "care_instructions": [
+   "Suelo drenado",
+   "Riego moderado",
+   "Evitar frío prolongado"
+  ],
+  "curious_facts": [
+   "Endémica NC",
+   "Rara en cultivo"
+  ],
+  "specifications": {
+   "soil": "drenado",
+   "wind": "media",
+   "growth": "lento"
+  },
+  "images": [
+   "https://www.palmtalk.org/forum/uploads/monthly_2019_01/65DD3B39-C231-46BA-AA56-90492CE4C2F2.jpeg.652a0cbf61114f5728e070d707eeaf91.jpeg",
+   "https://www.monaconatureencyclopedia.com/wp-content/uploads/2016/06/b-212-2_burretiokentia_hapala.jpg",
+   "https://dasignsourcebotanicals.com/wp-content/uploads/Burretiokentia-hapala-394x600.jpg",
+   "https://static.wixstatic.com/media/5010a8_25c2547441b4481988175d9065992761~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg"
+  ],
+  "meta_title": "Burretiokentia hapala, rareza de colección",
+  "meta_description": "Palmera endémica de Nueva Caledonia, de cultivo delicado y muy apreciada.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 4,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-07T12:23:37.597078+00:00",
+  "common_name": null,
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 4,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "extremely_rare",
+  "difficulty": "expert",
+  "notes": "Forma parte de un linaje de palmeras casi exclusivo de Nueva Caledonia.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "de840023-8e32-4c55-8741-ee46e2324b20",
+  "name": "Butia yatay",
+  "scientific_name": "Butia yatay",
+  "slug": "butia-yatay",
+  "description": "La Butia yatay es una de las palmeras más elegantes y majestuosas del género Butia, destacando por su imponente estípite solitario que puede alcanzar los 12 metros de altura. Sus hojas son de un color verde glauco o azulado, fuertemente arqueadas, lo que le otorga un aspecto plumoso y sofisticado. Es originaria del sur de Brasil, Uruguay y el noreste de Argentina, donde forma extensos palmares. En cultivo, es sumamente apreciada por su resistencia al frío, soportando heladas de hasta -10°C una vez establecida. Prefiere exposiciones a pleno sol y suelos bien drenados, siendo muy tolerante a la sequía y a los vientos fuertes. Produce racimos de frutos comestibles de sabor agridulce, muy utilizados localmente para jaleas y licores. Es una opción excelente para jardines mediterráneos y templados donde se busque un punto focal de bajo mantenimiento y gran impacto visual. Su crecimiento es lento pero constante, lo que garantiza una estructura sólida y duradera en el paisaje.",
+  "short_description": "Majestuosa palmera de hojas azuladas y arqueadas, extremadamente resistente al frío y la sequía.",
+  "category_id": null,
+  "price": 15,
+  "sale_price": null,
+  "stock_qty": 0,
+  "container_size": "30-50 litros",
+  "germination_date": null,
+  "growth_rate": "slow",
+  "mature_height": "8-12 m",
+  "mature_width": "3-5 m",
+  "origin_country": "AR",
+  "origin_region": "Entre Ríos, Argentina",
+  "native_habitat": "Sabanas y pastizales arenosos del noreste de Argentina, Uruguay y sur de Brasil, formando comunidades densas llamadas palmares.",
+  "care_instructions": {},
+  "curious_facts": [],
+  "specifications": {},
+  "images": [
+   "https://semillasdelmundo.com/wp-content/uploads/2025/02/Butia-Yatai-Seeds-semillas-del-mundo.jpeg",
+   "https://bananalicious.pl/environment/cache/images/0_0_productGfx_2158/ButiaYatay01.jpg",
+   "https://http2.mlstatic.com/D_NQ_NP_682347-MLM47798439525_102021-O.webp",
+   "https://antropocene.it/wp-content/uploads/2023/10/Butia_yatay.jpeg"
+  ],
+  "meta_title": "Butia yatay | Palmera de Colección",
+  "meta_description": "Compra Butia yatay, la elegante palma de hojas azuladas resistente al frío. Ideal para jardines mediterráneos. Envíos desde nuestro vivero especializado.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 0,
+  "created_at": "2026-02-28T00:17:00.033848+00:00",
+  "updated_at": "2026-02-28T00:22:23.318998+00:00",
+  "common_name": "Palma Yatay",
+  "plant_type": "palm",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "mediterráneo",
+   "templado",
+   "subtropical",
+   "árido"
+  ],
+  "min_temp_c": -10,
+  "water": "low",
+  "humidity": "low",
+  "plant_use": [
+   "exterior",
+   "jardin",
+   "maceta"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "easy",
+  "notes": "Identificación confirmada al 100%. Especie muy estable taxonómicamente. Muy valorada en paisajismo por su color azulado y resistencia. Confianza en temperatura mínima: 0.9. Confianza en rareza: 0.8.",
+  "weight_grams": null,
+  "family": "Arecaceae",
+  "variety": null,
+  "image_alt_text": "Butia yatay palmera azulada",
+  "reference_url": "https://www.gbif.org/species/2735150",
+  "hardiness_zones": [
+   "8b",
+   "9a",
+   "9b",
+   "10a",
+   "10b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": [
+   "azulada",
+   "resistente al frío",
+   "frutos comestibles",
+   "mediterránea",
+   "colección"
+  ]
+ },
+ {
+  "id": "f32b5647-ffb7-462b-b475-7edf7ccb7487",
+  "name": "Caryota mitis",
+  "scientific_name": "Caryota mitis",
+  "slug": "caryota-mitis",
+  "description": "Palmera multicaul de hojas bipinnadas en forma de cola de pez, de rápido crecimiento en climas cálidos.",
+  "short_description": "Palmera tropical de hojas en forma de cola de pez",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 12,
+  "sale_price": null,
+  "stock_qty": 2,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "fast",
+  "mature_height": "10-15m",
+  "mature_width": "4-6m",
+  "origin_country": "TH",
+  "origin_region": "Sudeste asiático",
+  "native_habitat": "Selvas húmedas",
+  "care_instructions": [
+   "Riego alto",
+   "Suelo rico",
+   "Evitar frío",
+   "Semisombra"
+  ],
+  "curious_facts": [
+   "Hojas cola de pez",
+   "Tallos monocárpicos"
+  ],
+  "specifications": {
+   "soil": "rico-húmedo",
+   "habit": "multicaul",
+   "growth": "rápido"
+  },
+  "images": [
+   "https://www.palmerasyjardines.com/wp-content/uploads/2019/01/100430.jpg",
+   "https://www.palmerasyjardines.com/wp-content/uploads/2019/01/100427.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/9/99/Caryota_mitis_leaves.jpg",
+   "https://www.palmpedia.net/wiki/images/thumb/2/28/Cmfa3b28.jpg/400px-Cmfa3b28.jpg"
+  ],
+  "meta_title": "Caryota mitis, palmera cola de pez",
+  "meta_description": "Palmera tropical multicaul de hojas tipo cola de pez; perfecta para ambientes cálidos y húmedos.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 5,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-07T12:23:37.597078+00:00",
+  "common_name": "Fishtail palm",
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 5,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "interior",
+   "colección"
+  ],
+  "rarity": "common",
+  "difficulty": "intermediate",
+  "notes": "Puede florecer durante varios años antes de que el tallo muera definitivamente.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "cdf8630a-a8ce-4157-a89f-8de2bf1c35b3",
+  "name": "Ceratozamia hildae",
+  "scientific_name": "Ceratozamia hildae",
+  "slug": "ceratozamia-hildae",
+  "description": "Cícada mexicana de crecimiento lento, muy apreciada por su follaje rígido y aspecto prehistórico.",
+  "short_description": "Cícada mexicana de crecimiento lento",
+  "category_id": "a4af6826-d082-4efa-99e5-324e403ef5b7",
+  "price": 65,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2022",
+  "growth_rate": "slow",
+  "mature_height": "1-2m",
+  "mature_width": "1-2m",
+  "origin_country": "MX",
+  "origin_region": "Querétaro/Sierra Gorda",
+  "native_habitat": "Bosques subtropicales",
+  "care_instructions": [
+   "Semisombra",
+   "Suelo drenado",
+   "Riego moderado",
+   "Crecimiento lento"
+  ],
+  "curious_facts": [
+   "Cícada longeva",
+   "Aspecto prehistórico"
+  ],
+  "specifications": {
+   "pot": "apta",
+   "soil": "drenado",
+   "growth": "lento"
+  },
+  "images": [
+   "https://www.monaconatureencyclopedia.com/wp-content/uploads/2020/01/4-Ceratozamia-hildae.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/4/4f/Ceratozamia_Hildae_Leave.jpg",
+   "https://www.smgrowers.com/imagedb/Ceratozamia_hildae.jpg",
+   "https://bihrmann.com/caudiciforms/DIFO/cer-hil-lef.jpg"
+  ],
+  "meta_title": "Ceratozamia hildae, cícada mexicana rara",
+  "meta_description": "Cícada de colección, muy longeva y de crecimiento lento; ideal en semisombra con drenaje.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 6,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-25T01:03:57.619284+00:00",
+  "common_name": null,
+  "plant_type": "cycad",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "subtropical"
+  ],
+  "min_temp_c": 2,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "very_rare",
+  "difficulty": "advanced",
+  "notes": "Fue descrita científicamente en el siglo XX, a pesar de su aspecto \"prehistórico\".",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "9d4690bf-988e-4315-a08e-432e253e2243",
+  "name": "Chamaedorea elegans \"Negrita\"",
+  "scientific_name": "Chamaedorea elegans",
+  "slug": "chamaedorea-elegans-negrita",
+  "description": "Palmera compacta y resistente, ideal para interior o semisombra, muy popular como ornamental.",
+  "short_description": "Palmera compacta ideal para interior",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 15,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "slow",
+  "mature_height": "2-3m",
+  "mature_width": "1-2m",
+  "origin_country": "MX",
+  "origin_region": "Veracruz/Chiapas",
+  "native_habitat": "Sotobosque tropical",
+  "care_instructions": [
+   "Sombra luminosa",
+   "Riego moderado",
+   "Evitar sol fuerte"
+  ],
+  "curious_facts": [
+   "Muy usada en interior",
+   "Resistente"
+  ],
+  "specifications": {
+   "soil": "ligero",
+   "light": "interior",
+   "growth": "lento"
+  },
+  "images": [
+   "https://i.etsystatic.com/14485351/r/il/80bf19/3465580180/il_fullxfull.3465580180_mklv.jpg",
+   "https://static.wixstatic.com/media/0f7c58_af924c46b39a4dea90e970f352abb4e2.jpg/v1/fill/w_520,h_578,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0f7c58_af924c46b39a4dea90e970f352abb4e2.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2026_01/IMG_8313.thumb.jpeg.4629688e7cdf16edacb55b28fb3a81fd.jpeg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2017_07/5967efec4cd88_Chamaedoreaelegansfront01.jpg.c36ef348a2315a9579168fc6c7f0fe36.jpg"
+  ],
+  "meta_title": "Chamaedorea elegans, palma de salón",
+  "meta_description": "Palmera compacta para interior o semisombra, fácil y muy decorativa.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 7,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-07T12:23:37.597078+00:00",
+  "common_name": "Palma de salón",
+  "plant_type": "palm",
+  "exposure": [
+   "semisombra",
+   "sombra"
+  ],
+  "climate_zones": [
+   "interior",
+   "tropical"
+  ],
+  "min_temp_c": 5,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "interior",
+   "exterior",
+   "colección"
+  ],
+  "rarity": "common",
+  "difficulty": "beginner",
+  "notes": "Fue una de las primeras palmeras exportadas masivamente a Europa en el siglo XIX.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "8db1a051-7f4f-4c82-acba-e0fa19b15f48",
+  "name": "Chamaedorea microspadix",
+  "scientific_name": "Chamaedorea microspadix",
+  "slug": "chamaedorea-microspadix",
+  "description": "Palmera cespitosa de hojas finas, resistente al frío moderado y apta para sombra luminosa.",
+  "short_description": "Palmera resistente para sombra",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 18,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "medium",
+  "mature_height": "3-4m",
+  "mature_width": "1-2m",
+  "origin_country": "MX",
+  "origin_region": "Sierra Madre",
+  "native_habitat": "Bosques montanos",
+  "care_instructions": [
+   "Semisombra",
+   "Suelo húmedo",
+   "Tolera frío moderado"
+  ],
+  "curious_facts": [
+   "Buena para climas suaves",
+   "Frutos rojos"
+  ],
+  "specifications": {
+   "cold": "alta",
+   "soil": "húmedo",
+   "habit": "multicaul"
+  },
+  "images": [
+   "https://i.etsystatic.com/24837219/r/il/42a703/5917410262/il_fullxfull.5917410262_il04.jpg",
+   "https://plants.rogersgardens.com/Content/Images/Photos/I048-09.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2022_05/20220505_150340.jpg.8ac258d6af15c66ca6da44ecd87f5738.jpg",
+   "https://projectpalm.net/assets/users/photos/user/IMG_7077.jpeg",
+   "https://florafutura.ch/wp-content/uploads/2022/10/chamaedorea-microspadix-7-cut.png"
+  ],
+  "meta_title": "Chamaedorea microspadix resistente",
+  "meta_description": "Palmera de sombra con buena tolerancia al frío moderado, ideal para jardines templados.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 8,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-27T21:55:47.031714+00:00",
+  "common_name": "Palma bambú",
+  "plant_type": "palm",
+  "exposure": [
+   "semisombra"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "subtropical"
+  ],
+  "min_temp_c": -6,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "intermediate",
+  "notes": "Produce frutos rojos muy decorativos que atraen fauna en su hábitat natural.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "9a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "e8c9a3c8-7441-4841-9a65-a26c6b1d0996",
+  "name": "Chamaedorea radicalis",
+  "scientific_name": "Chamaedorea radicalis",
+  "slug": "chamaedorea-radicalis",
+  "description": "Palmera pequeña y muy rústica, capaz de tolerar temperaturas bajas y condiciones variables.",
+  "short_description": "Palmera rústica tolerante al frío",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 18,
+  "sale_price": null,
+  "stock_qty": 4,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "medium",
+  "mature_height": "2-4m",
+  "mature_width": "1-2m",
+  "origin_country": "MX",
+  "origin_region": "Nuevo León/Tamaulipas",
+  "native_habitat": "Laderas y bosques secos-subhúmedos",
+  "care_instructions": [
+   "Suelo drenado",
+   "Riego moderado",
+   "Tolera frío"
+  ],
+  "curious_facts": [
+   "Muy rústica",
+   "Versátil"
+  ],
+  "specifications": {
+   "cold": "muy alta",
+   "soil": "drenado",
+   "growth": "medio"
+  },
+  "images": [
+   "https://www.palmpedia.net/wiki/images/thumb/4/4d/Gallery_1532_21_1653116.jpg/338px-Gallery_1532_21_1653116.jpg",
+   "https://www.monaconatureencyclopedia.com/wp-content/uploads/2017/01/1-94.jpg",
+   "https://www.palmpedia.net/wiki/images/thumb/f/f6/Gallery_1532_21_2780478.jpg/338px-Gallery_1532_21_2780478.jpg",
+   "https://www.palmpedia.net/wiki/images/thumb/3/3c/Post-376-0-75386200-1388024546.jpg/337px-Post-376-0-75386200-1388024546.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Chamaedorea_radicalis_2.jpg/250px-Chamaedorea_radicalis_2.jpg"
+  ],
+  "meta_title": "Chamaedorea radicalis rústica",
+  "meta_description": "Palmera compacta y muy rústica, tolera frío y se adapta bien con riego moderado.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 9,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-27T21:56:40.332063+00:00",
+  "common_name": null,
+  "plant_type": "palm",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "subtropical"
+  ],
+  "min_temp_c": -9,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "intermediate",
+  "notes": "Puede florecer incluso sin desarrollar un tronco visible.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "2f758864-7c4b-4415-8513-a0554953c95c",
+  "name": "Chamaedorea tepejilote",
+  "scientific_name": "Chamaedorea tepejilote",
+  "slug": "chamaedorea-tepejilote",
+  "description": "Palmera tropical de sotobosque, conocida también por su uso tradicional alimentario en Mesoamérica.",
+  "short_description": "Palmera tropical de sotobosque",
+  "category_id": null,
+  "price": 18,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "medium",
+  "mature_height": "4-6m",
+  "mature_width": "2-3m",
+  "origin_country": "GT",
+  "origin_region": "Centroamérica",
+  "native_habitat": "Selva húmeda",
+  "care_instructions": [
+   "Sombra",
+   "Humedad alta",
+   "Suelo rico",
+   "Riego frecuente"
+  ],
+  "curious_facts": [
+   "Uso alimentario tradicional"
+  ],
+  "specifications": {
+   "soil": "rico-húmedo",
+   "light": "sombra",
+   "growth": "medio"
+  },
+  "images": [
+   "https://arboretum.ufm.edu/wp-content/uploads/Chamaedorea-sp-1-scaled.jpg",
+   "https://letsgrowflorida.com/cdn/shop/files/Chamaedorea-Tepejilote_1024x1024@2x.jpg",
+   "https://www.backyardnature.net/n/16/160626pc.jpg",
+   "https://tropical.theferns.info/plantimages/sized/9/0/908296d8c21cbf269970b5b004343929c653f4e9_480px.jpg"
+  ],
+  "meta_title": "Chamaedorea tepejilote tropical",
+  "meta_description": "Palmera de sotobosque tropical; requiere humedad constante y sombra.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 10,
+  "created_at": "2026-02-07T00:38:57.772717+00:00",
+  "updated_at": "2026-02-27T22:01:33.487386+00:00",
+  "common_name": "Tepejilote",
+  "plant_type": "palm",
+  "exposure": [
+   "sombra",
+   "semisombra"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 6,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "advanced",
+  "notes": "Sus inflorescencias aún se consumen como manjar estacional en mercados locales.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "283cfacd-6336-4fc9-ae3d-7098ab85c4b2",
+  "name": "Chambeyronia lepidota \"Mid elevation\"",
+  "scientific_name": "Chambeyronia lepidota",
+  "slug": "chambeyronia-lepidota-mid-elevation",
+  "description": "Palmera ornamental muy valorada por su follaje elegante y brotes jóvenes decorativos.",
+  "short_description": "Palmera ornamental de follaje elegante",
+  "category_id": null,
+  "price": 45,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "medium",
+  "mature_height": "12-18m",
+  "mature_width": "4-6m",
+  "origin_country": "NC",
+  "origin_region": "Nueva Caledonia",
+  "native_habitat": "Bosques húmedos",
+  "care_instructions": [
+   "Suelo drenado",
+   "Riego moderado",
+   "Clima suave"
+  ],
+  "curious_facts": [
+   "Brotes jóvenes llamativos"
+  ],
+  "specifications": {
+   "soil": "drenado",
+   "growth": "medio",
+   "feature": "brotes color"
+  },
+  "images": [
+   "https://www.palmpedia.net/wiki/images/thumb/2/23/Chamblep0005z.jpg/400px-Chamblep0005z.jpg",
+   "https://www.palmpedia.net/wiki/images/thumb/8/8a/Chamblep0009z.jpg/372px-Chamblep0009z.jpg",
+   "https://www.palmpedia.net/wiki/images/thumb/2/24/ChaLep2.jpg/299px-ChaLep2.jpg",
+   "https://www.palmpedia.net/wiki/images/thumb/b/b8/P1010800.JPG/337px-P1010800.JPG"
+  ],
+  "meta_title": "Chambeyronia lepidota, palmera ornamental",
+  "meta_description": "Palmera de colección de follaje elegante, ideal en semisol con riego regular.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 11,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:03:44.745604+00:00",
+  "common_name": null,
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "subtropical",
+   "tropical"
+  ],
+  "min_temp_c": 0,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "rare",
+  "difficulty": "advanced",
+  "notes": "Está emparentada con especies famosas por sus hojas jóvenes de colores intensos.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "565c6154-d81e-45d2-afac-df55c2b4e922",
+  "name": "Cyphophoenix nucele",
+  "scientific_name": "Cyphophoenix nucele",
+  "slug": "cyphophoenix-nucele",
+  "description": "Palmera endémica de Nueva Caledonia, de gran valor ornamental y crecimiento lento.",
+  "short_description": "Palmera rara endémica de Nueva Caledonia",
+  "category_id": null,
+  "price": 64,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "slow",
+  "mature_height": "10-15m",
+  "mature_width": "3-5m",
+  "origin_country": "NC",
+  "origin_region": "Islas Loyauté",
+  "native_habitat": "Bosques insulares",
+  "care_instructions": [
+   "Suelo drenado",
+   "Humedad ambiental",
+   "Evitar frío"
+  ],
+  "curious_facts": [
+   "Endémica",
+   "Muy rara"
+  ],
+  "specifications": {
+   "salt": "media",
+   "soil": "drenado",
+   "growth": "lento"
+  },
+  "images": [
+   "https://palmpedia.net/wiki/images/thumb/8/86/Cyphophoenix_nucele.jpg/337px-Cyphophoenix_nucele.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2017_03/IMG_0304.thumb.JPG.8fba78bdfced50293eabb73daf5f72b9.JPG",
+   "https://www.palmpedia.net/palmsforcal/images/thumb/7/78/Cyphophoenix_nucele_crownshaft_Ha.JPG/337px-Cyphophoenix_nucele_crownshaft_Ha.JPG",
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/137562759/large.jpeg",
+   "https://jurassicpalms.com/cdn/shop/products/image_a9a02c58-33f4-42ce-a7ce-d966e7deecc1.jpg"
+  ],
+  "meta_title": "Cyphophoenix nucele, rareza NC",
+  "meta_description": "Palmera endémica muy rara, de crecimiento lento y gran valor ornamental.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 12,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:13:53.618117+00:00",
+  "common_name": "Lifou palm",
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 3,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "extremely_rare",
+  "difficulty": "expert",
+  "notes": "Su nombre hace referencia a la textura escamosa de sus semillas.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "ca53a9c2-3504-43cf-872b-ac21afefe75d",
+  "name": "Dictyocaryum lamarckianum",
+  "scientific_name": "Dictyocaryum lamarckianum",
+  "slug": "dictyocaryum-lamarckianum",
+  "description": "Palmera tropical elegante, de tronco esbelto y hojas pinnadas arqueadas. Muy apreciada en jardinería.",
+  "short_description": "Palmera tropical esbelta y muy ornamental",
+  "category_id": null,
+  "price": 55,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "medium",
+  "mature_height": "12-20m",
+  "mature_width": "3-5m",
+  "origin_country": "MU",
+  "origin_region": "Mascareñas",
+  "native_habitat": "Bosques húmedos oceánicos",
+  "care_instructions": [
+   "Humedad alta",
+   "Viento protegido",
+   "Suelo profundo"
+  ],
+  "curious_facts": [
+   "Porte muy elegante",
+   "Insular"
+  ],
+  "specifications": {
+   "soil": "profundo-húmedo",
+   "wind": "baja",
+   "growth": "medio"
+  },
+  "images": [
+   "https://palmpedia.net/wiki/images/thumb/2/20/Zlamarckianum.jpg/400px-Zlamarckianum.jpg",
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/79534768/original.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2016_10/IMG_3182.jpg.c71071a76833d0213753f66251c5c003.jpg",
+   "https://palmpedia.net/wiki/images/thumb/8/8c/Dictyocaryum_lamarckianum_14z.jpg/337px-Dictyocaryum_lamarckianum_14z.jpg"
+  ],
+  "meta_title": "Dictyocaryum lamarckianum esbelta",
+  "meta_description": "Palmera oceánica muy ornamental; prefiere humedad constante y abrigo del viento.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 13,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:15:36.116946+00:00",
+  "common_name": null,
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical",
+   "oceanico"
+  ],
+  "min_temp_c": 2,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "very_rare",
+  "difficulty": "advanced",
+  "notes": "Fue nombrada en honor a Lamarck, uno de los pioneros de la botánica evolutiva.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "283c82ed-919d-48d2-b4a9-2df7016198af",
+  "name": "Dracaena draco \"Madeira\"",
+  "scientific_name": "Dracaena draco",
+  "slug": "dracaena-draco-madeira",
+  "description": "Árbol emblemático de la Macaronesia, famoso por su porte escultórico y su savia rojiza.",
+  "short_description": "Árbol icónico de porte escultórico",
+  "category_id": "715d7016-135a-4a23-95cc-97c97b9e7ce5",
+  "price": 17,
+  "sale_price": null,
+  "stock_qty": 4,
+  "container_size": "1L",
+  "germination_date": "2025",
+  "growth_rate": "slow",
+  "mature_height": "10-15m",
+  "mature_width": "6-10m",
+  "origin_country": "ES",
+  "origin_region": "Canarias/Macaronesia",
+  "native_habitat": "Laderas secas y roquedos",
+  "care_instructions": [
+   "Suelo drenado",
+   "Poco riego",
+   "Sol",
+   "Evitar encharque"
+  ],
+  "curious_facts": [
+   "Sangre de drago",
+   "Muy longeva"
+  ],
+  "specifications": {
+   "soil": "mineral",
+   "growth": "lento",
+   "drought": "alta"
+  },
+  "images": [
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/60249389/large.jpeg",
+   "https://flora-on.pt/Dracaena-draco-draco_ori_FTtg.jpg",
+   "https://www.oficinadopaisagista.com.br/wp-content/uploads/2022/07/dracaena-dragoeiro-764x1024.jpg",
+   "https://mountainviewnursery.com.au/cdn/shop/files/master-DRADRA-1704682411-dracaena-draco.jpg?v=1754297806&width=1780"
+  ],
+  "meta_title": "Dracaena draco, drago canario",
+  "meta_description": "Árbol icónico y escultórico, muy resistente a sequía en climas suaves.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 14,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:16:14.953743+00:00",
+  "common_name": "Drago",
+  "plant_type": "tree",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "mediterraneo",
+   "subtropical"
+  ],
+  "min_temp_c": -3,
+  "water": "low",
+  "humidity": "low",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "beginner",
+  "notes": "La resina rojiza fue usada históricamente como pigmento y barniz para instrumentos.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "9b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "091bc821-4351-49ac-87a1-9d70a2fb326f",
+  "name": "Euphorbia francoisii",
+  "scientific_name": "Euphorbia francoisii",
+  "slug": "euphorbia-francoisii",
+  "description": "Planta suculenta de Madagascar, muy apreciada por su forma escultural y rareza.",
+  "short_description": "Suculenta exótica y escultural",
+  "category_id": "374c8b53-0d9e-4809-ba4e-ab58d60ec146",
+  "price": 65,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "0.3L",
+  "germination_date": "2018",
+  "growth_rate": "slow",
+  "mature_height": "1-2m",
+  "mature_width": "1-2m",
+  "origin_country": "MG",
+  "origin_region": "Madagascar",
+  "native_habitat": "Matorral seco espinoso",
+  "care_instructions": [
+   "Suelo mineral",
+   "Riego mínimo",
+   "Mucha luz"
+  ],
+  "curious_facts": [
+   "Formas escultóricas",
+   "Endémica"
+  ],
+  "specifications": {
+   "soil": "muy drenante",
+   "water": "muy bajo",
+   "spines": "sí"
+  },
+  "images": [
+   "https://www.cactofili.org/images/plants/img_7265_a_scelta_198.jpeg",
+   "https://www.tropicanursery.com/catalog_images/385/1672637178-brown-knight_thumbnail.jpg",
+   "https://bihrmann.com/caudiciforms/difo/eup-fra-2.jpg",
+   "https://www.thaiornamentalplants.com/wp-content/uploads/elementor/thumbs/IMG_6644-qk2jsstxe0lwz5xpk0elo8ce67e7d2ewwrzf5dfzxc.jpg"
+  ],
+  "meta_title": "Euphorbia francoisii suculenta rara",
+  "meta_description": "Suculenta de colección, requiere mucha luz y riegos muy espaciados.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 15,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:16:54.928362+00:00",
+  "common_name": null,
+  "plant_type": "succulent",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "mediterraneo",
+   "tropical"
+  ],
+  "min_temp_c": 8,
+  "water": "low",
+  "humidity": "low",
+  "plant_use": [
+   "interior",
+   "colección"
+  ],
+  "rarity": "very_rare",
+  "difficulty": "advanced",
+  "notes": "Presenta una enorme variabilidad de formas incluso dentro de la misma población.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "11b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "7dfd44b3-5aa2-4466-a251-f1cd789122c9",
+  "name": "Geonoma undata",
+  "scientific_name": "Geonoma undata",
+  "slug": "geonoma-undata",
+  "description": "La Geonoma undata es una de las palmeras de montaña más espectaculares y codiciadas por los coleccionistas de climas templados y subtropicales. Originaria de las selvas nubladas de América Central y del Sur, destaca por su tronco robusto y solitario, coronado por frondas coriáceas de un verde intenso con folíolos anchos y ondulados. A diferencia de muchas palmeras tropicales, la G. undata prefiere temperaturas frescas y una humedad ambiental muy elevada, lo que la convierte en una candidata ideal para jardines en climas oceánicos o zonas de montaña sin heladas fuertes. Su cuidado requiere un sustrato rico en materia orgánica, bien drenado pero constantemente húmedo. Es fundamental evitar el calor extremo y la luz solar directa intensa, ya que prospera mejor en condiciones de semisombra que imiten el sotobosque de las nubes. Es una planta de crecimiento pausado que recompensa la paciencia con una elegancia estructural inigualable.",
+  "short_description": "Exclusiva palmera de selva nublada con hojas anchas y onduladas, ideal para climas frescos y húmedos.",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 100,
+  "sale_price": null,
+  "stock_qty": 0,
+  "container_size": "15-25 cm (maceta profunda)",
+  "germination_date": null,
+  "growth_rate": "slow",
+  "mature_height": "4-8 m",
+  "mature_width": "2-3 m",
+  "origin_country": "CO",
+  "origin_region": "Andes y cordilleras de Centroamérica",
+  "native_habitat": "Bosques nubosos y selvas de alta montaña desde México hasta Bolivia, creciendo generalmente entre los 1.000 y 3.000 metros de altitud.",
+  "care_instructions": {},
+  "curious_facts": [],
+  "specifications": {},
+  "images": [
+   "https://static.inaturalist.org/photos/475641839/original.jpeg",
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/63127551/original.jpeg",
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/63127744/original.jpeg",
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/63127783/original.jpeg",
+   "https://inaturalist-open-data.s3.amazonaws.com/photos/151921478/original.jpg"
+  ],
+  "meta_title": "Geonoma undata | Palmera de Colección",
+  "meta_description": "Compra Geonoma undata, la exótica palmera de selva nublada. Ideal para climas frescos y húmedos. Planta de colección disponible en The Remainder.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 0,
+  "created_at": "2026-02-28T00:25:06.709144+00:00",
+  "updated_at": "2026-02-28T00:25:06.709144+00:00",
+  "common_name": "Palma de montaña",
+  "plant_type": "palm",
+  "exposure": [
+   "semisombra",
+   "sombra"
+  ],
+  "climate_zones": [
+   "tropical",
+   "subtropical",
+   "oceánico"
+  ],
+  "min_temp_c": 1,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "jardin",
+   "maceta"
+  ],
+  "rarity": "rare",
+  "difficulty": "advanced",
+  "notes": "Especie de alta montaña, muy sensible al calor seco y a la falta de humedad radicular. Confianza alta en identificación taxonómica. Confianza media en límites exactos de temperatura mínima (reportada hasta 0°C pero con daño foliar).",
+  "weight_grams": null,
+  "family": "Arecaceae",
+  "variety": null,
+  "image_alt_text": "Geonoma undata palmera de montaña",
+  "reference_url": "https://www.gbif.org/species/2735749",
+  "hardiness_zones": [
+   "10a",
+   "10b",
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": [
+   "palmera de colección",
+   "bosque nuboso",
+   "rara",
+   "exótica",
+   "frio-tolerante"
+  ]
+ },
+ {
+  "id": "a2d4751d-1ace-4100-b31e-78c6c5d7abf9",
+  "name": "Ixora margaretae",
+  "scientific_name": "Ixora margaretae",
+  "slug": "ixora-margaretae",
+  "description": "Un arbusto tropical de follaje brillante y floración ornamental, originario de Nueva Caledonia.",
+  "short_description": "Arbusto tropical de floración ornamental",
+  "category_id": null,
+  "price": 25,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "medium",
+  "mature_height": "3-5m",
+  "mature_width": "2-3m",
+  "origin_country": "NC",
+  "origin_region": "Nueva Caledonia",
+  "native_habitat": "Bosque tropical húmedo",
+  "care_instructions": [
+   "Suelo ácido",
+   "Humedad alta",
+   "Semisol",
+   "Riego regular"
+  ],
+  "curious_facts": [
+   "Floración ornamental",
+   "Poco común"
+  ],
+  "specifications": {
+   "soil": "ácido",
+   "flower": "ornamental",
+   "humidity": "alta"
+  },
+  "images": [
+   "https://onszaden.com//Files/10/221000/221010/ProductPhotos/Source/1991101041.jpg",
+   "https://i.pinimg.com/564x/b5/7d/4b/b57d4b99fc25950638d03dca1f157784.jpg",
+   "https://pbs.twimg.com/media/F3Py9tsbsAAqfac.jpg",
+   "https://pbs.twimg.com/media/F3Py9tqbgAAfyFN.jpg"
+  ],
+  "meta_title": "Ixora margaretae tropical ornamental",
+  "meta_description": "Arbusto tropical de floración decorativa; necesita humedad ambiental y suelo ácido.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 16,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:21:20.437427+00:00",
+  "common_name": null,
+  "plant_type": "shrub",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 7,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "interior",
+   "colección"
+  ],
+  "rarity": "rare",
+  "difficulty": "advanced",
+  "notes": "Pertenece a un género muy conocido, pero esta especie es casi desconocida fuera de su isla.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "31b717a1-7558-473b-85cf-f0d86140eb94",
+  "name": "Livistona decora",
+  "scientific_name": "Livistona decipiens",
+  "slug": "livistona-decora",
+  "description": "Palmera de hojas palmadas elegantes, muy tolerante a la sequía una vez establecida.",
+  "short_description": "Palmera resistente de hojas palmadas",
+  "category_id": null,
+  "price": 10,
+  "sale_price": null,
+  "stock_qty": 7,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "medium",
+  "mature_height": "10-15m",
+  "mature_width": "4-6m",
+  "origin_country": "AU",
+  "origin_region": "Queensland",
+  "native_habitat": "Bosques abiertos/secos",
+  "care_instructions": [
+   "Sol",
+   "Riego bajo adulto",
+   "Suelo drenado"
+  ],
+  "curious_facts": [
+   "Muy tolerante a sequía"
+  ],
+  "specifications": {
+   "soil": "drenado",
+   "growth": "medio",
+   "drought": "alta"
+  },
+  "images": [
+   "data:image/jpeg;base64,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",
+   "https://static.inaturalist.org/photos/106528756/medium.jpg",
+   "https://cdn-ikpmiob.nitrocdn.com/RvvBoOylnRxQzWxXRKmvmlmchysxbOTV/assets/images/optimized/rev-7114f0c/palmseedlings.com/wp-content/uploads/2024/04/Livistona-Decora-4.webp",
+   "data:image/jpeg;base64,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"
+  ],
+  "meta_title": "Livistona decipiens, abanico resistente",
+  "meta_description": "Palmera de hojas palmadas muy resistente y adaptable, ideal para sol y bajo riego.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 17,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:25:56.045364+00:00",
+  "common_name": "Ribbon fan palm",
+  "plant_type": "palm",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "mediterraneo",
+   "subtropical"
+  ],
+  "min_temp_c": -6,
+  "water": "low",
+  "humidity": "low",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "common",
+  "difficulty": "intermediate",
+  "notes": "Sus hojas pueden producir sonidos audibles con viento fuerte.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "9a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "3cbe7653-6fc4-457f-8ef7-2a9b395a0b94",
+  "name": "Loxococcus rupicola",
+  "scientific_name": "Loxococcus rupicola",
+  "slug": "loxococcus-rupicola",
+  "description": "Palmera poco común de Sri Lanka, robusta y adaptada a ambientes rocosos y húmedos.",
+  "short_description": "Palmera tropical poco común",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 52,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "slow",
+  "mature_height": "10-15m",
+  "mature_width": "4-6m",
+  "origin_country": "LK",
+  "origin_region": "Sri Lanka",
+  "native_habitat": "Rocas húmedas y bosques",
+  "care_instructions": [
+   "Humedad alta",
+   "Semisol",
+   "Suelo drenado"
+  ],
+  "curious_facts": [
+   "Crece en roquedos"
+  ],
+  "specifications": {
+   "soil": "drenado-húmedo",
+   "growth": "lento",
+   "habitat": "rocoso"
+  },
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/5/57/Loxococcus_rupicola.jpg",
+   "https://www.palmpedia.net/wiki/images/thumb/3/3c/7bad3fab-0086-40ad-a007-7ff1b51b0166.jpg/400px-7bad3fab-0086-40ad-a007-7ff1b51b0166.jpg",
+   "https://media.e-taxonomy.eu/palmae/photos/palm_tc_115242_8.jpg",
+   "https://d2seqvvyy3b8p2.cloudfront.net/45589d43e34476215f503a6a2b273525.jpg",
+   "https://d2seqvvyy3b8p2.cloudfront.net/a986ff0fc94096923f9197ae19180de5.jpg"
+  ],
+  "meta_title": "Loxococcus rupicola, palmera rarísima",
+  "meta_description": "Palmera muy rara de Sri Lanka, amante de humedad y semisombra.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 18,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:28:01.704554+00:00",
+  "common_name": "Dothalu palm",
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 4,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "extremely_rare",
+  "difficulty": "expert",
+  "notes": "Es una de las pocas palmeras adaptadas a crecer directamente sobre roca.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "3b07ea78-d7b3-4272-9c3c-b1429257f2a9",
+  "name": "Magnolia campbellii",
+  "scientific_name": "Magnolia campbellii",
+  "slug": "magnolia-campbellii",
+  "description": "Magnolia de gran tamaño, conocida por su espectacular floración temprana.",
+  "short_description": "Magnolia de gran floración primaveral",
+  "category_id": null,
+  "price": 15,
+  "sale_price": null,
+  "stock_qty": 2,
+  "container_size": "1L",
+  "germination_date": "2024",
+  "growth_rate": "medium",
+  "mature_height": "20-25m",
+  "mature_width": "8-12m",
+  "origin_country": "NP",
+  "origin_region": "Himalaya",
+  "native_habitat": "Bosques templados montanos",
+  "care_instructions": [
+   "Suelo ácido",
+   "Riego regular",
+   "Proteger vientos fríos"
+  ],
+  "curious_facts": [
+   "Floración muy temprana"
+  ],
+  "specifications": {
+   "soil": "ácido",
+   "flower": "muy grande",
+   "growth": "medio"
+  },
+  "images": [
+   "https://www.treesandshrubsonline.org/site/assets/files/6192/magnolia-campbellii-11.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/d/d8/Magnolia_campbellii.jpg",
+   "https://www.treesandshrubsonline.org/site/assets/files/18852/magnolia-campbellii-raffillii-group-5.jpg",
+   "https://pukeiti.gardenexplorer.org/AppImages/3184.jpg"
+  ],
+  "meta_title": "Magnolia campbellii, floración espectacular",
+  "meta_description": "Magnolia de gran porte y floración temprana; ideal en climas frescos y suelos ácidos.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 19,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:31:00.300096+00:00",
+  "common_name": null,
+  "plant_type": "tree",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "templado"
+  ],
+  "min_temp_c": -12,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "advanced",
+  "notes": "Florece antes de que broten las hojas, creando un impacto visual muy marcado.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "714a5bf6-c65e-4b8c-bb2c-3a977a9dbfb9",
+  "name": "Magnolia grandiflora",
+  "scientific_name": "Magnolia grandiflora",
+  "slug": "magnolia-grandiflora",
+  "description": "Árbol perenne de hojas brillantes y grandes flores blancas muy aromáticas.",
+  "short_description": "Árbol perenne de flores blancas aromáticas",
+  "category_id": null,
+  "price": 7,
+  "sale_price": null,
+  "stock_qty": 10,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "medium",
+  "mature_height": "20-30m",
+  "mature_width": "8-12m",
+  "origin_country": "US",
+  "origin_region": "SE Estados Unidos",
+  "native_habitat": "Bosques subtropicales",
+  "care_instructions": [
+   "Suelo profundo",
+   "Riego regular",
+   "Sol o semisol"
+  ],
+  "curious_facts": [
+   "Flores aromáticas",
+   "Perenne"
+  ],
+  "specifications": {
+   "soil": "profundo",
+   "flower": "aromática",
+   "evergreen": "sí"
+  },
+  "images": [
+   "https://www.viverosshangai.es/image/cache/catalog/blog/La-Magnolia-Grandiflora-1250x750.jpg",
+   "https://www.arundelarboretum.co.uk/cdn/shop/articles/Magnolia_grandiflora_3.jpg?v=1670886717",
+   "https://www.thegardener.co.za/wp-content/uploads/2022/02/20200604_105537.jpg",
+   "https://www.urbanjungle.uk.com/wp-content/uploads/2023/03/magnolia-grandiflora3-WK.jpg",
+   "https://www.siteone.com/medias/sys_master/PimProductImages/assets/ProductAssets/US/Portfolio/itemImage/261650/image-thumb__261650__pdpIcon/803177-1.e8d5a824/803177-1.e8d5a824.jpg"
+  ],
+  "meta_title": "Magnolia grandiflora, flores aromáticas",
+  "meta_description": "Árbol perenne con grandes flores blancas; resistente y muy ornamental en jardines.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 20,
+  "created_at": "2026-02-07T00:40:00.739015+00:00",
+  "updated_at": "2026-02-27T22:33:30.446414+00:00",
+  "common_name": null,
+  "plant_type": "tree",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "mediterraneo",
+   "subtropical"
+  ],
+  "min_temp_c": -10,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior"
+  ],
+  "rarity": "common",
+  "difficulty": "intermediate",
+  "notes": "Sus flores pueden tardar más de un mes en descomponerse tras caer.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "51cbfe20-2815-4992-bcd6-766bc6d257af",
+  "name": "Magnolia laevifolia",
+  "scientific_name": "Magnolia laevifolia",
+  "slug": "magnolia-laevifolia",
+  "description": "Magnolia compacta y aromática, adecuada para jardines pequeños y climas templados.",
+  "short_description": "Magnolia compacta y aromática",
+  "category_id": null,
+  "price": 22,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "slow",
+  "mature_height": "6-10m",
+  "mature_width": "3-5m",
+  "origin_country": "CN",
+  "origin_region": "Yunnan/SE Asia",
+  "native_habitat": "Bosques subtropicales",
+  "care_instructions": [
+   "Semisol",
+   "Suelo ácido",
+   "Riego moderado"
+  ],
+  "curious_facts": [
+   "Muy aromática",
+   "Compacta"
+  ],
+  "specifications": {
+   "size": "compacta",
+   "soil": "ácido",
+   "flower": "perfumada"
+  },
+  "images": [
+   "https://www.treesandshrubsonline.org/site/assets/files/18702/magnolia-laevifolia-gails-favourite-1.jpg",
+   "https://panglobal-sz.b-cdn.net/2021/12/magnolia-laevifolia-syn-michelia-yunnanensis-scaled.jpg",
+   "https://apps.rhs.org.uk/plantselectorimages/detail/MagnolialaevifoliaGailsFavourite.jpg",
+   "https://www.gardenplantsonline.co.uk/wp-content/uploads/2020/04/2-37.jpg",
+   "https://www.treesandshrubsonline.org/site/assets/files/6219/magnolia-laevifolia-14.jpg"
+  ],
+  "meta_title": "Magnolia laevifolia compacta aromática",
+  "meta_description": "Magnolia compacta y perfumada; ideal en semisol con suelos ácidos y riego regular.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 21,
+  "created_at": "2026-02-07T00:41:01.609571+00:00",
+  "updated_at": "2026-02-27T22:37:11.248805+00:00",
+  "common_name": null,
+  "plant_type": "tree",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "subtropical"
+  ],
+  "min_temp_c": -5,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "intermediate",
+  "notes": "Durante años se clasificó en otro género por diferencias florales.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "9a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "c40001a0-4bb6-4ad1-94bd-7fe778925922",
+  "name": "Phormium cookianum",
+  "scientific_name": "Phormium cookianum",
+  "slug": "phormium-cookianum",
+  "description": "Planta perenne de hojas largas y fibrosas, muy utilizada en jardinería estructural.",
+  "short_description": "Planta estructural de hojas largas",
+  "category_id": null,
+  "price": 12,
+  "sale_price": null,
+  "stock_qty": 10,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "medium",
+  "mature_height": "2-4m",
+  "mature_width": "2-3m",
+  "origin_country": "NZ",
+  "origin_region": "Nueva Zelanda",
+  "native_habitat": "Costas ventosas y laderas",
+  "care_instructions": [
+   "Resiste viento",
+   "Riego moderado",
+   "Suelo drenado"
+  ],
+  "curious_facts": [
+   "Uso tradicional fibra",
+   "Muy rústica"
+  ],
+  "specifications": {
+   "salt": "media",
+   "wind": "alta",
+   "habit": "macollo"
+  },
+  "images": [
+   "https://maryflower.co.nz/wp-content/uploads/2015/05/Phormium-Cookianum-scaled.jpg",
+   "https://www.promessedefleurs.es/media/catalog/product/P/h/Phormium-Bronze-Baby-Lin-de-Nouvelle-Zelande-IF-22469-1.jpg",
+   "https://www.gardensonline.com.au/Uploads/Plant/2468/Phormium-Cookianum-Purpurea-b.jpg",
+   "https://awapuni.co.nz/images/products/main/566_Cookianum-Moutain-Flax.jpg"
+  ],
+  "meta_title": "Phormium cookianum, wharariki resistente",
+  "meta_description": "Planta estructural resistente al viento; ideal en climas oceánicos con riego moderado.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 24,
+  "created_at": "2026-02-07T00:41:01.609571+00:00",
+  "updated_at": "2026-02-27T22:43:36.184142+00:00",
+  "common_name": "Wharariki",
+  "plant_type": "grass",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "oceanico"
+  ],
+  "min_temp_c": -8,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior"
+  ],
+  "rarity": "common",
+  "difficulty": "beginner",
+  "notes": "Sus fibras se usaron históricamente para fabricar cuerdas y tejidos resistentes al agua.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "1c0cca65-e48c-4df0-9529-52ed0a020aec",
+  "name": "Podocarpus macrophyllus",
+  "scientific_name": "Podocarpus macrophyllus",
+  "slug": "podocarpus-macrophyllus",
+  "description": "Conífera ornamental muy versátil, apta para setos, bonsái o arbolado urbano.",
+  "short_description": "Conífera ornamental muy versátil",
+  "category_id": null,
+  "price": 18,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "1L",
+  "germination_date": "2024",
+  "growth_rate": "slow",
+  "mature_height": "10-20m",
+  "mature_width": "4-8m",
+  "origin_country": "JP",
+  "origin_region": "Japón/China",
+  "native_habitat": "Bosques templados-subtropicales",
+  "care_instructions": [
+   "Semisol",
+   "Riego moderado",
+   "Poda tolerada"
+  ],
+  "curious_facts": [
+   "Muy usado en bonsái"
+  ],
+  "specifications": {
+   "use": "seto/bonsái",
+   "shade": "media",
+   "pruning": "alta"
+  },
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/a/af/Podocarpus_macrophyllus.jpg",
+   "https://www.treesandshrubsonline.org/site/assets/files/10848/podocarpus-macrophyllus-var-maki-4.jpg",
+   "https://www.promessedefleurs.es/media/catalog/product/P/o/Podocarpus-macrophyllus-0756002-1.jpg",
+   "https://d2seqvvyy3b8p2.cloudfront.net/227e2f5279c9d641b3752cb4271a8446.jpg",
+   "https://www.conifers.org/po/po/m/macrophyllus5.jpg"
+  ],
+  "meta_title": "Podocarpus macrophyllus, pino budista",
+  "meta_description": "Conífera ornamental muy versátil, apta para setos, arbolado y bonsái.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 25,
+  "created_at": "2026-02-07T00:41:01.609571+00:00",
+  "updated_at": "2026-02-27T22:47:21.41035+00:00",
+  "common_name": "Buddhist pine",
+  "plant_type": "tree",
+  "exposure": [
+   "semisol",
+   "sombra"
+  ],
+  "climate_zones": [
+   "subtropical",
+   "atlantico"
+  ],
+  "min_temp_c": -10,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "interior",
+   "colección"
+  ],
+  "rarity": "common",
+  "difficulty": "beginner",
+  "notes": "No es un pino real, aunque su nombre común lo sugiera.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "83d4b3c0-1c7a-4442-a5cc-5f555fdc6da7",
+  "name": "Prestoea acuminata var. acuminata ",
+  "scientific_name": "Prestoea acuminata var. acuminata",
+  "slug": "prestoea-acuminata-var-acuminata",
+  "description": "La Prestoea acuminata var. acuminata es una palmera elegante y esbelta, originaria de las selvas nubladas de América Central y del Sur. Se distingue por su tronco solitario, liso y grisáceo, coronado por un capitel verde y frondas pinnadas de un verde vibrante que caen con gracia. A diferencia de otras palmeras tropicales, esta variedad prospera en altitudes elevadas, lo que le otorga una resistencia notable a temperaturas más frescas, aunque no tolera heladas intensas. \n\nEn cuanto a sus cuidados, requiere un entorno que simule su hábitat de bosque montano: alta humedad ambiental, riego constante para mantener el sustrato húmedo (pero bien drenado) y una exposición de semisombra o luz filtrada, ya que el sol directo intenso puede quemar sus hojas. Es una opción excepcional para coleccionistas que buscan una palmera con aspecto tropical pero que prefieren climas subtropicales o invernaderos frescos. Su crecimiento es moderado y aporta una estructura vertical muy estética tanto en jardines protegidos como en grandes contenedores.",
+  "short_description": "Elegante palmera de montaña con tronco esbelto y capitel verde, ideal para zonas de semisombra y alta humedad.",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 150,
+  "sale_price": null,
+  "stock_qty": 0,
+  "container_size": "15-30 cm pot",
+  "germination_date": null,
+  "growth_rate": "moderate",
+  "mature_height": "5-12 m",
+  "mature_width": "2-3 m",
+  "origin_country": "CO",
+  "origin_region": "Andes y Centroamérica",
+  "native_habitat": "Bosques nublados y selvas montanas desde Centroamérica hasta los Andes en Sudamérica, creciendo a menudo en pendientes húmedas.",
+  "care_instructions": {},
+  "curious_facts": [],
+  "specifications": {},
+  "images": [
+   "https://qsjnjitjbegtrxgwqygg.supabase.co/storage/v1/object/public/plant-images/plants/1772239051314-lpdyqqwaxom.jpeg",
+   "https://www.palmpedia.net/palmsforcal/images/thumb/6/64/Prestoea_acuminata_var_acuminata.JPG/337px-Prestoea_acuminata_var_acuminata.JPG",
+   "https://www.palmpedia.net/palmsforcal/images/thumb/e/ea/Prestoea_acuminata_var._acuminata_DArold.jpg/337px-Prestoea_acuminata_var._acuminata_DArold.jpg"
+  ],
+  "meta_title": "Prestoea acuminata var. acuminata | Palmera de Montaña",
+  "meta_description": "Compra Prestoea acuminata var. acuminata, una palmera de montaña elegante y resistente al fresco. Ideal para climas subtropicales y coleccionistas. Envío expert",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 0,
+  "created_at": "2026-02-28T00:37:40.586738+00:00",
+  "updated_at": "2026-02-28T00:37:40.586738+00:00",
+  "common_name": "Palma de Manaca",
+  "plant_type": "palm",
+  "exposure": [
+   "semisombra",
+   "sombra"
+  ],
+  "climate_zones": [
+   "tropical",
+   "subtropical",
+   "templado"
+  ],
+  "min_temp_c": 1,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "jardin",
+   "maceta"
+  ],
+  "rarity": "rare",
+  "difficulty": "intermediate",
+  "notes": "Identificación confirmada como la variedad tipo. Es menos común en cultivo que la var. montana. Confianza alta en datos climáticos debido a su origen altitudinal. Scientific_name: 0.98, Family: 1.0, Min_temp_c: 0.85, Rarity: 0.9.",
+  "weight_grams": null,
+  "family": "Arecaceae",
+  "variety": null,
+  "image_alt_text": "Prestoea acuminata var. acuminata planta palmera",
+  "reference_url": "https://www.gbif.org/species/2735160",
+  "hardiness_zones": [
+   "10a",
+   "10b",
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": [
+   "tropical",
+   "rara",
+   "coleccionista",
+   "palmera de montaña",
+   "exótica"
+  ]
+ },
+ {
+  "id": "6222eb97-c4c4-4990-afb2-566c0f836b03",
+  "name": "Pritchardia hillebrandii",
+  "scientific_name": "Pritchardia hillebrandii",
+  "slug": "pritchardia-hillebrandii",
+  "description": "Palmera hawaiana de hojas grandes y circulares, muy ornamental y poco común en cultivo.",
+  "short_description": "Palmera hawaiana de hojas circulares",
+  "category_id": null,
+  "price": 25,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "slow",
+  "mature_height": "8-12m",
+  "mature_width": "3-5m",
+  "origin_country": "US",
+  "origin_region": "Hawái",
+  "native_habitat": "Bosques húmedos insulares",
+  "care_instructions": [
+   "Semisol",
+   "Suelo drenado",
+   "Riego moderado"
+  ],
+  "curious_facts": [
+   "Loulu hawaiana",
+   "Protegida"
+  ],
+  "specifications": {
+   "salt": "baja",
+   "soil": "drenado",
+   "growth": "lento"
+  },
+  "images": [
+   "https://www.palmerasyjardines.com/wp-content/uploads/2019/02/100574.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2019_05/221367473_PritchardiahillebrandiiIPS1.jpg.d75db1d948d758ab191927e8d362dff4.jpg",
+   "https://www.promessedefleurs.es/media/catalog/product/P/r/Pritchardia-hillebrandii-89926-1.jpg",
+   "https://s3-us-west-2.amazonaws.com/ntbgmeettheplants/images/600h/PritchHillebMcBMar03.05-0083.jpg",
+   "https://www.palmerasyjardines.com/wp-content/uploads/2019/02/002086.jpg"
+  ],
+  "meta_title": "Pritchardia hillebrandii, loulu hawaiana",
+  "meta_description": "Palmera hawaiana rara de hojas circulares, ideal en climas cálidos sin heladas.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 26,
+  "created_at": "2026-02-07T00:41:01.609571+00:00",
+  "updated_at": "2026-02-27T22:50:45.397642+00:00",
+  "common_name": "Loulu",
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical",
+   "oceanico"
+  ],
+  "min_temp_c": 4,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "extremely_rare",
+  "difficulty": "advanced",
+  "notes": "Forma parte de un grupo de palmeras con fuerte valor cultural en Hawái.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "4339ffeb-3444-4721-82cb-edb7af70858b",
+  "name": "Ptychosperma elegans",
+  "scientific_name": "Ptychosperma elegans",
+  "slug": "ptychosperma-elegans",
+  "description": "Palmera estilizada y de crecimiento rápido, ideal para climas tropicales y subtropicales.",
+  "short_description": "Palmera estilizada de crecimiento rápido",
+  "category_id": null,
+  "price": 40,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2024",
+  "growth_rate": "fast",
+  "mature_height": "10-12m",
+  "mature_width": "3-4m",
+  "origin_country": "AU",
+  "origin_region": "Queensland",
+  "native_habitat": "Bosques tropicales",
+  "care_instructions": [
+   "Riego regular",
+   "Suelo drenado",
+   "Clima cálido"
+  ],
+  "curious_facts": [
+   "Crece rápido"
+  ],
+  "specifications": {
+   "soil": "drenado",
+   "habit": "solitaria",
+   "growth": "rápido"
+  },
+  "images": [
+   "https://www.siteone.com/medias/sys_master/PimProductImages/assets/ProductAssets/US/NoBrand/itemImage/184944/image-thumb__184944__pdpIcon/572691-1-571338.491f7be1/572691-1-571338.491f7be1.jpg",
+   "https://www.palmerasyjardines.com/wp-content/uploads/2019/02/100579.jpg",
+   "https://static.wixstatic.com/media/08ddc4_65f412440b924394bee5d10ec81d416c~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+   "https://www.thetutuguru.com.au/wp-content/uploads/2022/06/Ptychosperma-elegans-Solitaire-Palm.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/4/4b/Ptychosperma_elegans%E2%80%94_characteristic_blunt%2C_jagged_leaflet_tips.jpg"
+  ],
+  "meta_title": "Ptychosperma elegans, palmera estilizada",
+  "meta_description": "Palmera estilizada y rápida, perfecta para dar verticalidad en jardines cálidos.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 27,
+  "created_at": "2026-02-07T00:41:01.609571+00:00",
+  "updated_at": "2026-02-27T22:54:17.901547+00:00",
+  "common_name": "Solitaire palm",
+  "plant_type": "palm",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 5,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "common",
+  "difficulty": "intermediate",
+  "notes": "Es una de las palmeras tropicales más usadas en paisajismo urbano asiático.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "e2b96beb-2256-4a9e-9b7b-7fbf33b7def7",
+  "name": "Rhopalostylis baueri var. cheesemanii",
+  "scientific_name": "Rhopalostylis baueri",
+  "slug": "rhopalostylis-baueri-var-cheesemanii",
+  "description": "Palmera elegante y de crecimiento lento, endémica de Norfolk Island.",
+  "short_description": "Palmera elegante de clima oceánico",
+  "category_id": null,
+  "price": 38,
+  "sale_price": null,
+  "stock_qty": 2,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "slow",
+  "mature_height": "10-15m",
+  "mature_width": "3-5m",
+  "origin_country": "NF",
+  "origin_region": "Norfolk Island",
+  "native_habitat": "Bosques oceánicos",
+  "care_instructions": [
+   "Suelo profundo",
+   "Riego moderado",
+   "Clima suave"
+  ],
+  "curious_facts": [
+   "Endémica Norfolk",
+   "Muy elegante"
+  ],
+  "specifications": {
+   "soil": "profundo",
+   "wind": "baja",
+   "growth": "lento"
+  },
+  "images": [
+   "https://www.theplantcompany.co.nz/file/getimage/shop/jpg/md/rhopalostylis_baurei_var_cheesmanii.webp",
+   "https://kentia.it/wp-content/uploads/2020/11/Rophalostylis-2.jpg",
+   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYJ1pjYDK4gPez2QoxS3_QF3no4qEZOuLaZA&s",
+   "https://www.nzpcn.org.nz/site/assets/files/0/27/792/qqq_eubcnybfglyvf-onhrev-ynetr-01.400x400-u0c0i1s1q90f1.jpg"
+  ],
+  "meta_title": "Rhopalostylis baueri, palmera de Norfolk",
+  "meta_description": "Palmera oceánica elegante y rara; necesita clima suave, humedad moderada y suelo profundo.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 29,
+  "created_at": "2026-02-07T00:41:01.609571+00:00",
+  "updated_at": "2026-02-27T23:04:02.77334+00:00",
+  "common_name": "Norfolk Island palm",
+  "plant_type": "palm",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "oceanico"
+  ],
+  "min_temp_c": 0,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "very_rare",
+  "difficulty": "advanced",
+  "notes": "Crece de forma natural en suelos volcánicos profundos.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "10a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "2711ad51-9dae-4cb2-b88a-e49d87529fb2",
+  "name": "Sabal casuarium",
+  "scientific_name": "Sabal causiarum",
+  "slug": "sabal-causiarum",
+  "description": "Sabal causiarum es una de las palmeras más majestuosas y robustas del género Sabal. Originaria de Puerto Rico, las Islas Vírgenes y La Española, destaca por su tronco masivo y liso de color gris claro, que puede alcanzar diámetros considerables. Sus hojas son costapalmadas, de un verde azulado o grisáceo, y forman una corona densa y esférica muy atractiva. Es una especie extremadamente resistente una vez establecida, capaz de tolerar vientos huracanados y periodos de sequía. En cuanto a su cultivo, prefiere una exposición a pleno sol para desarrollar su máximo potencial. Aunque su crecimiento inicial es algo lento, acelera notablemente una vez que el tronco comienza a formarse. Es ideal para grandes jardines, avenidas o como ejemplar solitario donde su porte arquitectónico pueda destacar. Requiere suelos bien drenados, aunque se adapta a diversos tipos de sustrato, incluidos los calizos. Es una opción excelente para climas mediterráneos y subtropicales debido a su notable resistencia al frío moderado.",
+  "short_description": "Impresionante palmera de tronco masivo y grisáceo, muy resistente al viento y al frío moderado.",
+  "category_id": null,
+  "price": 15,
+  "sale_price": null,
+  "stock_qty": 2,
+  "container_size": "15-30 litros (ejemplares jóvenes)",
+  "germination_date": null,
+  "growth_rate": "slow",
+  "mature_height": "10-15 m",
+  "mature_width": "4-6 m",
+  "origin_country": "PR",
+  "origin_region": "Puerto Rico y el Caribe",
+  "native_habitat": "Bosques secos y zonas costeras de Puerto Rico, La Española y las Islas Vírgenes, a menudo en suelos de origen calizo.",
+  "care_instructions": {},
+  "curious_facts": [],
+  "specifications": {},
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/4/49/Sabal_causiarum.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2018_11/SCausiarum2018oct.jpg.bc6ca45cfdb0f0cac92d4808353ace90.jpg",
+   "https://www.plantdelights.com/cdn/shop/files/Sabal-palmarum-Just-Cause.i-16952.s-67775.r-1_008bdf0e-0afb-4761-85ef-b0e26e644630_600x.jpg?v=1765556599",
+   "https://www.palmtalk.org/forum/uploads/monthly_2023_10/IMG_9543.JPG.c48bfc59318457564b2b88f809254508.JPG"
+  ],
+  "meta_title": "Sabal causiarum | Palmera de Sombrero de Puerto Rico",
+  "meta_description": "Compra Sabal causiarum, la majestuosa palmera de sombrero de Puerto Rico. Resistente, de tronco robusto y perfecta para climas mediterráneos. ¡Envíos a todos!",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 0,
+  "created_at": "2026-02-28T00:01:22.701202+00:00",
+  "updated_at": "2026-02-28T00:12:27.240381+00:00",
+  "common_name": "Palmera de sombrero de Puerto Rico",
+  "plant_type": "palm",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "tropical",
+   "subtropical",
+   "mediterráneo"
+  ],
+  "min_temp_c": -7,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "jardin"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "easy",
+  "notes": "Es frecuentemente confundida con Sabal domingensis, pero S. causiarum tiene un tronco más masivo y liso. Confianza alta en identificación y datos de cultivo.",
+  "weight_grams": null,
+  "family": "Arecaceae",
+  "variety": null,
+  "image_alt_text": "Sabal causiarum palmera de tronco grueso",
+  "reference_url": "https://www.gbif.org/species/2731843",
+  "hardiness_zones": [
+   "9a",
+   "9b",
+   "10a",
+   "10b",
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "28656413-bd69-4b5a-a992-921a51c5e408",
+  "name": "Sabal miamiensis",
+  "scientific_name": "Sabal miamiensis",
+  "slug": "sabal-miamiensis",
+  "description": "Palmera extremadamente rara y resistente, originaria del sur de Florida.",
+  "short_description": "Palmera extremadamente rara",
+  "category_id": null,
+  "price": 37,
+  "sale_price": null,
+  "stock_qty": 3,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "slow",
+  "mature_height": "6-8m",
+  "mature_width": "3-4m",
+  "origin_country": "US",
+  "origin_region": "Florida (Miami-Dade)",
+  "native_habitat": "Matorral/pinar subtropical",
+  "care_instructions": [
+   "Sol",
+   "Riego bajo",
+   "Suelo drenado"
+  ],
+  "curious_facts": [
+   "Extinta en hábitat"
+  ],
+  "specifications": {
+   "soil": "drenado",
+   "status": "extinta silvestre",
+   "drought": "alta"
+  },
+  "images": [
+   "https://www.palmtalk.org/forum/uploads/monthly_2015_10/Sabal_miamiensis_01_7-10-15.JPG.1f3351ac398262368f3d0a183cdc9dc5.JPG",
+   "https://www.palmtalk.org/forum/uploads/monthly_2015_12/5664c4f83c733_Sabalmiamiensis026-16-15.JPG.42b11b12f0561b8527ccd08c070f2122.JPG",
+   "https://www.palmtalk.org/forum/uploads/monthly_2015_10/IMG_0167.JPG.a2203519c8c7c9c8594681b12e3ae507.JPG",
+   "https://www.palmtalk.org/forum/uploads/monthly_2019_10/1256291832_Sabalmiamiensis0110-28-19.JPG.4bf0212d720bf86b39300381c20f91da.JPG"
+  ],
+  "meta_title": "Sabal miamiensis, palmera extinta en hábitat",
+  "meta_description": "Palmera extremadamente rara; resistente y de bajo riego, pieza de colección excepcional.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 31,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:20:22.19297+00:00",
+  "common_name": "Miami palmetto",
+  "plant_type": "palm",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "subtropical"
+  ],
+  "min_temp_c": -3,
+  "water": "low",
+  "humidity": "low",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "extremely_rare",
+  "difficulty": "advanced",
+  "notes": "Solo se conoce por registros históricos y cultivo ex situ.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "9b"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "17d14c73-8168-4eef-a51d-a42f9bd59a57",
+  "name": "Sabal palmetto \"Lisa\"",
+  "scientific_name": "Sabal palmetto",
+  "slug": "sabal-palmetto-lisa",
+  "description": "Palmera robusta y muy resistente al viento y la salinidad, típica del sureste de EE. UU.",
+  "short_description": "Palmera resistente al viento y la sal",
+  "category_id": null,
+  "price": 18,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2025",
+  "growth_rate": "medium",
+  "mature_height": "15-20m",
+  "mature_width": "4-6m",
+  "origin_country": "US",
+  "origin_region": "SE EE. UU.",
+  "native_habitat": "Costas y marismas",
+  "care_instructions": [
+   "Sol",
+   "Bajo riego",
+   "Tolera salinidad"
+  ],
+  "curious_facts": [
+   "Muy resistente a viento/sal"
+  ],
+  "specifications": {
+   "salt": "alta",
+   "wind": "alta",
+   "drought": "alta"
+  },
+  "images": [
+   "https://palmpedia.net/wiki/images/thumb/c/c1/56660fb815adc_SabalLisa0212-7-15.JPG.5f16cd602203ac4eaca8774e9a042839.JPG/407px-56660fb815adc_SabalLisa0212-7-15.JPG.5f16cd602203ac4eaca8774e9a042839.JPG",
+   "https://www.palmtalk.org/forum/uploads/monthly_2020_12/1870204520_SabalpalmettoLisa0104-30-19.JPG.d7a67d40b821f67701a232f55efff923.JPG",
+   "https://i.etsystatic.com/35753834/r/il/45199f/4090936119/il_fullxfull.4090936119_hman.jpg",
+   "https://lh6.googleusercontent.com/proxy/tB1Wof43jew1TTkYAVzUF5OROZ6Ne-WhCFFitt4Dl4eKOiNzQpUrny62wU2ryKaNzyC51j3qUOENkM6Zzu1prOm3D0CJRv8wxw",
+   "https://i.pinimg.com/564x/b5/a4/b3/b5a4b3be9a99f9f3c10ad867078703c7.jpg"
+  ],
+  "meta_title": "Sabal palmetto, resistente al viento",
+  "meta_description": "Palmera muy resistente al viento y la sal; excelente para jardines costeros.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 32,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:22:07.015502+00:00",
+  "common_name": "Cabbage palmetto",
+  "plant_type": "palm",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "subtropical",
+   "mediterraneo"
+  ],
+  "min_temp_c": -10,
+  "water": "low",
+  "humidity": "low",
+  "plant_use": [
+   "exterior"
+  ],
+  "rarity": "common",
+  "difficulty": "beginner",
+  "notes": "Puede sobrevivir a huracanes que derriban árboles de mayor porte.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "e415fcab-6c6e-45ff-9c2b-f4abc6f0156c",
+  "name": "Syagrus romanzoffiana",
+  "scientific_name": "Syagrus romanzoffiana",
+  "slug": "syagrus-romanzoffiana",
+  "description": "La Syagrus romanzoffiana, comúnmente conocida como Palmera Pindó o Coco Plumoso, es una de las palmeras ornamentales más populares y elegantes para climas templados y cálidos. Se distingue por su estípite (tronco) grisáceo y liso, que puede alcanzar alturas considerables, coronado por un penacho de hojas pinnadas de un verde intenso con un aspecto plumoso y arqueado muy atractivo. Es una especie de crecimiento relativamente rápido comparada con otras palmeras.\n\nEn cuanto a sus cuidados, es una planta rústica y adaptable. Prefiere exposiciones a pleno sol para un desarrollo óptimo, aunque tolera la semisombra en su etapa juvenil. Requiere suelos bien drenados y, aunque es resistente a la sequía una vez establecida, agradece riegos regulares durante los meses de verano. Es importante vigilar las carencias de micronutrientes (como el manganeso) en suelos muy alcalinos, lo cual se manifiesta con hojas amarillentas o deformadas. Soporta heladas ligeras de hasta -7°C, lo que la hace ideal para jardines mediterráneos y zonas costeras.",
+  "short_description": "Palmera elegante de aspecto plumoso y crecimiento rápido, ideal para climas mediterráneos y subtropicales.",
+  "category_id": "420830a5-8d0e-4973-aa9a-7294b3744454",
+  "price": 15,
+  "sale_price": null,
+  "stock_qty": 2,
+  "container_size": "25-50 litros",
+  "germination_date": null,
+  "growth_rate": "fast",
+  "mature_height": "10-15 m",
+  "mature_width": "4-6 m",
+  "origin_country": "BR",
+  "origin_region": "Sudamérica oriental",
+  "native_habitat": "Bosques y zonas abiertas de Sudamérica, principalmente en Brasil, Paraguay, Uruguay y el norte de Argentina.",
+  "care_instructions": {},
+  "curious_facts": [],
+  "specifications": {},
+  "images": [
+   "https://upload.wikimedia.org/wikipedia/commons/2/29/Starr_020617-0019_Syagrus_romanzoffiana.jpg",
+   "https://www.viriar.com/cdn/shop/files/2bc9bb19-51fe-473e-8ff7-c96882cea496.jpg?v=1744388185",
+   "https://www.gardenia.net/wp-content/uploads/2023/05/Syagrus-romanzoffiana.webp",
+   "https://fsus.ncbg.unc.edu/img/orig/userimg/userimg_276838.jpg"
+  ],
+  "meta_title": "Syagrus romanzoffiana | Palmera Pindó de Exterior",
+  "meta_description": "Compra Syagrus romanzoffiana (Palmera Pindó). Una palmera elegante, de crecimiento rápido y resistente al frío moderado. Ideal para jardines y avenidas.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 0,
+  "created_at": "2026-02-28T00:05:46.222013+00:00",
+  "updated_at": "2026-02-28T00:10:23.753942+00:00",
+  "common_name": "Palmera Pindó",
+  "plant_type": "palm",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "mediterráneo",
+   "subtropical",
+   "templado",
+   "oceánico"
+  ],
+  "min_temp_c": -7,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "jardin",
+   "maceta"
+  ],
+  "rarity": "common",
+  "difficulty": "easy",
+  "notes": "Especie muy común en paisajismo debido a su estética tropical y resistencia. Identificación 100% segura. Confianza alta en todos los parámetros técnicos.",
+  "weight_grams": null,
+  "family": "Arecaceae",
+  "variety": null,
+  "image_alt_text": "Syagrus romanzoffiana palmera pindó coco plumoso",
+  "reference_url": "https://www.gbif.org/species/2734500",
+  "hardiness_zones": [
+   "9a",
+   "9b",
+   "10a",
+   "10b",
+   "11a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "94b44786-2c38-4c69-8134-6b0ab34ea3a2",
+  "name": "Trachycarpus nanus",
+  "scientific_name": "Trachycarpus nanus",
+  "slug": "trachycarpus-nanus",
+  "description": "Palmera enana y cespitosa, muy resistente al frío y de crecimiento lento.",
+  "short_description": "Palmera enana muy resistente al frío",
+  "category_id": null,
+  "price": 30,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2023",
+  "growth_rate": "slow",
+  "mature_height": "1-2m",
+  "mature_width": "1-2m",
+  "origin_country": "CN",
+  "origin_region": "China",
+  "native_habitat": "Laderas rocosas montanas",
+  "care_instructions": [
+   "Drenaje alto",
+   "Riego moderado",
+   "Tolera frío"
+  ],
+  "curious_facts": [
+   "Palmera enana",
+   "Muy rústica"
+  ],
+  "specifications": {
+   "cold": "muy alta",
+   "soil": "drenado",
+   "habit": "multicaul"
+  },
+  "images": [
+   "https://d2seqvvyy3b8p2.cloudfront.net/fd21c80278077b4bf6e4c415b6e76170.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2024_09/IMG_5744.jpeg.273fa75234920fff9cb6a0e06834cb35.jpeg",
+   "https://thepalmgrower.com/wp-content/uploads/2024/04/nanus-female.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2017_08/20170830_181116.jpg.45f88efda4f3e1bab5ff571b7b5bd89d.jpg",
+   "https://www.junglemusic.net/Articles/Trachycarpus,%20the%20Windmill%20Palm/IMAGES%20Trachycarpus/Trachycarpus%20nanus,%20by%20M.G.%20and%20T.S.%20Yunnan,%20China%20%20(2)%20(Small).jpg"
+  ],
+  "meta_title": "Trachycarpus nanus, palmera enana rústica",
+  "meta_description": "Palmera enana de colección, muy resistente al frío y perfecta para espacios pequeños.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 35,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:24:40.309376+00:00",
+  "common_name": "Dwarf windmill palm",
+  "plant_type": "palm",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "templado"
+  ],
+  "min_temp_c": -12,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "rare",
+  "difficulty": "intermediate",
+  "notes": "Apenas desarrolla tronco visible incluso en ejemplares muy viejos.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [
+   "8a"
+  ],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "961a7bb3-d94c-42cf-a28e-d9c54df6c43e",
+  "name": "Trachycarpus princeps \"Stone Gate\"",
+  "scientific_name": "Trachycarpus princeps",
+  "slug": "trachycarpus-princeps-stone-gate",
+  "description": "Palmera muy ornamental, conocida por el envés plateado de sus hojas y su resistencia al frío.",
+  "short_description": "Palmera de hojas plateadas",
+  "category_id": null,
+  "price": 35,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2023",
+  "growth_rate": "medium",
+  "mature_height": "8-12m",
+  "mature_width": "3-5m",
+  "origin_country": "CN",
+  "origin_region": "Yunnan",
+  "native_habitat": "Acantilados calizos",
+  "care_instructions": [
+   "Sol",
+   "Suelo drenado",
+   "Tolera frío"
+  ],
+  "curious_facts": [
+   "Envés plateado"
+  ],
+  "specifications": {
+   "cold": "alta",
+   "soil": "calizo-drenado",
+   "feature": "envés plateado"
+  },
+  "images": [
+   "https://thepalmgrower.com/wp-content/uploads/2021/12/princeps.jpg",
+   "https://diana.eu-central-1.linodeobjects.com/wp-media-folder-the-palm-centre/wp-content/uploads/2021/11/TPR-1.jpg",
+   "https://lh4.googleusercontent.com/proxy/LBd5_os2bSkP2d0o-VeYeOxjdARoeKD3VQA7Rc_g8e5Hy7ePNXA1ysa_gEwe4eO6f2DT1nHMmgZkjpLp0CFw4-7SdkzsDVLYdjLBleQ64bYFxz5Sb205",
+   "https://stories.rbge.org.uk/wp-content/uploads/2013/07/palm1.jpg"
+  ],
+  "meta_title": "Trachycarpus princeps, Stone Gate palm",
+  "meta_description": "Palmera muy ornamental de hojas plateadas, resistente al frío y amante del drenaje.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 36,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:27:04.359941+00:00",
+  "common_name": "Stone Gate palm",
+  "plant_type": "palm",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "templado"
+  ],
+  "min_temp_c": -12,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "rare",
+  "difficulty": "intermediate",
+  "notes": "Fue descubierta en acantilados casi inaccesibles del sur de China.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "f3637218-e360-4e24-a700-cc6c85059b8a",
+  "name": "Trachycarpus sp. \"Himgarda\"",
+  "scientific_name": "Trachycarpus sp.",
+  "slug": "trachycarpus-sp-himgarda",
+  "description": "Palmera del género Trachycarpus, generalmente resistente al frío y de fácil cultivo. Recientemente descrita.",
+  "short_description": "Palmera rústica de clima templado",
+  "category_id": null,
+  "price": 50,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "0.8L",
+  "germination_date": "2023",
+  "growth_rate": "medium",
+  "mature_height": "6-12m",
+  "mature_width": "3-5m",
+  "origin_country": "CN",
+  "origin_region": "Asia",
+  "native_habitat": "Montano templado",
+  "care_instructions": [
+   "Sol/semisol",
+   "Suelo drenado",
+   "Riego moderado"
+  ],
+  "curious_facts": [
+   "Depende del clon/especie"
+  ],
+  "specifications": {
+   "cold": "alta",
+   "note": "requiere identificación",
+   "growth": "medio"
+  },
+  "images": [
+   "https://www.palmtalk.org/forum/uploads/monthly_2025_02/mmexport1738899208685.jpeg.2060616cba49616e5580fb0b12a75e78.jpeg",
+   "https://impro.usercontent.one/appid/oneComShop/domain/happypalmenundco.com/media/happypalmenundco.com/webshopmedia/mg-204-1734271382542.jpg?&withoutEnlargement&resize=960+9999&webp&quality=85",
+   "https://www.palmtalk.org/forum/uploads/monthly_2025_02/mmexport1738899214056.jpeg.ec9f0e4a4ec05d646391ea0b64d44c03.jpeg",
+   "https://impro.usercontent.one/appid/oneComShop/domain/happypalmenundco.com/media/happypalmenundco.com/webshopmedia/mg%20204%206.jpg?&withoutEnlargement&resize=960+9999&webp&quality=85"
+  ],
+  "meta_title": "Trachycarpus sp., palmera rústica",
+  "meta_description": "Trachycarpus de clima templado, resistente al frío; ideal para exterior con buen drenaje.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 37,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:31:10.711465+00:00",
+  "common_name": null,
+  "plant_type": "palm",
+  "exposure": [
+   "sol",
+   "semisol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "templado"
+  ],
+  "min_temp_c": -10,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "beginner",
+  "notes": "Muchas formas en cultivo aún no están formalmente descritas.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "85e99970-ce76-4281-b453-768d37007bc7",
+  "name": "Vitis cognitae",
+  "scientific_name": "Vitis cognitae",
+  "slug": "vitis-cognitae",
+  "description": "Trepadora vigorosa del género Vitis, apreciada por su crecimiento ornamental.",
+  "short_description": "Trepadora vigorosa ornamental",
+  "category_id": null,
+  "price": 18,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "1L",
+  "germination_date": "2026",
+  "growth_rate": "fast",
+  "mature_height": "Trepadora",
+  "mature_width": "3-6m",
+  "origin_country": "CN",
+  "origin_region": "Asia oriental",
+  "native_habitat": "Bosque templado húmedo",
+  "care_instructions": [
+   "Sol",
+   "Soporte/trepa",
+   "Riego regular"
+  ],
+  "curious_facts": [
+   "Trepadora poco común"
+  ],
+  "specifications": {
+   "habit": "trepadora",
+   "growth": "rápido",
+   "support": "sí"
+  },
+  "images": [
+   "https://www.treesandshrubsonline.org/site/assets/files/8269/page-_name_-1.jpg",
+   "https://img.crocdn.co.uk/images/products2/pl/00/00/00/17/pl0000001730_card2_lg.jpg",
+   "https://www.guiaverde.com/files/plant/14161057.jpg",
+   "https://bethchatto.2dimg.com/1/vitis-coignetiae-scree-oct3_549ea6e121.jpg"
+  ],
+  "meta_title": "Vitis cognitae, trepadora ornamental",
+  "meta_description": "Trepadora vigorosa para pérgolas y muros; agradece sol y riego regular en crecimiento.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 38,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:32:29.832835+00:00",
+  "common_name": null,
+  "plant_type": "other",
+  "exposure": [
+   "sol"
+  ],
+  "climate_zones": [
+   "atlantico",
+   "templado"
+  ],
+  "min_temp_c": -12,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "exterior"
+  ],
+  "rarity": "uncommon",
+  "difficulty": "beginner",
+  "notes": "Produce zarcillos extremadamente fuertes para su tamaño.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "5549dce4-f836-4d87-854d-1c9990325a33",
+  "name": "Wallichia disticha",
+  "scientific_name": "Wallichia disticha",
+  "slug": "wallichia-disticha",
+  "description": "Palmera tropical de hojas dispuestas en dos filas, con un porte arquitectónico muy singular.",
+  "short_description": "Palmera tropical de hojas en dos planos",
+  "category_id": null,
+  "price": 32,
+  "sale_price": null,
+  "stock_qty": 1,
+  "container_size": "1L",
+  "germination_date": "2025",
+  "growth_rate": "medium",
+  "mature_height": "6-8m",
+  "mature_width": "3-5m",
+  "origin_country": "BT",
+  "origin_region": "Himalaya oriental/SE Asia",
+  "native_habitat": "Bosques húmedos montanos",
+  "care_instructions": [
+   "Sombra",
+   "Humedad alta",
+   "Suelo rico"
+  ],
+  "curious_facts": [
+   "Hojas en dos planos"
+  ],
+  "specifications": {
+   "habit": "tropical",
+   "feature": "disticha",
+   "humidity": "alta"
+  },
+  "images": [
+   "https://i.etsystatic.com/29564337/r/il/2bd5bf/3124733398/il_570xN.3124733398_b9zm.jpg",
+   "https://www.monaconatureencyclopedia.com/wp-content/uploads/2011/06/jpg_Le_foglie_della_Wallichia_disticha_sono_sullo_stesso_piano_ai_lati_del_rachide_c_Mazza.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2015_12/5664cae09e91b_Walichiadisticha008.JPG.c7dfa28998cdf45bb460bb932a1c8a72.JPG",
+   "https://www.palmtalk.org/forum/uploads/monthly_2015_12/image.jpeg.e7a8778966cbd826650a8aacce7c725e.jpeg"
+  ],
+  "meta_title": "Wallichia disticha, palmera arquitectónica",
+  "meta_description": "Palmera tropical de hojas en dos planos; ideal en sombra húmeda y suelos ricos.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 39,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:34:33.092302+00:00",
+  "common_name": "Thakal",
+  "plant_type": "palm",
+  "exposure": [
+   "semisombra"
+  ],
+  "climate_zones": [
+   "tropical",
+   "montano"
+  ],
+  "min_temp_c": 2,
+  "water": "high",
+  "humidity": "high",
+  "plant_use": [
+   "exterior",
+   "colección"
+  ],
+  "rarity": "rare",
+  "difficulty": "advanced",
+  "notes": "Su disposición foliar en dos planos es muy poco común en palmeras.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ },
+ {
+  "id": "f5c824cf-8869-44e4-905f-c772004b7f29",
+  "name": "Zamia sp. \"Jamaican Giant\"",
+  "scientific_name": "Zamia sp.",
+  "slug": "zamia-sp-jamaican-giant",
+  "description": "Cícada del género Zamia, de porte compacto y marcado aspecto prehistórico.",
+  "short_description": "Cícada tropical de gran porte",
+  "category_id": null,
+  "price": 45,
+  "sale_price": null,
+  "stock_qty": 2,
+  "container_size": "0.8L",
+  "germination_date": "2022",
+  "growth_rate": "slow",
+  "mature_height": "1-2m",
+  "mature_width": "1-2m",
+  "origin_country": "JM",
+  "origin_region": "Jamaica",
+  "native_habitat": "Bosque tropical estacional",
+  "care_instructions": [
+   "Semisol",
+   "Suelo drenado",
+   "Riego moderado"
+  ],
+  "curious_facts": [
+   "Cícada robusta",
+   "Muy rara"
+  ],
+  "specifications": {
+   "soil": "drenado",
+   "type": "cícada",
+   "growth": "lento"
+  },
+  "images": [
+   "https://www.palmtalk.org/forum/uploads/monthly_2016_02/IMG_0059.JPG.db6f8444f1c59c69c6bdbb6067e6c202.JPG",
+   "https://i.redd.it/6jvyc2drfcwc1.jpg",
+   "https://www.palmtalk.org/forum/uploads/monthly_2016_02/IMG_0060.JPG.50e5892437c5e5335a706eb7c5af15ae.JPG",
+   "https://www.palmtalk.org/forum/uploads/monthly_2017_01/IMG_0565.JPG.68acf31df16a77edc1d5918f2c6b881b.JPG"
+  ],
+  "meta_title": "Zamia Jamaican Giant, cícada tropical",
+  "meta_description": "Cícada tropical robusta de colección; requiere semisol y drenaje excelente.",
+  "is_active": true,
+  "is_featured": false,
+  "display_order": 40,
+  "created_at": "2026-02-07T00:42:00.071733+00:00",
+  "updated_at": "2026-02-27T23:36:52.217694+00:00",
+  "common_name": null,
+  "plant_type": "other",
+  "exposure": [
+   "semisol"
+  ],
+  "climate_zones": [
+   "tropical"
+  ],
+  "min_temp_c": 5,
+  "water": "medium",
+  "humidity": "medium",
+  "plant_use": [
+   "interior",
+   "colección"
+  ],
+  "rarity": "very_rare",
+  "difficulty": "advanced",
+  "notes": "Pertenece a un grupo de cícadas con poblaciones muy fragmentadas.",
+  "weight_grams": null,
+  "family": null,
+  "variety": null,
+  "image_alt_text": null,
+  "reference_url": null,
+  "hardiness_zones": [],
+  "product_images": [],
+  "primary_image": null,
+  "tags": []
+ }
+]
