@@ -286,7 +286,8 @@
     "confirmPassword": "Confirmar contraseña",
     "confirmNewPassword": "Confirmar contraseña",
     "repeatPassword": "Repite la contraseña",
-    "minCharacters": "Mínimo 6 caracteres",
+    "minCharacters": "Mínimo 12 caracteres",
+    "passwordHint": "Mínimo {{min}} caracteres. Mejor una frase larga que te sepas que una palabra corta con símbolos.",
     "forgotPassword": "¿Olvidaste tu contraseña?",
     "backToLogin": "Volver al inicio de sesión",
     "sendInstructions": "Enviar instrucciones",
@@ -299,6 +300,12 @@
       "emailNotConfirmed": "Por favor, confirma tu email antes de iniciar sesión",
       "userExists": "Este email ya está registrado. Intenta iniciar sesión.",
       "passwordLength": "La contraseña debe tener al menos 6 caracteres",
+      "passwordRequired": "Introduce tu contraseña",
+      "passwordTooShort": "La contraseña debe tener al menos 12 caracteres",
+      "passwordCommon": "Esa contraseña aparece en las listas de credenciales filtradas. Elige otra.",
+      "passwordAllDigits": "La contraseña no puede ser solo números",
+      "passwordSequential": "Evita secuencias como 123456 o abcdef",
+      "passwordRepeated": "Evita repetir el mismo patrón una y otra vez",
       "passwordMismatch": "Las contraseñas no coinciden"
     },
     "success": {
@@ -347,7 +354,10 @@
     "fraud": "Antifraude",
     "auctions": "Subastas",
     "disputes": "Incidencias",
+    "moderation": "Moderación",
     "audit": "Auditoría",
+    "validationAnalytics": "Analítica",
+    "roles": "Roles y permisos",
     "settings": "Configuración"
   },
   "plantFinder": {

@@ -5797,6 +5797,27 @@ export type Database = {
         }
         Relationships: []
       }
+      role_permissions: {
+        Row: {
+          created_at: string
+          id: string
+          permission: Database["public"]["Enums"]["app_permission"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          permission: Database["public"]["Enums"]["app_permission"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          permission?: Database["public"]["Enums"]["app_permission"]
+          role?: Database["public"]["Enums"]["app_role"]
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -6483,12 +6504,49 @@ export type Database = {
         Args: { p_consent_type: string; p_user_id: string }
         Returns: boolean
       }
+      find_user_by_email: {
+        Args: { _email: string }
+        Returns: {
+          email: string | null
+          full_name: string | null
+          user_id: string
+        }[]
+      }
+      has_permission: {
+        Args: {
+          _permission: Database["public"]["Enums"]["app_permission"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      list_role_assignments: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          email: string | null
+          full_name: string | null
+          granted_at: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }[]
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
           _user_id: string
         }
         Returns: boolean
+      }
+      my_permissions: {
+        Args: Record<PropertyKey, never>
+        Returns: Database["public"]["Enums"]["app_permission"][]
+      }
+      my_role: {
+        Args: Record<PropertyKey, never>
+        Returns: Database["public"]["Enums"]["app_role"]
+      }
+      role_rank: {
+        Args: { _role: Database["public"]["Enums"]["app_role"] }
+        Returns: number
       }
       increment_stock: {
         Args: { p_plant_id: string; p_quantity: number }
@@ -6694,7 +6752,35 @@ export type Database = {
       wilson_score: { Args: { pos: number; total: number }; Returns: number }
     }
     Enums: {
-      app_role: "admin" | "user" | "moderator"
+      app_permission:
+        | "dashboard.view"
+        | "plants.view"
+        | "plants.manage"
+        | "categories.view"
+        | "categories.manage"
+        | "orders.view"
+        | "orders.manage"
+        | "invoices.view"
+        | "invoices.manage"
+        | "shipping.view"
+        | "shipping.manage"
+        | "referrals.view"
+        | "referrals.manage"
+        | "fraud.view"
+        | "fraud.manage"
+        | "auctions.view"
+        | "auctions.manage"
+        | "disputes.view"
+        | "disputes.manage"
+        | "moderation.view"
+        | "moderation.manage"
+        | "audit.view"
+        | "analytics.view"
+        | "settings.view"
+        | "settings.manage"
+        | "roles.view"
+        | "roles.manage"
+      app_role: "admin" | "user" | "moderator" | "superadmin"
       auction_status:
         | "draft"
         | "scheduled"
@@ -6927,7 +7013,36 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      app_role: ["admin", "user", "moderator"],
+      app_permission: [
+        "dashboard.view",
+        "plants.view",
+        "plants.manage",
+        "categories.view",
+        "categories.manage",
+        "orders.view",
+        "orders.manage",
+        "invoices.view",
+        "invoices.manage",
+        "shipping.view",
+        "shipping.manage",
+        "referrals.view",
+        "referrals.manage",
+        "fraud.view",
+        "fraud.manage",
+        "auctions.view",
+        "auctions.manage",
+        "disputes.view",
+        "disputes.manage",
+        "moderation.view",
+        "moderation.manage",
+        "audit.view",
+        "analytics.view",
+        "settings.view",
+        "settings.manage",
+        "roles.view",
+        "roles.manage",
+      ],
+      app_role: ["admin", "user", "moderator", "superadmin"],
       auction_status: [
         "draft",
         "scheduled",

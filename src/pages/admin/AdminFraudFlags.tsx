@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { useAdminRole } from "@/hooks/account";
+import { usePermissions } from "@/hooks/account";
 import { useAuth } from "@/contexts/AuthContext";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
@@ -110,7 +110,9 @@ const statusColors: Record<FraudFlagStatus, string> = {
 };
 
 const AdminFraudFlags = () => {
-  const { isAdmin, isLoading: isAdminLoading } = useAdminRole();
+  const { can, isLoading: isPermissionsLoading } = usePermissions();
+  const canView = can("fraud.view");
+  const canManage = can("fraud.manage");
   const { user } = useAuth();
   const queryClient = useQueryClient();
   
@@ -141,7 +143,7 @@ const AdminFraudFlags = () => {
       if (error) throw error;
       return data as FraudFlag[];
     },
-    enabled: isAdmin,
+    enabled: canView,
   });
 
   // Fetch user emails for display
@@ -220,11 +222,11 @@ const AdminFraudFlags = () => {
     revoked: flags?.filter(f => f.status === "revoked").length || 0,
   };
 
-  if (isAdminLoading) {
+  if (isPermissionsLoading) {
     return <div className="p-6"><Skeleton className="h-96 w-full" /></div>;
   }
 
-  if (!isAdmin) {
+  if (!canView) {
     return (
       <div className="p-6 text-center">
         <AlertTriangle className="h-12 w-12 mx-auto text-destructive mb-4" />
@@ -365,7 +367,9 @@ const AdminFraudFlags = () => {
                       </TableCell>
                       <TableCell className="text-right">
                         <div className="flex items-center justify-end gap-2">
-                          {flag.status === "pending" && (
+                          {/* Aprobar o revocar exige fraud.manage: un moderador
+                              revisa las alertas pero no las resuelve. */}
+                          {canManage && flag.status === "pending" && (
                             <>
                               <Button
                                 size="sm"

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { useAdminRole } from "@/hooks/account";
+import { usePermissions } from "@/hooks/account";
 import { useAuth } from "@/contexts/AuthContext";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
@@ -80,7 +80,9 @@ const statusColors: Record<DisputeStatus, string> = {
 };
 
 const AdminDisputes = () => {
-  const { isAdmin, isLoading: adminLoading } = useAdminRole();
+  const { can, isLoading: permissionsLoading } = usePermissions();
+  const canView = can("disputes.view");
+  const canManage = can("disputes.manage");
   const { user } = useAuth();
   const queryClient = useQueryClient();
 
@@ -103,7 +105,7 @@ const AdminDisputes = () => {
       if (error) throw error;
       return data as Dispute[];
     },
-    enabled: isAdmin,
+    enabled: canView,
   });
 
   // Fetch user emails
@@ -248,9 +250,9 @@ const AdminDisputes = () => {
     resolved: disputes?.filter((d) => d.status === "resolved").length || 0,
   };
 
-  if (adminLoading) return <div className="p-6"><Skeleton className="h-96 w-full" /></div>;
+  if (permissionsLoading) return <div className="p-6"><Skeleton className="h-96 w-full" /></div>;
 
-  if (!isAdmin) {
+  if (!canView) {
     return (
       <div className="p-6 text-center">
         <AlertTriangle className="h-12 w-12 mx-auto text-destructive mb-4" />
@@ -440,8 +442,9 @@ const AdminDisputes = () => {
               </div>
             )}
 
-            {/* Refund trigger */}
-            {selectedDispute?.order_id && (
+            {/* Refund trigger — solo con disputes.manage: un moderador ve la
+                incidencia pero no mueve dinero. */}
+            {canManage && selectedDispute?.order_id && (
               <Button
                 variant="outline"
                 className="border-destructive/30 text-destructive hover:bg-destructive/10"
@@ -466,7 +469,12 @@ const AdminDisputes = () => {
               />
               <Button
                 onClick={() => updateMutation.mutate()}
-                disabled={(!newStatus && !adminMessage.trim()) || updateMutation.isPending}
+                disabled={
+                  !canManage ||
+                  (!newStatus && !adminMessage.trim()) ||
+                  updateMutation.isPending
+                }
+                title={canManage ? undefined : "Necesitas el permiso disputes.manage"}
               >
                 {updateMutation.isPending ? "..." : <><Send className="h-4 w-4 mr-2" />Enviar</>}
               </Button>

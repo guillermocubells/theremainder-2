@@ -1,38 +1,22 @@
-import { useEffect, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/contexts/AuthContext";
+import { usePermissions } from './usePermissions';
 
+/**
+ * Compatibilidad con el candado binario anterior.
+ *
+ * Antes hacía su propia llamada a has_role() con useState/useEffect, sin caché ni
+ * invalidación, revalidando en cada montaje. Ahora se deriva de usePermissions,
+ * que resuelve todos los permisos de la sesión en una sola query cacheada.
+ *
+ * Los guards nuevos deberían pedir el permiso concreto (usePermissions().can(...)
+ * o <RoleGuard permission="...">) en vez de preguntar "¿es admin?". Este hook se
+ * mantiene porque hay cuatro pantallas que aún lo usan.
+ */
 export function useAdminRole() {
-  const { user } = useAuth();
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const { role, isLoading } = usePermissions();
 
-  useEffect(() => {
-    async function checkAdminRole() {
-      if (!user) {
-        setIsAdmin(false);
-        setIsLoading(false);
-        return;
-      }
-
-      try {
-        const { data, error } = await supabase.rpc("has_role", {
-          _user_id: user.id,
-          _role: "admin",
-        });
-
-        if (error) throw error;
-        setIsAdmin(data === true);
-      } catch (error) {
-        console.error("Error checking admin role:", error);
-        setIsAdmin(false);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    checkAdminRole();
-  }, [user]);
-
-  return { isAdmin, isLoading };
+  return {
+    isAdmin: role === 'admin' || role === 'superadmin',
+    isSuperAdmin: role === 'superadmin',
+    isLoading,
+  };
 }

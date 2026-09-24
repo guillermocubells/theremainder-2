@@ -11,6 +11,7 @@ import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import { STORE_CONTACT } from "@/config/store";
 import { CookieConsentBanner } from "@/components/cookies";
 import ProtectedRoute from "@/components/shared/ProtectedRoute";
+import { RoleGuard } from "@/components/shared/RoleGuard";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Account from "./pages/Account";
@@ -41,6 +42,7 @@ import AdminDisputes from "./pages/admin/AdminDisputes";
 import AdminAuditLog from "./pages/admin/AdminAuditLog";
 import AdminModeration from "./pages/admin/AdminModeration";
 import AdminValidationAnalytics from "./pages/admin/AdminValidationAnalytics";
+import AdminRoles from "./pages/admin/AdminRoles";
 import AuctionPreview from "./pages/AuctionPreview";
 import AuctionDetail from "./pages/AuctionDetail";
 
@@ -159,21 +161,54 @@ const App = () => (
               <Route path="/subastas/:slug" element={<AuctionDetail />} />
               
               {/* Admin routes */}
+              {/* AdminLayout abre la puerta si hay cualquier permiso de panel;
+                  cada ruta declara el suyo con RoleGuard. */}
               <Route path="/admin" element={<AdminLayout />}>
-                <Route index element={<AdminDashboard />} />
-                <Route path="plants" element={<AdminPlants />} />
-                <Route path="categories" element={<AdminCategories />} />
-                <Route path="orders" element={<AdminOrders />} />
-                <Route path="invoices" element={<AdminInvoices />} />
-                <Route path="shipping" element={<AdminShipping />} />
-                <Route path="referrals" element={<AdminReferrals />} />
-                <Route path="fraud" element={<AdminFraudFlags />} />
-                <Route path="auctions" element={<AdminAuctions />} />
-                <Route path="disputes" element={<AdminDisputes />} />
-                <Route path="moderation" element={<AdminModeration />} />
-                <Route path="audit" element={<AdminAuditLog />} />
-                <Route path="validation-analytics" element={<AdminValidationAnalytics />} />
-                <Route path="settings" element={<AdminSettings />} />
+                <Route index element={
+                  <RoleGuard permission="dashboard.view"><AdminDashboard /></RoleGuard>
+                } />
+                <Route path="plants" element={
+                  <RoleGuard permission="plants.view"><AdminPlants /></RoleGuard>
+                } />
+                <Route path="categories" element={
+                  <RoleGuard permission="categories.view"><AdminCategories /></RoleGuard>
+                } />
+                <Route path="orders" element={
+                  <RoleGuard permission="orders.view"><AdminOrders /></RoleGuard>
+                } />
+                <Route path="invoices" element={
+                  <RoleGuard permission="invoices.view"><AdminInvoices /></RoleGuard>
+                } />
+                <Route path="shipping" element={
+                  <RoleGuard permission="shipping.view"><AdminShipping /></RoleGuard>
+                } />
+                <Route path="referrals" element={
+                  <RoleGuard permission="referrals.view"><AdminReferrals /></RoleGuard>
+                } />
+                <Route path="fraud" element={
+                  <RoleGuard permission="fraud.view"><AdminFraudFlags /></RoleGuard>
+                } />
+                <Route path="auctions" element={
+                  <RoleGuard permission="auctions.view"><AdminAuctions /></RoleGuard>
+                } />
+                <Route path="disputes" element={
+                  <RoleGuard permission="disputes.view"><AdminDisputes /></RoleGuard>
+                } />
+                <Route path="moderation" element={
+                  <RoleGuard permission="moderation.view"><AdminModeration /></RoleGuard>
+                } />
+                <Route path="audit" element={
+                  <RoleGuard permission="audit.view"><AdminAuditLog /></RoleGuard>
+                } />
+                <Route path="validation-analytics" element={
+                  <RoleGuard permission="analytics.view"><AdminValidationAnalytics /></RoleGuard>
+                } />
+                <Route path="roles" element={
+                  <RoleGuard permission="roles.view"><AdminRoles /></RoleGuard>
+                } />
+                <Route path="settings" element={
+                  <RoleGuard permission="settings.view"><AdminSettings /></RoleGuard>
+                } />
               </Route>
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

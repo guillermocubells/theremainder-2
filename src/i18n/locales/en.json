@@ -286,7 +286,8 @@
     "confirmPassword": "Confirm password",
     "confirmNewPassword": "Confirm password",
     "repeatPassword": "Repeat password",
-    "minCharacters": "Minimum 6 characters",
+    "minCharacters": "Minimum 12 characters",
+    "passwordHint": "At least {{min}} characters. A long phrase you can remember beats a short word with symbols.",
     "forgotPassword": "Forgot your password?",
     "backToLogin": "Back to sign in",
     "sendInstructions": "Send instructions",
@@ -299,6 +300,12 @@
       "emailNotConfirmed": "Please confirm your email before signing in",
       "userExists": "This email is already registered. Try signing in.",
       "passwordLength": "Password must be at least 6 characters",
+      "passwordRequired": "Enter your password",
+      "passwordTooShort": "Password must be at least 12 characters",
+      "passwordCommon": "That password appears in leaked credential lists. Choose another.",
+      "passwordAllDigits": "Password can't be only numbers",
+      "passwordSequential": "Avoid sequences like 123456 or abcdef",
+      "passwordRepeated": "Avoid repeating the same pattern over and over",
       "passwordMismatch": "Passwords don't match"
     },
     "success": {
@@ -347,7 +354,10 @@
     "fraud": "Fraud Detection",
     "auctions": "Auctions",
     "disputes": "Disputes",
+    "moderation": "Moderation",
     "audit": "Audit Log",
+    "validationAnalytics": "Analytics",
+    "roles": "Roles & permissions",
     "settings": "Settings"
   },
   "plantFinder": {

@@ -1,14 +1,14 @@
 import { Outlet, Navigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import { useAdminRole } from "@/hooks/account";
+import { usePermissions } from "@/hooks/account/usePermissions";
 import { AdminSidebar } from "./AdminSidebar";
 import { Loader2 } from "lucide-react";
 
 export function AdminLayout() {
   const { user, loading: authLoading } = useAuth();
-  const { isAdmin, isLoading: roleLoading } = useAdminRole();
+  const { hasPanelAccess, isLoading: permissionsLoading } = usePermissions();
 
-  if (authLoading || roleLoading) {
+  if (authLoading || permissionsLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <Loader2 className="h-8 w-8 animate-spin text-moss" />
@@ -20,7 +20,9 @@ export function AdminLayout() {
     return <Navigate to="/auth" replace />;
   }
 
-  if (!isAdmin) {
+  // La puerta del panel la abre cualquier permiso, no el rol de admin: un
+  // moderador entra y ve solo su sección. Cada ruta declara lo suyo con RoleGuard.
+  if (!hasPanelAccess) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center max-w-md mx-auto p-8">

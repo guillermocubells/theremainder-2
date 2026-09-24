@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { useAdminRole } from "@/hooks/account";
+import { usePermissions } from "@/hooks/account";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import {
@@ -66,7 +66,8 @@ const roleColors: Record<string, string> = {
 };
 
 const AdminAuditLog = () => {
-  const { isAdmin, isLoading: adminLoading } = useAdminRole();
+  const { can, isLoading: permissionsLoading } = usePermissions();
+  const canView = can("audit.view");
   const [entityFilter, setEntityFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLog, setSelectedLog] = useState<AuditLog | null>(null);
@@ -89,7 +90,7 @@ const AdminAuditLog = () => {
       if (error) throw error;
       return data as AuditLog[];
     },
-    enabled: isAdmin,
+    enabled: canView,
   });
 
   // Fetch actor emails
@@ -109,9 +110,9 @@ const AdminAuditLog = () => {
     enabled: actorIds.length > 0,
   });
 
-  if (adminLoading) return <div className="p-6"><Skeleton className="h-96 w-full" /></div>;
+  if (permissionsLoading) return <div className="p-6"><Skeleton className="h-96 w-full" /></div>;
 
-  if (!isAdmin) {
+  if (!canView) {
     return (
       <div className="p-6 text-center">
         <AlertTriangle className="h-12 w-12 mx-auto text-destructive mb-4" />

@@ -12,6 +12,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { TreePalm, Loader2, Eye, EyeOff, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { z } from 'zod';
+import { buildPasswordSchemas, MIN_PASSWORD_LENGTH } from '@/lib/passwordPolicy';
 
 const Auth = () => {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ const Auth = () => {
   const mode = searchParams.get('mode');
   
   const emailSchema = z.string().email(t('common.form.invalidEmail'));
-  const passwordSchema = z.string().min(6, t('auth.errors.passwordLength'));
+  const { loginPasswordSchema, newPasswordSchema } = buildPasswordSchemas(t);
   
   const [activeTab, setActiveTab] = useState<'login' | 'register' | 'forgot' | 'reset'>(
     mode === 'reset' ? 'reset' : 'login'
@@ -60,11 +61,22 @@ const Auth = () => {
       }
     }
 
-    if (activeTab === 'login' || activeTab === 'register' || activeTab === 'reset') {
+    // El login no valida fuerza a propósito: quien tenga una contraseña antigua y
+    // débil tiene que poder entrar, que es justo lo que necesita para cambiarla.
+    if (activeTab === 'login') {
       try {
-        passwordSchema.parse(password);
+        loginPasswordSchema.parse(password);
       } catch {
-        setError(t('auth.errors.passwordLength'));
+        setError(t('auth.errors.passwordRequired'));
+        return false;
+      }
+    }
+
+    // Alta y restablecimiento sí aplican la política completa.
+    if (activeTab === 'register' || activeTab === 'reset') {
+      const result = newPasswordSchema.safeParse(password);
+      if (!result.success) {
+        setError(result.error.issues[0]?.message ?? t('auth.errors.passwordTooShort'));
         return false;
       }
     }
@@ -298,6 +310,9 @@ const Auth = () => {
                       {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                     </Button>
                   </div>
+                  <p className="text-xs text-muted-foreground">
+                    {t('auth.passwordHint', { min: MIN_PASSWORD_LENGTH })}
+                  </p>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="confirm-new-password">{t('auth.confirmNewPassword')}</Label>
@@ -422,6 +437,9 @@ const Auth = () => {
                           {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                         </Button>
                       </div>
+                      <p className="text-xs text-muted-foreground">
+                        {t('auth.passwordHint', { min: MIN_PASSWORD_LENGTH })}
+                      </p>
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="register-confirm-password">{t('auth.confirmPassword')}</Label>

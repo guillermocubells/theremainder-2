@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
+import { usePermissions, type AppPermission } from "@/hooks/account/usePermissions";
 import {
   LayoutDashboard,
   Leaf,
@@ -17,39 +18,63 @@ import {
   ScrollText,
   Eye,
   BarChart3,
+  KeyRound,
 } from "lucide-react";
 
-const navItems = [
-  { path: "/admin", icon: LayoutDashboard, label: "admin.dashboard" },
-  { path: "/admin/plants", icon: Leaf, label: "admin.plants" },
-  { path: "/admin/categories", icon: FolderTree, label: "admin.categories" },
-  { path: "/admin/orders", icon: Package, label: "admin.orders" },
-  { path: "/admin/invoices", icon: FileText, label: "admin.invoices" },
-  { path: "/admin/shipping", icon: Truck, label: "admin.shipping" },
-  { path: "/admin/referrals", icon: Users, label: "admin.referrals" },
-  { path: "/admin/fraud", icon: Shield, label: "admin.fraud" },
-  { path: "/admin/auctions", icon: Gavel, label: "admin.auctions" },
-  { path: "/admin/disputes", icon: MessageSquare, label: "admin.disputes" },
-  { path: "/admin/moderation", icon: Eye, label: "admin.moderation" },
-  { path: "/admin/audit", icon: ScrollText, label: "admin.audit" },
-  { path: "/admin/validation-analytics", icon: BarChart3, label: "admin.validationAnalytics" },
-  { path: "/admin/settings", icon: Settings, label: "admin.settings" },
+// El permiso viaja con el ítem: la navegación y el guard de la ruta leen la misma
+// declaración, así que no pueden desincronizarse.
+const navItems: Array<{
+  path: string;
+  icon: typeof LayoutDashboard;
+  label: string;
+  permission: AppPermission;
+}> = [
+  { path: "/admin", icon: LayoutDashboard, label: "admin.dashboard", permission: "dashboard.view" },
+  { path: "/admin/plants", icon: Leaf, label: "admin.plants", permission: "plants.view" },
+  { path: "/admin/categories", icon: FolderTree, label: "admin.categories", permission: "categories.view" },
+  { path: "/admin/orders", icon: Package, label: "admin.orders", permission: "orders.view" },
+  { path: "/admin/invoices", icon: FileText, label: "admin.invoices", permission: "invoices.view" },
+  { path: "/admin/shipping", icon: Truck, label: "admin.shipping", permission: "shipping.view" },
+  { path: "/admin/referrals", icon: Users, label: "admin.referrals", permission: "referrals.view" },
+  { path: "/admin/fraud", icon: Shield, label: "admin.fraud", permission: "fraud.view" },
+  { path: "/admin/auctions", icon: Gavel, label: "admin.auctions", permission: "auctions.view" },
+  { path: "/admin/disputes", icon: MessageSquare, label: "admin.disputes", permission: "disputes.view" },
+  { path: "/admin/moderation", icon: Eye, label: "admin.moderation", permission: "moderation.view" },
+  { path: "/admin/audit", icon: ScrollText, label: "admin.audit", permission: "audit.view" },
+  { path: "/admin/validation-analytics", icon: BarChart3, label: "admin.validationAnalytics", permission: "analytics.view" },
+  { path: "/admin/roles", icon: KeyRound, label: "admin.roles", permission: "roles.view" },
+  { path: "/admin/settings", icon: Settings, label: "admin.settings", permission: "settings.view" },
 ];
+
+const ROLE_LABELS: Record<string, string> = {
+  superadmin: "Superadmin",
+  admin: "Administrador",
+  moderator: "Moderador",
+  user: "Usuario",
+};
 
 export function AdminSidebar() {
   const { t } = useTranslation();
   const location = useLocation();
+  const { can, role } = usePermissions();
+
+  const visibleItems = navItems.filter((item) => can(item.permission));
 
   return (
     <aside className="w-64 bg-card border-r border-border min-h-screen flex flex-col">
       <div className="p-6 border-b border-border">
         <h1 className="text-xl font-bold text-foreground">The Remainder</h1>
         <p className="text-sm text-muted-foreground">Panel de Administración</p>
+        {role && (
+          <span className="mt-2 inline-block rounded-full bg-moss/10 px-2.5 py-0.5 text-xs font-medium text-moss">
+            {ROLE_LABELS[role] ?? role}
+          </span>
+        )}
       </div>
 
       <nav className="flex-1 p-4">
         <ul className="space-y-1">
-          {navItems.map((item) => {
+          {visibleItems.map((item) => {
             const isActive =
               item.path === "/admin"
                 ? location.pathname === "/admin"
