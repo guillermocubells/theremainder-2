@@ -1,3 +1,13 @@
+-- Correccion del catalogo sembrado.
+-- Regenerado con scripts/bootstrap/generar-seed.mjs + correcciones.json:
+--  * familia derivada del genero (detail.family del volcado esta corrupto:
+--    la columna se desordeno en origen y 23 de 40 filas tenian la familia de
+--    otra especie -- magnolias marcadas como Arecaceae, etc.)
+--  * plant_type corregido donde el volcado decia 'other'
+--  * imagenes de 4 plantas (el mapeo historico usa slugs con variante:
+--    sabal-miamensis -> sabal-miamiensis, chamaedorea-elegans -> ...-negrita)
+-- Upsert por slug: actualiza las 40 filas ya sembradas, no duplica.
+
 -- Semilla del catalogo de The Remainder. GENERADO - no editar a mano.
 -- Fuente: scripts/catalogo-recuperado.json + scripts/bootstrap/correcciones.json
 -- Regenerar: node scripts/bootstrap/generar-seed.mjs

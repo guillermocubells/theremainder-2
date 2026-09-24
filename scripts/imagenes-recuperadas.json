@@ -1,0 +1,116 @@
+{
+  "rhopalostylis-sapida": {
+    "name": "Rhopalostylis sapida",
+    "images": [
+      "06e39b13-24ac-425d-aaba-e54afa8e9a13.png",
+      "9ec90b24-0543-43f9-8fbc-9e0550441101.png",
+      "e2d5dc14-7a7d-4068-9048-41c51c5b3e3e.png",
+      "8dd65cc2-e17d-4d6d-9bf1-f6930328f729.png",
+      "9173c699-a4ce-47c6-915d-47ddd7101b34.png",
+      "0e644766-bd72-43c9-ba64-16a24ad9c928.png"
+    ]
+  },
+  "brahea-armata": {
+    "name": "Brahea armata",
+    "images": [
+      "43efda5d-55eb-4fa9-b838-b43a3c7a2d1b.png",
+      "f77b4576-e17b-4cc8-a668-f80e5bd36ec2.png",
+      "b776a831-f1d0-4a40-ba6b-1935d94a30ad.png",
+      "9de9d435-f031-45a6-aa1f-ebb2e2b8c7a6.png",
+      "336f4453-40d3-461f-b29c-ab773093652f.png",
+      "59ed7d38-59ce-4812-ace9-9c0951355328.png"
+    ]
+  },
+  "cyathea-sp": {
+    "name": "Cyathea sp.",
+    "images": [
+      "1f5616bb-8f86-40f3-93ac-5d7685c5a05b.png",
+      "fcfe4130-c0fc-4b17-bb21-26888ccf76cb.png",
+      "e61424a3-926c-4ece-8990-c7641f66e1ce.png",
+      "dd1f79be-222b-47a2-9e87-36d225e1ae1e.png",
+      "d7c2bb2a-6aec-46d6-a31f-c31abb156a3f.png"
+    ]
+  },
+  "dicksonia-sp": {
+    "name": "Dicksonia sp.",
+    "images": [
+      "889919fc-5410-4f32-89b7-a8d0d819f236.png",
+      "747cd9a7-76af-4194-84cd-6793e34c0f82.png",
+      "5d376255-d859-4f74-987e-456b1789b2a8.png",
+      "34a76774-06d2-4550-8c63-c15a2f5a39a1.png",
+      "39358bc8-084d-4a6e-8f1e-130412406262.png"
+    ]
+  },
+  "caryota-obtusa": {
+    "name": "Caryota obtusa",
+    "images": [
+      "4b0c55aa-a762-40df-8abb-1a83b4d82ab7.png",
+      "074b2941-f6fe-4f65-9c05-7c09dcc25afb.png",
+      "1578c734-7382-4dc2-ab68-d95ad83ccc5e.png",
+      "2cec15ec-46ae-46f6-acd6-4d50f53dbe5b.png",
+      "08e149fe-8197-4e39-b8bb-e9e20e89a16b.png"
+    ]
+  },
+  "ptychosperma-caryotoides": {
+    "name": "Ptychosperma caryotoides",
+    "images": [
+      "2a4b9586-d7ad-4739-b4f6-6d13018f59f4.png",
+      "445b5767-e24b-4d97-835b-b947e2295b98.png",
+      "0fb0e9dd-8970-4d5b-bbdc-118225ea58a4.png",
+      "1cced876-c109-43da-94f3-4f4df2f95601.png"
+    ]
+  },
+  "magnolia-laevifolia": {
+    "name": "Magnolia laevifolia",
+    "images": [
+      "a04b7d73-9b68-4e31-9174-3d181aad491c.png",
+      "9b38e27d-78c3-4b53-a08a-b3441009766c.png",
+      "572c0131-eb0d-4fcf-9b74-8f1e4100f427.png",
+      "1e817628-12d6-4836-9977-07c3012a0df1.png"
+    ]
+  },
+  "chamaedorea-elegans": {
+    "name": "Chamaedorea elegans",
+    "images": [
+      "be0531d2-cf9b-4f2c-8ec7-e758b8dbfd69.png",
+      "b04dba5e-73cf-4818-8829-a26db8d884c2.png",
+      "7276866f-a573-4959-99df-ecc5c91546f9.png",
+      "3576febc-43a5-46d0-a625-0c5e00fa5a62.png"
+    ]
+  },
+  "basselinia-favieri": {
+    "name": "Basselinia favieri",
+    "images": [
+      "a89e97f5-5824-4441-93f5-09cd6f7b3afb.png",
+      "bae0e819-14d7-4c16-84d0-87cb8b7d7dfc.png",
+      "0ca7c12d-1bcf-4050-af0c-5350aae3a5bb.png",
+      "71a2e414-3fff-4838-8607-6af82cb39f25.png"
+    ]
+  },
+  "chuniophoenix-hainanensis": {
+    "name": "Chuniophoenix hainanensis",
+    "images": [
+      "ad7146c5-db03-446d-b3b2-5239278106cb.png",
+      "c9a2894c-6df3-45f5-98e5-04b3dd36c2b1.png",
+      "3ece7e74-dc20-4838-8347-78e45ebcf6af.png",
+      "e946bd23-8422-4f00-a597-d5f9ffd633ff.png"
+    ]
+  },
+  "sabal-miamensis": {
+    "name": "Sabal miamensis",
+    "images": [
+      "83cb91af-99bc-45b2-813b-ff789c073d75.png",
+      "1e90a912-b532-4f36-b161-098738e1c354.png",
+      "ec0403a1-5f5f-43e3-8846-bf343401cf48.png",
+      "5cce3c2f-5660-474e-89d8-0442d95afd2b.png"
+    ]
+  },
+  "zamia-integrifolia": {
+    "name": "Zamia integrifolia",
+    "images": [
+      "861d759e-ba67-4d4e-8fad-5ad1993827ef.png",
+      "4c8c52b1-6bce-4e7c-9708-f05986d91b4b.png",
+      "6abcd806-9f8a-4783-a613-25fc8a7f46cd.png"
+    ]
+  }
+}

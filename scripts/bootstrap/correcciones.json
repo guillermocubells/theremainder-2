@@ -1,0 +1,88 @@
+{
+  "_doc": [
+    "Correcciones de datos aplicadas por generar-seed.mjs sobre catalogo-recuperado.json.",
+    "Cada una esta justificada por un campo del propio JSON, no por criterio externo.",
+    "Si cambia el catalogo, revisa este fichero ANTES de regenerar la semilla."
+  ],
+
+  "_familia_doc": [
+    "El campo detail.family del JSON esta corrupto: la columna se ordeno sola en la hoja",
+    "de origen y quedo desplazada. 26 filas dicen 'Arecaceae' (incluidas magnolias, una",
+    "Dracaena y una Euphorbia) y las familias reales se apilan en las ultimas 14 filas,",
+    "asignadas a la especie equivocada. 23 de 40 estan mal.",
+    "Por eso NO se usa detail.family: la familia se deriva del genero, que es el primer",
+    "token del slug y coincide con scientific_name. Es reconstruible y verificable."
+  ],
+  "familia_por_genero": {
+    "araucaria": "Araucariaceae",
+    "archontophoenix": "Arecaceae",
+    "bentinckia": "Arecaceae",
+    "burretiokentia": "Arecaceae",
+    "caryota": "Arecaceae",
+    "chamaedorea": "Arecaceae",
+    "chambeyronia": "Arecaceae",
+    "cyphophoenix": "Arecaceae",
+    "dictyocaryum": "Arecaceae",
+    "livistona": "Arecaceae",
+    "loxococcus": "Arecaceae",
+    "phoenix": "Arecaceae",
+    "pritchardia": "Arecaceae",
+    "ptychosperma": "Arecaceae",
+    "rhopalostylis": "Arecaceae",
+    "sabal": "Arecaceae",
+    "syagrus": "Arecaceae",
+    "trachycarpus": "Arecaceae",
+    "wallichia": "Arecaceae",
+    "ceratozamia": "Zamiaceae",
+    "zamia": "Zamiaceae",
+    "dracaena": "Asparagaceae",
+    "euphorbia": "Euphorbiaceae",
+    "ixora": "Rubiaceae",
+    "magnolia": "Magnoliaceae",
+    "phormium": "Asphodelaceae",
+    "podocarpus": "Podocarpaceae",
+    "quercus": "Fagaceae",
+    "heptapleurum": "Araliaceae",
+    "vitis": "Vitaceae"
+  },
+
+  "_plant_type_doc": [
+    "5 filas llegan con plant_type='other', que seed-categories.sql deja deliberadamente",
+    "SIN categoria: esas fichas no aparecerian en ninguna categoria de la tienda.",
+    "La correccion no es inventada: sale del campo plantGroup del propio JSON, que si es",
+    "correcto en las 40 filas. 'Cicadas' -> cycad, 'Arbustos ornamentales' -> shrub.",
+    "Ambos valores existen en el enum plant_type y ambos estan mapeados en seed-categories.sql."
+  ],
+  "plant_type_por_slug": {
+    "ceratozamia-hildae": "cycad",
+    "zamia-sp-jamaican-giant": "cycad",
+    "ixora-margaretae": "shrub",
+    "heptapleurum-calyptratum": "shrub",
+    "vitis-cognitae": "shrub"
+  },
+
+  "_imagenes_doc": [
+    "scripts/imagenes-recuperadas.json mapea 12 plantas HISTORICAS a 54 de los 58 PNG de",
+    "public/lovable-uploads/. Solo 4 de esas 12 corresponden a una planta del catalogo de 40:",
+    "una coincide exacta y tres necesitan reconciliar el slug (erratum o variedad).",
+    "Las otras 8 son especies que ya no se venden. Resultado honesto: 4 de 40 con foto local.",
+    "NO se usan las URLs externas que traia scripts/seed-plants.sql (wikimedia, palmtalk,",
+    "etsystatic...): son hotlinks a servidores de terceros, se rompen en silencio y son un",
+    "problema de derechos de imagen en una tienda que cobra."
+  ],
+  "imagenes_slug_historico_a_catalogo": {
+    "magnolia-laevifolia": "magnolia-laevifolia",
+    "sabal-miamensis": "sabal-miamiensis",
+    "chamaedorea-elegans": "chamaedorea-elegans-negrita",
+    "rhopalostylis-sapida": "rhopalostylis-sapida-var-oceana"
+  },
+
+  "_carpeta_doc": [
+    "Carpeta publica donde viven los PNG. Cambiala aqui y regenera la semilla: la ruta que",
+    "se escribe en plants.images sale de este valor, asi que el renombrado de la carpeta y",
+    "el UPDATE de la base no se pueden desincronizar.",
+    "OJO: scripts/verificacion/recuperar-imagenes.mjs mina el historial de git buscando la",
+    "cadena literal 'lovable-uploads' y NO debe tocarse al renombrar."
+  ],
+  "carpeta_imagenes": "lovable-uploads"
+}
