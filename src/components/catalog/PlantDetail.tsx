@@ -403,14 +403,22 @@ const PlantDetail = () => {
             </div>
 
             {/* ====== DETAILS SECTION ====== */}
-            {detail && (
+            {/* Cada bloque se monta solo si tiene contenido. Antes bastaba con que
+                existiera `detail` para pintar el titulo, asi que una planta sin
+                instrucciones de cuidado mostraba "Care Instructions" con un hueco
+                debajo -- que se lee como algo roto, no como algo que falta. */}
+            {Boolean(detail?.careInstructions?.length || detail?.characteristics?.length) && (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
-                <div className="animate-fade-in" style={{ animationDelay: '100ms' }}>
-                  <CareInstructions instructions={detail.careInstructions} />
-                </div>
-                <div className="animate-fade-in" style={{ animationDelay: '150ms' }}>
-                  <PlantCharacteristics characteristics={detail.characteristics} />
-                </div>
+                {detail?.careInstructions?.length ? (
+                  <div className="animate-fade-in" style={{ animationDelay: '100ms' }}>
+                    <CareInstructions instructions={detail.careInstructions} />
+                  </div>
+                ) : null}
+                {detail?.characteristics?.length ? (
+                  <div className="animate-fade-in" style={{ animationDelay: '150ms' }}>
+                    <PlantCharacteristics characteristics={detail.characteristics} />
+                  </div>
+                ) : null}
               </div>
             )}
 
@@ -420,11 +428,11 @@ const PlantDetail = () => {
             </div>
 
             {/* Curious Facts */}
-            {detail && (
+            {detail?.curiousFacts?.length ? (
               <div className="mb-6 sm:mb-8 animate-fade-in" style={{ animationDelay: '200ms' }}>
                 <PlantCuriousFacts curiousFacts={detail.curiousFacts} />
               </div>
-            )}
+            ) : null}
 
             {/* Complete Your Order */}
             <div className="mb-6 sm:mb-8 animate-fade-in" style={{ animationDelay: '250ms' }}>

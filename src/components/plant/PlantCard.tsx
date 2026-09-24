@@ -121,7 +121,7 @@ const PlantCard = ({ plant }: PlantCardProps) => {
         <div className="block md:hidden">
           {/* Image with swipe carousel */}
           <div
-            className="relative aspect-[4/3] overflow-hidden touch-pan-y bg-muted/40"
+            className="relative aspect-[4/3] overflow-hidden touch-pan-y"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -130,7 +130,7 @@ const PlantCard = ({ plant }: PlantCardProps) => {
               <OptimizedImage
                 src={currentImage}
                 alt={`${plant.name} - ${currentImageIndex + 1}/${allImages.length}`}
-                className="w-full h-full object-contain object-center transition-transform duration-300 ease-out"
+                className="w-full h-full object-cover transition-transform duration-300 ease-out"
                 draggable={false}
                 responsiveHint={640}
                 sizes="(max-width: 640px) 50vw, 33vw"
@@ -332,15 +332,12 @@ const PlantCard = ({ plant }: PlantCardProps) => {
 
             {/* Hover overlay with image */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col">
-              {/* object-contain, no object-cover: las palmeras son verticales y un
-                  recorte 4/3 se come la copa, que es justo lo que hay que ver.
-                  El fondo hace que el encuadre se lea intencionado y no como hueco. */}
               {getHoverImage() && (
-                <div className="flex-1 relative overflow-hidden bg-muted/40">
+                <div className="flex-1 relative overflow-hidden">
                   <OptimizedImage
                     src={getHoverImage()}
                     alt={`${plant.name} - ${t('plant.preview')}`}
-                    className="w-full h-full object-contain object-center transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                    className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
                     placeholder={false}
                     responsiveHint={768}
                     sizes="(max-width: 768px) 50vw, 33vw"
