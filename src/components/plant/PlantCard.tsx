@@ -11,6 +11,7 @@ import { getMainImage, getDisplayImages } from "@/utils/plantImageUtils";
 import { usePlantTooltips } from "@/hooks/catalog";
 import { useCart } from "@/contexts/CartContext";
 import { useCurrency } from "@/contexts/CurrencyContext";
+import { useIsMobile } from "@/hooks/shared/use-mobile";
 import { useImageCarousel } from "@/hooks/catalog";
 import { toast } from "sonner";
 
@@ -28,6 +29,11 @@ const PlantCard = ({ plant }: PlantCardProps) => {
   const LightIcon = lightInfo.icon;
   const GrowthIcon = growthInfo.icon;
 
+  // Se monta UN solo diseño, no los dos con uno oculto por CSS: antes cada
+  // tarjeta creaba dos arboles DOM y pedia dos imagenes -- la del movil y la
+  // de hover del escritorio -- y con 13 tarjetas eso son 26 descargas y el
+  // doble de nodos. En movil ahogaba la pagina.
+  const isMobile = useIsMobile();
   const allImages = getDisplayImages(plant.images, plant.productImages);
   const mainImg = getMainImage(plant.images, plant.productImages, plant.primaryImage);
   const hasMultipleImages = allImages.length > 1;
@@ -118,6 +124,7 @@ const PlantCard = ({ plant }: PlantCardProps) => {
         }}
       >
         {/* ──────────────── MOBILE LAYOUT ──────────────── */}
+        {isMobile && (
         <div className="block md:hidden">
           {/* Image with swipe carousel */}
           <div
@@ -242,8 +249,10 @@ const PlantCard = ({ plant }: PlantCardProps) => {
             </div>
           </CardContent>
         </div>
+        )}
 
         {/* ──────────────── DESKTOP LAYOUT ──────────────── */}
+        {!isMobile && (
         <div className="hidden md:flex md:flex-col md:h-full">
           <CardHeader className="flex-shrink-0 pb-3 sm:pb-4 h-36 sm:h-40">
             <div className="flex justify-between items-start mb-2">
@@ -403,6 +412,7 @@ const PlantCard = ({ plant }: PlantCardProps) => {
             </div>
           </CardContent>
         </div>
+        )}
       </Card>
     </Link>
   );
