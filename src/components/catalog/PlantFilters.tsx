@@ -42,7 +42,10 @@ const INITIAL_FILTERS: FilterState = {
   climate: "",
   category: "",
   plantGroup: "",
-  stock: "",
+  // Por defecto el catalogo ensena solo lo disponible: "Todas" = disponibles.
+  // El selector permite cambiar a "Agotado" (archivo de lo ya vendido, donde se
+  // puede dejar el correo) o a "Todas" para ver el catalogo historico entero.
+  stock: "disponible",
   sortBy: "",
   priceMin: "",
   priceMax: "",

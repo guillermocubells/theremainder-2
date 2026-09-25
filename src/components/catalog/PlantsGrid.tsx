@@ -23,11 +23,12 @@ const PlantsGrid = () => {
     setVisibleCount(BATCH_SIZE);
   }, []);
 
-  // Hide out-of-stock plants from catalog listing (detail page remains accessible via URL/SEO)
+  // Sin filtros, el catalogo muestra solo lo disponible. Pero cuando el usuario
+  // ya ha filtrado, se respeta su eleccion: antes se volvia a forzar "en stock"
+  // aqui, asi que la opcion "Agotado" del selector no podia devolver nada nunca
+  // y el archivo de especies vendidas era inalcanzable.
   const inStockPlants = useMemo(() => plants.filter((p) => (p.quantity ?? 0) > 0), [plants]);
-  const basePlants = filteredPlants
-    ? filteredPlants.filter((p) => (p.quantity ?? 0) > 0)
-    : inStockPlants;
+  const basePlants = filteredPlants ?? inStockPlants;
   const displayPlants = selectedCategory
     ? basePlants.filter((p) => p.plantGroup === getCategoryName(selectedCategory, inStockPlants))
     : basePlants;
