@@ -34,6 +34,15 @@ export default defineConfig(({ mode }) => ({
         ],
       },
       workbox: {
+        // Sin esto, un service worker ya instalado sigue mandando hasta que se
+        // cierran TODAS las pestanas del sitio. En movil la pestana se queda
+        // abierta, asi que un visitante que cargo la version que precacheaba
+        // 30 MB se quedaba atrapado en ella indefinidamente, aunque el arreglo
+        // ya estuviera desplegado. Con estas tres, el nuevo toma el control en
+        // la siguiente carga y tira las caches viejas.
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         // Solo el armazon de la aplicacion. Las fotos del catalogo NO se
         // precachean: son 206 ficheros y ~30 MB, y precachearlas obliga al
