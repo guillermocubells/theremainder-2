@@ -190,11 +190,18 @@ const PlantFilters = ({ plants, onFilterChange, isVisible }: PlantFiltersProps) 
 
   const clearAllFilters = useCallback(() => {
     setFilters(INITIAL_FILTERS);
-    onFilterChange(plants);
-  }, [onFilterChange, plants]);
+    // Se pasa por applyFilters en vez de devolver `plants` en crudo: INITIAL_FILTERS
+    // ya no esta vacio (stock arranca en "disponible"), asi que entregar la lista
+    // sin filtrar hacia aparecer las agotadas al limpiar.
+    applyFilters(INITIAL_FILTERS);
+  }, [applyFilters]);
 
-  const hasActiveFilters = useMemo(() => 
-    Object.values(filters).some(v => v !== ""),
+  // Se compara contra los valores de partida, no contra cadena vacia: con
+  // stock: "disponible" por defecto, la comparacion antigua daba siempre true y
+  // la interfaz creia que habia filtros puestos nada mas cargar.
+  const hasActiveFilters = useMemo(() =>
+    (Object.keys(filters) as Array<keyof FilterState>)
+      .some(k => filters[k] !== INITIAL_FILTERS[k]),
   [filters]);
 
   const habitatFiltersCount = useMemo(() => 

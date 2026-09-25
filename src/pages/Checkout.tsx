@@ -18,6 +18,8 @@ import { useAuth } from "@/contexts/AuthContext";
 import { CountrySelector } from "@/components/checkout/CountrySelector";
 import { ShippingPreview } from "@/components/checkout/ShippingPreview";
 import { StripeEmbeddedCheckout } from "@/components/checkout/StripeEmbeddedCheckout";
+import { QuoteRequestPanel } from "@/components/checkout/QuoteRequestPanel";
+import { PAGOS_ACTIVOS } from "@/config/store";
 import { CheckoutOrderSummary } from "@/components/checkout/CheckoutOrderSummary";
 import { useShippingQuote } from "@/hooks/checkout";
 import { COUNTRY_NAMES } from "@/utils/shippingCalculator";
@@ -718,13 +720,26 @@ const Checkout = () => {
             onStepClick={goToStep}
             canEdit={completedSteps.includes("notes")}
           >
-            <StripeEmbeddedCheckout
-              items={items}
-              shippingCountry={shippingCountry}
-              shippingForm={form}
-              referralCode={appliedReferralCode}
-              referrerUserId={referrerUserId}
-            />
+            {PAGOS_ACTIVOS ? (
+              <StripeEmbeddedCheckout
+                items={items}
+                shippingCountry={shippingCountry}
+                shippingForm={form}
+                referralCode={appliedReferralCode}
+                referrerUserId={referrerUserId}
+              />
+            ) : (
+              /* Mientras Stripe no este configurado, el pedido se recoge como
+                 solicitud y se gestiona a mano. Un solo interruptor en
+                 config/store.ts devuelve la pasarela cuando toque. */
+              <QuoteRequestPanel
+                items={items}
+                shippingCountry={shippingCountry}
+                shippingForm={form}
+                shippingTotal={quote?.total ?? null}
+                referralCode={appliedReferralCode}
+              />
+            )}
             </CheckoutAccordionItem>
           </div>
 

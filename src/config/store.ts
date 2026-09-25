@@ -52,3 +52,13 @@ export const STORAGE_KEYS = {
   cookieConsent: "frondaprima_cookie_consent",
   cookiePreferences: "frondaprima_cookie_preferences",
 } as const;
+
+// ─── Pagos ───
+/**
+ * Interruptor temporal. Con Stripe sin configurar (faltan STRIPE_SECRET_KEY y
+ * STRIPE_WEBHOOK_SECRET en los secretos de las edge functions), el checkout no
+ * puede cobrar. En false, el ultimo paso recoge el pedido como solicitud y el
+ * dueno responde a mano con el presupuesto. Ponlo en true cuando la pasarela
+ * este lista: es lo unico que hay que tocar.
+ */
+export const PAGOS_ACTIVOS = false;

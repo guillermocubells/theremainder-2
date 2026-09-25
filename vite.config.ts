@@ -35,10 +35,28 @@ export default defineConfig(({ mode }) => ({
       },
       workbox: {
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
-        globPatterns: ["**/*.{js,css,html,ico,png,jpg,jpeg,svg,webp,woff2}"],
+        // Solo el armazon de la aplicacion. Las fotos del catalogo NO se
+        // precachean: son 206 ficheros y ~30 MB, y precachearlas obliga al
+        // navegador a descargarlos ANTES de que la web sea usable. En movil eso
+        // es una pagina colgada. Se sirven bajo demanda con la regla de abajo.
+        globPatterns: ["**/*.{js,css,html,ico,svg,woff2}"],
         navigateFallback: "/index.html",
         navigateFallbackAllowlist: [/^\/(?!api\/).*/],
         runtimeCaching: [
+          {
+            // Fotos del catalogo: se descargan cuando hacen falta y se quedan
+            // cacheadas. Con tope de entradas para no llenar el disco del
+            // visitante con un catalogo que puede seguir creciendo.
+            urlPattern: ({ url }: { url: URL }) =>
+              url.pathname.startsWith("/plantas/") ||
+              url.pathname.startsWith("/lovable-uploads/"),
+            handler: "CacheFirst",
+            options: {
+              cacheName: "fotos-catalogo",
+              expiration: { maxEntries: 120, maxAgeSeconds: 60 * 60 * 24 * 30 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
           {
             urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\/.*/i,
             handler: "CacheFirst",
