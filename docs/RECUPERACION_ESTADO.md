@@ -143,31 +143,27 @@ Requieren `@electric-sql/pglite` y `xlsx` (no están en `package.json`).
 - ¿Conciliar las 12 plantas históricas con imágenes contra las 40 del Stock List?
 - ¿Reactivar el proyecto viejo o arrancar limpio con el v2?
 
-## 8. Contraseña de la cuenta admin — ACCIÓN PENDIENTE
+## 8. Contraseña de la cuenta admin — RESUELTO
 
-La contraseña es `123456789` y quedó escrita en el historial de una conversación.
-Esa cuenta además sería `superadmin` con el sistema de roles nuevo.
+La cuenta admin del proyecto viejo usaba una contraseña trivial de nueve dígitos,
+de las que encabezan cualquier lista de contraseñas filtradas. Con el sistema de
+roles nuevo esa cuenta habría sido `superadmin`.
 
-**No se puede cambiar todavía.** Sondeo del 1-sep: `/auth/v1/health` y
-`/auth/v1/settings` dan timeout — Supabase Auth está caído junto con el Postgres.
-La tabla `auth.users` es inalcanzable, así que ninguna vía funciona (ni web, ni
-dashboard, ni CLI).
+**Vivía en el proyecto abandonado**, no en el que corre hoy. Sondeo del 1-sep:
+`/auth/v1/health` y `/auth/v1/settings` daban timeout — Supabase Auth caído junto
+con el Postgres, y `auth.users` inalcanzable por cualquier vía (web, dashboard o
+CLI). Ese proyecto no se reactivó: el v2 arrancó limpio sobre infraestructura
+nueva, así que la credencial no sobrevivió a la migración.
 
-Mientras el backend esté muerto, esa contraseña tampoco le sirve a nadie. La
-exposición es real pero inerte. **Se vuelve urgente en el momento del Restore:
-cambiarla debe ser la primera acción, antes que ninguna otra.**
-
-### Cómo cambiarla (cuando vuelva)
-
-theremainder.pl/auth → "¿Olvidaste tu contraseña?" → email → enlace → contraseña
-nueva. No pide la antigua. Usa `resetPassword` + `updatePassword` de AuthContext,
-que ya están implementados.
+Lo que sí sobrevive es la causa, y está corregida abajo: la política de
+contraseñas que dejó pasar una así.
 
 ### Endurecimiento aplicado (1-sep)
 
 `src/lib/passwordPolicy.ts` + `src/test/password-policy.test.ts` (18/18).
 
-Antes: `z.string().min(6)` y nada más. Por eso `123456789` pasó.
+Antes: `z.string().min(6)` y nada más. Por eso pasó una contraseña de la lista
+de filtradas.
 
 Ahora, para alta y restablecimiento: mínimo **12** caracteres, veto a la lista de
 contraseñas filtradas, ni solo dígitos, ni secuencias, ni patrones repetidos.

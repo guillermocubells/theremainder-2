@@ -8,7 +8,7 @@ const { loginPasswordSchema, newPasswordSchema } = buildPasswordSchemas(t);
 describe('política de contraseñas', () => {
   describe('rechaza lo débil', () => {
     it.each([
-      ['123456789', 'auth.errors.passwordCommon'],   // la que estaba en producción
+      ['123456789', 'auth.errors.passwordCommon'],   // caso que la política vieja dejaba pasar
       ['123456', 'auth.errors.passwordCommon'],
       ['password123', 'auth.errors.passwordCommon'],
       ['theremainder', 'auth.errors.passwordCommon'], // el nombre de la propia tienda
