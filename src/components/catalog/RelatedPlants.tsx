@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { plants as staticPlants, Plant } from "@/data/plants";
+import { Plant } from "@/data/plants";
 import { useCatalogPlants } from "@/hooks/catalog";
 import { Card, CardContent } from "@/components/ui/card";
 import { useCurrency } from "@/contexts/CurrencyContext";
@@ -18,19 +18,14 @@ interface RelatedPlantsProps {
 const RelatedPlants = ({ currentPlant, maxItems = 4 }: RelatedPlantsProps) => {
   const { t } = useTranslation();
   const { formatPrice } = useCurrency();
+  // Solo el catalogo real. Antes se mezclaban las fichas de prueba de
+  // `data/plants.ts`, que metian especies inexistentes entre las relacionadas
+  // con precio y stock inventados y enlace a una ficha que no existe.
   const { plants: catalogPlants } = useCatalogPlants();
 
-  // Merge static + catalog, deduplicate by id, prefer catalog
-  const allPlants = useMemo(() => {
-    const map = new Map<string, Plant>();
-    for (const p of staticPlants) map.set(p.id, p);
-    for (const p of catalogPlants) map.set(p.id, p);
-    return Array.from(map.values());
-  }, [catalogPlants]);
-
   const relatedPlants = useMemo(
-    () => getRelatedPlants(allPlants, currentPlant, maxItems),
-    [allPlants, currentPlant, maxItems],
+    () => getRelatedPlants(catalogPlants, currentPlant, maxItems),
+    [catalogPlants, currentPlant, maxItems],
   );
 
   if (relatedPlants.length === 0) return null;

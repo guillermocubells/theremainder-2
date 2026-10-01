@@ -36,7 +36,11 @@ vi.mock("react-i18next", () => ({
 }));
 
 // Prevent PlantSearchEngine's useAISearch from triggering effect loops
-vi.mock("@/hooks/useAISearch", () => ({
+// La ruta real tras la reestructura por dominios es @/hooks/catalog/*.
+// Con la ruta vieja el mock no se aplicaba: el grid usaba el hook real,
+// que contra el cliente de Supabase simulado devuelve cero plantas. Las
+// pruebas llevaban desde entonces comprobando una rejilla vacia.
+vi.mock("@/hooks/catalog/useAISearch", () => ({
   useAISearch: (_query: string, plants: Plant[]) => ({
     filteredPlants: plants,
     detectedPostalCode: null,
@@ -67,6 +71,25 @@ vi.mock("@/contexts/AuthContext", () => ({
   AuthProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
+// PlantCard usa el carrito. Al arreglar el mock del catalogo, la rejilla pasa
+// a pintar tarjetas de verdad y sin esto revienta con "useCart must be used
+// within a CartProvider".
+vi.mock("@/contexts/CartContext", () => ({
+  useCart: () => ({
+    items: [],
+    addToCart: vi.fn(),
+    removeFromCart: vi.fn(),
+    updateQuantity: vi.fn(),
+    clearCart: vi.fn(),
+    getItemQuantity: () => 0,
+    getTotalPrice: () => 0,
+    getTotalItems: () => 0,
+    isCartOpen: false,
+    setIsCartOpen: vi.fn(),
+  }),
+  CartProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+}));
+
 function makePlant(overrides: Partial<Plant> & { id: string; name: string }): Plant {
   return {
     variety: "",
@@ -92,7 +115,7 @@ const mockPlants: Plant[] = Array.from({ length: 30 }, (_, i) =>
   }),
 );
 
-vi.mock("@/hooks/useCatalogPlants", () => ({
+vi.mock("@/hooks/catalog/useCatalogPlants", () => ({
   useCatalogPlants: () => ({
     plants: mockPlants,
     loading: false,
@@ -100,6 +123,7 @@ vi.mock("@/hooks/useCatalogPlants", () => ({
   }),
 }));
 
+import { intersectAll } from "./setup";
 import PlantsGrid from "@/components/catalog/PlantsGrid";
 
 function renderGrid() {
@@ -117,78 +141,52 @@ function renderGrid() {
   );
 }
 
-describe("PlantsGrid – Listing & Pagination", () => {
+describe("PlantsGrid – listado y scroll infinito", () => {
   beforeEach(() => vi.clearAllMocks());
 
-  it("renders the correct total count", async () => {
+  it("muestra el numero total de plantas", async () => {
     renderGrid();
     await waitFor(() => {
       expect(screen.getByText(/30 plantas/)).toBeInTheDocument();
     });
   });
 
-  it("displays pagination info (page 1 of 3)", async () => {
+  // La tarjeta repite el nombre (titulo y nombre comun, y de nuevo en la capa
+  // de hover), asi que se cuenta por "hay al menos una" y no por unicidad.
+  const estaEnPantalla = (nombre: string) =>
+    screen.queryAllByText(nombre).length > 0;
+
+  it("pinta solo la primera tanda de 12", async () => {
     renderGrid();
-    await waitFor(() => {
-      expect(screen.getByText(/Página 1 de 3/)).toBeInTheDocument();
-    });
+    await waitFor(() => expect(estaEnPantalla("Planta 1")).toBe(true));
+    expect(estaEnPantalla("Planta 12")).toBe(true);
+    expect(estaEnPantalla("Planta 13")).toBe(false);
   });
 
-  it("navigates to next page", async () => {
+  it("anade otra tanda cuando el centinela entra en pantalla", async () => {
     renderGrid();
-    await waitFor(() => screen.getByLabelText("Go to next page"));
-    await act(async () => {
-      fireEvent.click(screen.getByLabelText("Go to next page"));
-    });
-    await waitFor(() => {
-      expect(screen.getByText(/Página 2 de 3/)).toBeInTheDocument();
-    });
+    await waitFor(() => expect(estaEnPantalla("Planta 12")).toBe(true));
+
+    await act(async () => { intersectAll(); });
+
+    await waitFor(() => expect(estaEnPantalla("Planta 13")).toBe(true));
+    expect(estaEnPantalla("Planta 24")).toBe(true);
+    expect(estaEnPantalla("Planta 25")).toBe(false);
   });
 
-  it("navigates back to previous page", async () => {
+  it("acaba mostrando las 30 y deja de pedir mas", async () => {
     renderGrid();
-    await waitFor(() => screen.getByLabelText("Go to next page"));
-    await act(async () => {
-      fireEvent.click(screen.getByLabelText("Go to next page"));
-    });
-    await act(async () => {
-      fireEvent.click(screen.getByLabelText("Go to previous page"));
-    });
-    await waitFor(() => {
-      expect(screen.getByText(/Página 1 de 3/)).toBeInTheDocument();
-    });
-  });
+    await waitFor(() => expect(estaEnPantalla("Planta 12")).toBe(true));
 
-  it("previous button is disabled on first page", async () => {
-    renderGrid();
-    await waitFor(() => {
-      expect(screen.getByLabelText("Go to previous page").className).toContain("pointer-events-none");
-    });
-  });
+    await act(async () => { intersectAll(); });
+    await waitFor(() => expect(estaEnPantalla("Planta 13")).toBe(true));
+    await act(async () => { intersectAll(); });
 
-  it("next button is disabled on last page", async () => {
-    renderGrid();
-    await waitFor(() => screen.getByLabelText("Go to next page"));
-    await act(async () => {
-      fireEvent.click(screen.getByLabelText("Go to next page")); // 2
-    });
-    await act(async () => {
-      fireEvent.click(screen.getByLabelText("Go to next page")); // 3
-    });
-    await waitFor(() => {
-      expect(screen.getByLabelText("Go to next page").className).toContain("pointer-events-none");
-    });
-  });
+    await waitFor(() => expect(estaEnPantalla("Planta 30")).toBe(true));
 
-  it("clicking a page number navigates directly", async () => {
-    renderGrid();
-    await waitFor(() => screen.getByRole("link", { name: "3" }));
-    await act(async () => {
-      fireEvent.click(screen.getByRole("link", { name: "3" }));
-    });
-    await waitFor(() => {
-      expect(screen.getByText(/Página 3 de 3/)).toBeInTheDocument();
-    });
+    // Agotado el catalogo, el centinela desaparece: no hay mas que cargar.
+    await act(async () => { intersectAll(); });
+    expect(estaEnPantalla("Planta 30")).toBe(true);
   });
 
   it("does not show empty state when plants exist", async () => {

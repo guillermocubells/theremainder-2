@@ -137,8 +137,18 @@ scripts/          Semillas y utilidades
 En producción. El repositorio es público como muestra de trabajo; no busca
 contribuciones externas.
 
-Hay 15 ficheros de test y un `vitest.config.ts`, pero **vitest no está declarado
-en `devDependencies`** — hace falta añadirlo antes de poder ejecutarlos.
+14 ficheros de test, **251 pruebas en verde** con `npm test`. El proyecto
+comprueba tipos con `npm run typecheck` y compila con `npm run build`.
+
+**El checkout no cobra todavía**: `PAGOS_ACTIVOS` está en `false` en
+`src/config/store.ts` mientras falten `STRIPE_SECRET_KEY` y
+`STRIPE_WEBHOOK_SECRET` en los secretos de las edge functions. El último paso
+recoge el pedido como solicitud y se responde con el presupuesto a mano.
+
+**Antes de aceptar pedidos hace falta sembrar `shipping_zones`**
+(`scripts/seed-shipping-zones.sql`). Con la tabla vacía, `calculate-shipping`
+responde `SHIPPING_NOT_AVAILABLE` para todos los países y el checkout se
+bloquea en el primer paso.
 
 ---
 

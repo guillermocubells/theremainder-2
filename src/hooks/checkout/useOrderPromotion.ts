@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { plants, Plant } from '@/data/plants';
+import { Plant } from '@/data/plants';
+import { useCatalogPlants } from '@/hooks/catalog';
 import { useCart, CartItem } from '@/contexts/CartContext';
 import { PROMO_CONFIG } from '@/config/store';
 
@@ -56,6 +57,10 @@ function scorePlant(
 
 export function useOrderPromotion(): PromoState {
   const { items, getTotalPrice } = useCart();
+  // Los productos que se sugieren para llegar al umbral tienen que existir y
+  // costar lo que dice la base: antes salian de `data/plants.ts` y se podia
+  // recomendar en el carrito una especie que no esta a la venta.
+  const { plants } = useCatalogPlants();
 
   return useMemo(() => {
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
@@ -90,5 +95,5 @@ export function useOrderPromotion(): PromoState {
       threshold: thresholdAmount,
       recommendations: candidates,
     };
-  }, [items]);
+  }, [items, plants]);
 }

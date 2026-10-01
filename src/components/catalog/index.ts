@@ -15,7 +15,6 @@ export { default as PlantsGrid } from './PlantsGrid';
 export { PlantCardSkeleton, PlantGridSkeleton } from './PlantGridSkeleton';
 export { default as CategoryCards } from './CategoryCards';
 export { default as RecentlyViewed } from './RecentlyViewed';
-export { default as RecentlyPurchased } from './RecentlyPurchased';
 export { default as RelatedPlants } from './RelatedPlants';
 export { default as ViabilityScale } from './ViabilityScale';
 export { default as AddToCartButton } from './AddToCartButton';

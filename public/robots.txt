@@ -16,4 +16,4 @@ Disallow: /admin
 Disallow: /auth
 Disallow: /checkout
 
-Sitemap: https://theremainder.lovable.app/sitemap.xml
+Sitemap: https://theremainder.pl/sitemap.xml

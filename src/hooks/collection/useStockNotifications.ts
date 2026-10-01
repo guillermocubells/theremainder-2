@@ -1,7 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
-import { plants } from '@/data/plants';
 
 export interface StockNotification {
   id: string;
@@ -36,19 +35,33 @@ export const useStockNotifications = () => {
         .order('created_at', { ascending: false });
       
       if (error) throw error;
-      
-      // Enrich with local plant data
+
+      // Los datos de cada planta salen de la base, no del array de prueba de
+      // `data/plants.ts`: ese solo tiene 6 fichas, asi que casi todos los avisos
+      // se quedaban con `plantData: null` y el que acertaba mostraba un precio
+      // que no era el de venta.
+      // `plant_id` es el UUID de `plants.id`, no el slug.
+      const ids = [...new Set(data.map((n) => n.plant_id))];
+      const { data: rows } = ids.length
+        ? await supabase
+            .from('plants')
+            .select('id, slug, name, common_name, images, primary_image, price, sale_price, stock_qty')
+            .in('id', ids)
+        : { data: [] };
+
+      const byId = new Map((rows ?? []).map((p) => [p.id, p]));
+
       return data.map(notification => {
-        const localPlant = plants.find(p => p.id === notification.plant_id);
+        const p = byId.get(notification.plant_id);
         return {
           ...notification,
-          plantData: localPlant ? {
-            id: localPlant.id,
-            name: localPlant.name,
-            scientificName: localPlant.commonName,
-            thumbnailUrl: localPlant.images?.[0],
-            price: localPlant.price,
-            stockQty: localPlant.quantity,
+          plantData: p ? {
+            id: p.slug,
+            name: p.name,
+            scientificName: p.common_name ?? p.name,
+            thumbnailUrl: p.primary_image ?? p.images?.[0],
+            price: p.sale_price ?? p.price,
+            stockQty: p.stock_qty ?? 0,
           } : null,
         } as StockNotification;
       });

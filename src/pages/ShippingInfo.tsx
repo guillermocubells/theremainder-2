@@ -94,106 +94,130 @@ const ShippingInfo = () => {
           {/* Sección 4 — Tarifas orientativas (Península España) */}
           <section className="space-y-4">
             <h2 className="text-xl sm:text-2xl font-semibold text-foreground mt-8 mb-4">
-              4. Tarifas orientativas — España (Península)
+              4. Tarifas de envío — España (Península)
             </h2>
-            
+
             <div className="not-prose overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Maceta / Peso estimado</TableHead>
-                    <TableHead>1 planta</TableHead>
-                    <TableHead>Planta adicional</TableHead>
+                    <TableHead>Concepto</TableHead>
+                    <TableHead>Coste</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell>12 cm (≈ 1 kg)</TableCell>
-                    <TableCell>7,40 €</TableCell>
-                    <TableCell>2 € por kg</TableCell>
+                    <TableCell>Primera planta</TableCell>
+                    <TableCell>8,00 €</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>20 cm (≈ 3 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2 € por kg</TableCell>
+                    <TableCell>Cada planta adicional</TableCell>
+                    <TableCell>1,50 €</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>26 cm (≈ 4 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2 € por kg</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>30 cm (≈ 6 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2 € por kg</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>35 cm (≈ 8 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2 € por kg</TableCell>
+                    <TableCell>Pedidos desde 150 €</TableCell>
+                    <TableCell>Envío gratuito</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
             </div>
 
             <p className="text-muted-foreground text-sm italic mt-4">
-              Tarifas orientativas. El coste final se calcula automáticamente en el checkout en función de peso y altura.
+              El coste exacto se muestra en el checkout antes de confirmar el pedido.
             </p>
           </section>
 
           <Separator className="my-6" />
 
-          {/* Sección 5 — Tarifas orientativas (Unión Europea — Zona 1) */}
+          {/* Sección 5 — Tarifas por zona (resto de Europa) */}
           <section className="space-y-4">
             <h2 className="text-xl sm:text-2xl font-semibold text-foreground mt-8 mb-4">
-              5. Tarifas orientativas — Unión Europea (Zona 1)
+              5. Tarifas de envío — resto de Europa
             </h2>
-            
-            <p className="text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Países incluidos:</strong> Alemania, Austria, Bélgica, Dinamarca, Eslovaquia, Eslovenia, Francia, Italia, Luxemburgo, Países Bajos, Polonia, Portugal, República Checa.
-            </p>
 
             <div className="not-prose overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Maceta / Peso estimado</TableHead>
-                    <TableHead>1 planta</TableHead>
-                    <TableHead>Planta adicional</TableHead>
+                    <TableHead>Zona</TableHead>
+                    <TableHead>Países</TableHead>
+                    <TableHead>1.ª planta</TableHead>
+                    <TableHead>Adicional</TableHead>
+                    <TableHead>Envío gratis</TableHead>
+                    <TableHead>Días</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell>12 cm (≈ 1 kg)</TableCell>
-                    <TableCell>16,50 €</TableCell>
-                    <TableCell>2,50 € por kg</TableCell>
+                    <TableCell className="font-medium">Portugal</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Portugal</TableCell>
+                    <TableCell>12,00 €</TableCell>
+                    <TableCell>2,00 €</TableCell>
+                    <TableCell>200 €</TableCell>
+                    <TableCell>3–5</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>20 cm (≈ 3 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2,50 € por kg</TableCell>
+                    <TableCell className="font-medium">Francia</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Francia</TableCell>
+                    <TableCell>15,00 €</TableCell>
+                    <TableCell>2,50 €</TableCell>
+                    <TableCell>250 €</TableCell>
+                    <TableCell>4–6</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>26 cm (≈ 4 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2,50 € por kg</TableCell>
+                    <TableCell className="font-medium">Italia</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Italia</TableCell>
+                    <TableCell>16,00 €</TableCell>
+                    <TableCell>2,80 €</TableCell>
+                    <TableCell>280 €</TableCell>
+                    <TableCell>4–7</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>30 cm (≈ 6 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2,50 € por kg</TableCell>
+                    <TableCell className="font-medium">Europa Central</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Alemania, Austria, Bélgica, Luxemburgo, Países Bajos</TableCell>
+                    <TableCell>18,00 €</TableCell>
+                    <TableCell>3,00 €</TableCell>
+                    <TableCell>300 €</TableCell>
+                    <TableCell>5–8</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>35 cm (≈ 9 kg)</TableCell>
-                    <TableCell>Según tamaño</TableCell>
-                    <TableCell>2,50 € por kg</TableCell>
+                    <TableCell className="font-medium">Europa del Este</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Bulgaria, Croacia, Eslovaquia, Eslovenia, Hungría, Polonia, República Checa, Rumanía</TableCell>
+                    <TableCell>22,00 €</TableCell>
+                    <TableCell>3,50 €</TableCell>
+                    <TableCell>—</TableCell>
+                    <TableCell>6–10</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Países Nórdicos</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Dinamarca, Finlandia, Suecia</TableCell>
+                    <TableCell>25,00 €</TableCell>
+                    <TableCell>4,00 €</TableCell>
+                    <TableCell>—</TableCell>
+                    <TableCell>6–10</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Países Bálticos</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Estonia, Letonia, Lituania</TableCell>
+                    <TableCell>28,00 €</TableCell>
+                    <TableCell>4,50 €</TableCell>
+                    <TableCell>—</TableCell>
+                    <TableCell>7–12</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Irlanda, Malta, Chipre y Grecia</TableCell>
+                    <TableCell className="text-muted-foreground text-xs">Chipre, Grecia, Irlanda, Malta</TableCell>
+                    <TableCell>30,00 €</TableCell>
+                    <TableCell>5,00 €</TableCell>
+                    <TableCell>—</TableCell>
+                    <TableCell>8–14</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
             </div>
 
-            <p className="text-muted-foreground text-sm mt-4">
-              <strong className="text-foreground">Nota:</strong> Envíos a islas de Italia y Francia: coste fijo adicional de 20 €.
+            <p className="text-muted-foreground text-sm italic mt-4">
+              El coste exacto se muestra en el checkout antes de confirmar el pedido.
             </p>
           </section>
 
@@ -206,8 +230,8 @@ const ShippingInfo = () => {
             </h2>
             
             <ul className="space-y-2 text-muted-foreground text-sm list-disc pl-5">
-              <li><strong className="text-foreground">España (Península):</strong> Seur → entrega estimada 24–72 h</li>
-              <li><strong className="text-foreground">Unión Europea:</strong> DPD Group (estándar) → entrega estimada 4–6 días laborables</li>
+              <li><strong className="text-foreground">España (Península):</strong> Seur → 2–4 días laborables</li>
+              <li><strong className="text-foreground">Resto de Europa:</strong> DPD Group (estándar) → según zona, ver la tabla del apartado 5</li>
             </ul>
 
             <p className="text-muted-foreground text-sm italic mt-4">

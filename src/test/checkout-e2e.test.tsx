@@ -4,6 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import i18n from "@/i18n";
+import { PAGOS_ACTIVOS } from "@/config/store";
 
 // ── Mocks ────────────────────────────────────────────────
 
@@ -115,6 +116,13 @@ vi.mock("@/hooks/checkout/useShippingQuote", () => ({
     isLoading: mockIsQuoteLoading,
     error: null,
   }),
+}));
+
+// Sin pedido confirmado todavia: la pantalla cae al tramo que muestra el
+// identificador de sesion. Sin este mock el hook se queda en `isLoading` para
+// siempre contra el cliente de Supabase simulado y solo se pinta el spinner.
+vi.mock("@/hooks/checkout/useOrderBySession", () => ({
+  useOrderBySession: () => ({ data: null, isLoading: false, error: null }),
 }));
 
 vi.mock("@/hooks/collection/useOwnedPlants", () => ({
@@ -359,7 +367,22 @@ describe("E2E: Full checkout flow to Stripe", () => {
       screen.getAllByRole("button", { name: /continuar|continue/i })[0]
     );
 
-    // Step 4: Notes → advance to payment
+    // Paso 4: notas y consentimientos. Los cuatro obligatorios (condiciones,
+    // privacidad, renuncia al desistimiento y comision) bloquean el avance si
+    // no se marcan, y la prueba no los marcaba: se escribio antes de que el
+    // paso los exigiera.
+    await waitFor(() =>
+      expect(container.querySelector('#consent-terms')).toBeInTheDocument()
+    );
+    for (const id of [
+      '#consent-terms',
+      '#consent-privacy',
+      '#consent-withdrawal',
+      '#consent-platform-fee',
+    ]) {
+      fireEvent.click(container.querySelector(id)!);
+    }
+
     await waitFor(() => {
       const btns = screen.getAllByRole("button", {
         name: /pago|payment|continuar/i,
@@ -373,9 +396,21 @@ describe("E2E: Full checkout flow to Stripe", () => {
     })[0];
     fireEvent.click(payBtn);
 
-    // Step 5: Payment — Stripe embedded checkout should appear
+    // Paso 5: pago. Lo que se monta aqui depende de `PAGOS_ACTIVOS`: con la
+    // pasarela configurada, el checkout incrustado de Stripe; sin ella, el
+    // panel que recoge el pedido como solicitud. La prueba comprueba que se
+    // LLEGA al paso de pago y que lo que aparece es lo que toca segun el
+    // interruptor, para que siga valiendo cuando se encienda Stripe. Antes
+    // exigia Stripe siempre y fallaba por tener los pagos apagados, que es la
+    // configuracion real de produccion.
     await waitFor(() => {
-      expect(screen.getByTestId("stripe-checkout")).toBeInTheDocument();
+      if (PAGOS_ACTIVOS) {
+        expect(screen.getByTestId("stripe-checkout")).toBeInTheDocument();
+      } else {
+        expect(
+          screen.getByRole("button", { name: /enviar pedido/i })
+        ).toBeInTheDocument();
+      }
     });
   });
 });

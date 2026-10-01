@@ -5,7 +5,6 @@ export * from './useAISearch';
 export * from './usePlant';
 export * from './useRecommendPlants';
 export * from './useRecentlyViewed';
-export * from './useRecentPurchases';
 export * from './usePlantTooltips';
 export * from './useClimateFit';
 export * from './useCareNotes';

@@ -736,7 +736,7 @@ const Checkout = () => {
                 items={items}
                 shippingCountry={shippingCountry}
                 shippingForm={form}
-                shippingTotal={quote?.total ?? null}
+                shippingTotal={quote ? quote.shippingCostCents / 100 : null}
                 referralCode={appliedReferralCode}
               />
             )}

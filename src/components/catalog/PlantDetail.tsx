@@ -26,7 +26,6 @@ import CartDrawer from "@/components/shared/CartDrawer";
 import LanguageSwitcher from "@/components/shared/LanguageSwitcher";
 import RelatedPlants from "./RelatedPlants";
 import RecentlyViewed from "./RecentlyViewed";
-import RecentlyPurchased from "./RecentlyPurchased";
 import CompleteYourOrder from "./CompleteYourOrder";
 import Footer from "@/components/shared/Footer";
 import StickyMobileCTA from "./StickyMobileCTA";
@@ -376,7 +375,9 @@ const PlantDetail = () => {
                 ) : (
                   <div className="flex flex-col gap-3">
                     <p className="text-base text-muted-foreground font-medium">{t('stockNotification.outOfStock')}</p>
-                    <StockNotificationButton plantId={plant.id} />
+                    {/* El UUID, no el slug: `stock_notifications.plant_id` es
+                        una clave ajena a `plants.id`. */}
+                    <StockNotificationButton plantId={plant.uuid} />
                   </div>
                 )}
 
@@ -454,10 +455,13 @@ const PlantDetail = () => {
               <RecentlyViewed excludePlantId={plant.id} />
             </div>
 
-            {/* Recently Purchased */}
-            <div className="animate-fade-in" style={{ animationDelay: '450ms' }}>
-              <RecentlyPurchased currentPlant={plant} />
-            </div>
+            {/* La seccion "Compras recientes" se ha retirado: los datos que
+                mostraba estaban inventados por `useRecentPurchases`, que
+                generaba compras, ciudades y horas con un generador
+                pseudoaleatorio. Presentar transacciones ficticias como reales
+                es publicidad enganosa, y la tienda no tiene todavia ni un
+                pedido real del que tirar. Si se recupera, tiene que leer de
+                `orders`. */}
           </div>
           <div className="h-20 sm:hidden" />
         </div>

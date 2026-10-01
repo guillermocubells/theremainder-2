@@ -60,8 +60,19 @@ export function useShippingQuote({ items, countryCode }: UseShippingQuoteOptions
         throw new Error(fnError.message || "Failed to calculate shipping");
       }
 
-      if (data.error && data.error !== "SHIPPING_NOT_AVAILABLE") {
-        throw new Error(data.error);
+      // La funcion devuelve el error como objeto ({ code, message, request_id }),
+      // no como cadena. Comparar el objeto con la cadena daba siempre distinto,
+      // asi que el caso "no enviamos a ese pais" acababa en el throw de abajo y
+      // el usuario veia "[object Object]" con el boton Continuar bloqueado.
+      if (data.error) {
+        const code = typeof data.error === "string" ? data.error : data.error.code;
+        if (code !== "SHIPPING_NOT_AVAILABLE") {
+          const message =
+            typeof data.error === "string"
+              ? data.error
+              : data.error.message || "Failed to calculate shipping";
+          throw new Error(message);
+        }
       }
 
       setQuote(data);

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Search } from 'lucide-react';
-import { plants } from '@/data/plants';
+import { useCatalogPlants } from '@/hooks/catalog';
 import { PlantFinderAnswers, initialAnswers, getQuestions } from './types';
 import ProgressBar from './ProgressBar';
 import QuestionStep from './QuestionStep';
@@ -78,7 +78,9 @@ const PlantFinderModal = ({ open, onOpenChange }: PlantFinderModalProps) => {
   const currentAnswer = answers[currentQuestion.id];
   const isLastStep = currentStep === totalSteps - 1;
 
-  const { plants: filteredPlants, activeFilters } = filterPlantsByAnswers(plants, answers);
+  // El buscador guiado filtra el catalogo real, no las 6 fichas de prueba.
+  const { plants: catalogPlants } = useCatalogPlants();
+  const { plants: filteredPlants, activeFilters } = filterPlantsByAnswers(catalogPlants, answers);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>

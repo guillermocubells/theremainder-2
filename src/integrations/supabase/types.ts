@@ -10,7 +10,7 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.1"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
@@ -4257,6 +4257,78 @@ export type Database = {
         }
         Relationships: []
       }
+      quote_requests: {
+        Row: {
+          apartment: string | null
+          city: string | null
+          country: string | null
+          created_at: string
+          currency: string
+          email: string
+          emailed_at: string | null
+          full_name: string
+          grand_total: number | null
+          id: string
+          items: Json
+          items_total: number
+          notes: string | null
+          phone: string | null
+          postal_code: string | null
+          province: string | null
+          referral_code: string | null
+          shipping_total: number | null
+          status: string
+          street: string | null
+          user_id: string | null
+        }
+        Insert: {
+          apartment?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string
+          currency?: string
+          email: string
+          emailed_at?: string | null
+          full_name: string
+          grand_total?: number | null
+          id?: string
+          items: Json
+          items_total?: number
+          notes?: string | null
+          phone?: string | null
+          postal_code?: string | null
+          province?: string | null
+          referral_code?: string | null
+          shipping_total?: number | null
+          status?: string
+          street?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          apartment?: string | null
+          city?: string | null
+          country?: string | null
+          created_at?: string
+          currency?: string
+          email?: string
+          emailed_at?: string | null
+          full_name?: string
+          grand_total?: number | null
+          id?: string
+          items?: Json
+          items_total?: number
+          notes?: string | null
+          phone?: string | null
+          postal_code?: string | null
+          province?: string | null
+          referral_code?: string | null
+          shipping_total?: number | null
+          status?: string
+          street?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       ref_location_types: {
         Row: {
           description: string | null
@@ -4705,6 +4777,27 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      role_permissions: {
+        Row: {
+          created_at: string
+          id: string
+          permission: Database["public"]["Enums"]["app_permission"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          permission: Database["public"]["Enums"]["app_permission"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          permission?: Database["public"]["Enums"]["app_permission"]
+          role?: Database["public"]["Enums"]["app_role"]
+        }
+        Relationships: []
       }
       saved_searches: {
         Row: {
@@ -5503,7 +5596,7 @@ export type Database = {
           id: string
           notified_at: string | null
           plant_id: string
-          user_id: string
+          user_id: string | null
         }
         Insert: {
           created_at?: string
@@ -5511,7 +5604,7 @@ export type Database = {
           id?: string
           notified_at?: string | null
           plant_id: string
-          user_id: string
+          user_id?: string | null
         }
         Update: {
           created_at?: string
@@ -5519,9 +5612,17 @@ export type Database = {
           id?: string
           notified_at?: string | null
           plant_id?: string
-          user_id?: string
+          user_id?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "stock_notifications_plant_id_fkey"
+            columns: ["plant_id"]
+            isOneToOne: false
+            referencedRelation: "plants"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       stock_reservations: {
         Row: {
@@ -5794,27 +5895,6 @@ export type Database = {
           total_score?: number
           updated_at?: string
           user_id?: string
-        }
-        Relationships: []
-      }
-      role_permissions: {
-        Row: {
-          created_at: string
-          id: string
-          permission: Database["public"]["Enums"]["app_permission"]
-          role: Database["public"]["Enums"]["app_role"]
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          permission: Database["public"]["Enums"]["app_permission"]
-          role: Database["public"]["Enums"]["app_role"]
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          permission?: Database["public"]["Enums"]["app_permission"]
-          role?: Database["public"]["Enums"]["app_role"]
         }
         Relationships: []
       }
@@ -6314,7 +6394,7 @@ export type Database = {
         }[]
       }
       bump_synonym_version: { Args: never; Returns: number }
-      calculate_backoff: { Args: { p_attempts: number }; Returns: unknown }
+      calculate_backoff: { Args: { p_attempts: number }; Returns: string }
       calculate_invoice_hash: {
         Args: {
           p_invoice_number: string
@@ -6462,6 +6542,14 @@ export type Database = {
         Args: { p_plant_ids: string[] }
         Returns: undefined
       }
+      find_user_by_email: {
+        Args: { _email: string }
+        Returns: {
+          email: string
+          full_name: string
+          user_id: string
+        }[]
+      }
       full_reindex_catalog: { Args: { p_batch_size?: number }; Returns: Json }
       generate_invoice_number: { Args: never; Returns: string }
       generate_invoice_number_from_series: {
@@ -6504,14 +6592,6 @@ export type Database = {
         Args: { p_consent_type: string; p_user_id: string }
         Returns: boolean
       }
-      find_user_by_email: {
-        Args: { _email: string }
-        Returns: {
-          email: string | null
-          full_name: string | null
-          user_id: string
-        }[]
-      }
       has_permission: {
         Args: {
           _permission: Database["public"]["Enums"]["app_permission"]
@@ -6519,34 +6599,12 @@ export type Database = {
         }
         Returns: boolean
       }
-      list_role_assignments: {
-        Args: Record<PropertyKey, never>
-        Returns: {
-          email: string | null
-          full_name: string | null
-          granted_at: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }[]
-      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
           _user_id: string
         }
         Returns: boolean
-      }
-      my_permissions: {
-        Args: Record<PropertyKey, never>
-        Returns: Database["public"]["Enums"]["app_permission"][]
-      }
-      my_role: {
-        Args: Record<PropertyKey, never>
-        Returns: Database["public"]["Enums"]["app_role"]
-      }
-      role_rank: {
-        Args: { _role: Database["public"]["Enums"]["app_role"] }
-        Returns: number
       }
       increment_stock: {
         Args: { p_plant_id: string; p_quantity: number }
@@ -6565,6 +6623,16 @@ export type Database = {
         Returns: boolean
       }
       is_own_wishlist_item: { Args: { wi_user_id: string }; Returns: boolean }
+      list_role_assignments: {
+        Args: never
+        Returns: {
+          email: string
+          full_name: string
+          granted_at: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }[]
+      }
       log_audit_event: {
         Args: {
           p_action: string
@@ -6583,6 +6651,11 @@ export type Database = {
         Returns: number
       }
       mature_pending_rewards: { Args: never; Returns: number }
+      my_permissions: {
+        Args: never
+        Returns: Database["public"]["Enums"]["app_permission"][]
+      }
+      my_role: { Args: never; Returns: Database["public"]["Enums"]["app_role"] }
       owns_plant: { Args: { plant_id: string }; Returns: boolean }
       place_bid:
         | {
@@ -6637,6 +6710,10 @@ export type Database = {
         Returns: string
       }
       retry_index_dead_letter: { Args: { p_id: string }; Returns: boolean }
+      role_rank: {
+        Args: { _role: Database["public"]["Enums"]["app_role"] }
+        Returns: number
+      }
       search_catalog:
         | {
             Args: {
@@ -6901,12 +6978,12 @@ export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -6930,11 +7007,11 @@ export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -6955,11 +7032,11 @@ export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -6980,11 +7057,11 @@ export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
     | { schema: keyof DatabaseWithoutInternals },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  EnumName extends (DefaultSchemaEnumNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -6997,11 +7074,11 @@ export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof DatabaseWithoutInternals },
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  CompositeTypeName extends (PublicCompositeTypeNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never) = never,
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }

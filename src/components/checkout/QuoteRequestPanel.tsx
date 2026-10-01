@@ -60,7 +60,10 @@ export const QuoteRequestPanel = ({
   const enviar = async () => {
     setEnviando(true);
     const snapshot = items.map((i) => ({
-      id: i.id,
+      // `CartItem` no tiene `id`, tiene `plantId`. Con `i.id` el snapshot que se
+      // guardaba en la solicitud llevaba `id: undefined` en todas las lineas, o
+      // sea que el pedido no decia QUE planta se habia pedido.
+      id: i.plantId,
       nombre: i.name,
       unidades: i.quantity,
       precio_unitario: i.price,
@@ -145,7 +148,7 @@ export const QuoteRequestPanel = ({
         <h4 className="mb-3 text-sm font-semibold text-foreground">Resumen de tu pedido</h4>
         <ul className="mb-3 space-y-1.5 text-sm">
           {items.map((i) => (
-            <li key={i.id} className="flex justify-between gap-4">
+            <li key={i.plantId} className="flex justify-between gap-4">
               <span className="text-muted-foreground">
                 {i.quantity} × {i.name}
               </span>

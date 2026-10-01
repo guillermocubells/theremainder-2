@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { leerConfiguracionIA, respuestaIANoDisponible, llamarChat } from "../_shared/ai.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -158,7 +159,7 @@ serve(async (req) => {
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const lovableApiKey = Deno.env.get("LOVABLE_API_KEY");
+    const configIA = leerConfiguracionIA();
 
     // Auth is optional — log user if available, but don't block recommendations
     const authHeader = req.headers.get("Authorization");
@@ -186,7 +187,10 @@ serve(async (req) => {
 
     console.log("[recommend-plants] User:", userId);
 
-    if (!lovableApiKey) throw new Error("LOVABLE_API_KEY not configured");
+    // Sin proveedor de IA esto no es un fallo del servidor, es una funcion
+    // apagada: 503 con codigo, no 500, para que el front pueda esconder el
+    // recomendador en vez de enseñar un error.
+    if (!configIA) return respuestaIANoDisponible(corsHeaders);
 
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     const body = await req.json();
@@ -251,15 +255,10 @@ serve(async (req) => {
     
     const userMessage = `${user_prompt ? `USER: "${user_prompt}"` : ''}\nCATALOG (${catalog.length}): ${JSON.stringify(catalogData)}\nReturn STRICT JSON.`;
 
-    const aiResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Authorization": `Bearer ${lovableApiKey}` },
-      body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
-        messages: [{ role: "system", content: SYSTEM_PROMPT }, { role: "user", content: userMessage }],
-        response_format: { type: "json_object" },
-        temperature: 0.3,
-      }),
+    const aiResponse = await llamarChat(configIA, {
+      messages: [{ role: "system", content: SYSTEM_PROMPT }, { role: "user", content: userMessage }],
+      response_format: { type: "json_object" },
+      temperature: 0.3,
     });
 
     if (!aiResponse.ok) {

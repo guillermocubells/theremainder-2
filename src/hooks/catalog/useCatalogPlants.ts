@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Plant } from "@/data/plants";
+import { marcarArranqueCorrecto } from "@/lib/swWatchdog";
 
 /**
  * Maps database water_level enum to the UI label
@@ -105,6 +106,7 @@ function dbToPlant(row: Record<string, unknown>): Plant {
 
   return {
     id: row.slug as string,
+    uuid: row.id as string,
     name: row.name as string,
     variety: (row.variety as string) || "",
     quantity: (row.stock_qty as number) ?? 0,
@@ -141,6 +143,10 @@ export function useCatalogPlants() {
         .order("display_order", { ascending: true });
 
       if (error) throw error;
+
+      // Senal de que la aplicacion ha conseguido hablar con el backend: cancela
+      // el rescate del service worker.
+      marcarArranqueCorrecto();
 
       return (data || []).map((row) => dbToPlant(row as Record<string, unknown>));
     },

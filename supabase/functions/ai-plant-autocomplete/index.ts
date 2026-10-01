@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
+import { leerConfiguracionIA, respuestaIANoDisponible, llamarChat } from "../_shared/ai.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -212,35 +213,25 @@ serve(async (req) => {
       });
     }
 
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) {
-      return new Response(
-        JSON.stringify({ error: "LOVABLE_API_KEY not configured" }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
+    // Funcion apagada, no error del servidor: 503 con codigo.
+    const configIA = leerConfiguracionIA();
+    if (!configIA) return respuestaIANoDisponible(corsHeaders);
 
-    // Use vision-capable model
-    const model = imageUrls.length > 0
-      ? "google/gemini-2.5-flash"  // good multimodal + fast
-      : "google/gemini-3-flash-preview";  // fast text-only
+    // Con imagenes hace falta un modelo multimodal. `AI_MODEL` manda si esta
+    // puesto; si no, se usa el que ya venia por defecto.
+    const modelo = Deno.env.get("AI_MODEL")
+      ?? (imageUrls.length > 0
+        ? "google/gemini-2.5-flash"
+        : "google/gemini-3-flash-preview");
 
-    const aiResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model,
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: userContent },
-        ],
-        tools: [TOOL_SCHEMA],
-        tool_choice: { type: "function", function: { name: "fill_plant_data" } },
-        temperature: 0.3,
-      }),
+    const aiResponse = await llamarChat({ ...configIA, model: modelo }, {
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: userContent },
+      ],
+      tools: [TOOL_SCHEMA],
+      tool_choice: { type: "function", function: { name: "fill_plant_data" } },
+      temperature: 0.3,
     });
 
     if (!aiResponse.ok) {
@@ -255,7 +246,7 @@ serve(async (req) => {
       }
       if (aiResponse.status === 402) {
         return new Response(
-          JSON.stringify({ error: "Créditos de IA agotados. Añade créditos en tu workspace." }),
+          JSON.stringify({ error: "Créditos de IA agotados. Recarga el saldo del proveedor configurado en AI_API_KEY." }),
           { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }

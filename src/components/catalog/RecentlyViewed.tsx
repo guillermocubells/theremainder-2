@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { plants } from "@/data/plants";
-import { useRecentlyViewed } from "@/hooks/catalog";
+import { useCatalogPlants, useRecentlyViewed } from "@/hooks/catalog";
 import { useCurrency } from "@/contexts/CurrencyContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +16,8 @@ const RecentlyViewed = ({ excludePlantId, maxItems = 4 }: RecentlyViewedProps) =
   const { t } = useTranslation();
   const { getRecentIds, clearRecentlyViewed } = useRecentlyViewed();
   const { formatPrice } = useCurrency();
+  // Precio y stock salen del catalogo real, no de `data/plants.ts`.
+  const { plants } = useCatalogPlants();
 
   // Get recent plant IDs excluding the current one
   const recentIds = getRecentIds(excludePlantId);

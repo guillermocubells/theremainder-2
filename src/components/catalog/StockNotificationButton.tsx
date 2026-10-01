@@ -8,7 +8,8 @@ import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 
 interface StockNotificationButtonProps {
-  plantId: string;
+  /** UUID de la planta (`plants.id`), NO el slug. */
+  plantId: string | undefined;
   className?: string;
 }
 
@@ -44,6 +45,10 @@ const StockNotificationButton = ({ plantId, className = "" }: StockNotificationB
     const valor = email.trim();
     if (!EMAIL_RE.test(valor)) {
       toast.error(t("stockNotification.invalidEmail", "Introduce un correo válido"));
+      return;
+    }
+    if (!plantId) {
+      toast.error(t("stockNotification.error"));
       return;
     }
     setEnviando(true);

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { plants, Plant } from "@/data/plants";
-import { plantDetails, PlantDetailData } from "@/data/plantDetailData";
+import { Plant } from "@/data/plants";
+import { PlantDetailData } from "@/data/plantDetailData";
 
 const mapWater = (w: string | null): Plant["waterNeeds"] => {
   if (!w) return undefined;
@@ -60,6 +60,7 @@ async function fetchPlantFromDb(plantId: string): Promise<PlantWithDetail | null
 
   const mapped: Plant = {
     id: row.slug as string,
+    uuid: row.id as string,
     name: row.name as string,
     variety: (row.variety as string) || "",
     quantity: (row.stock_qty as number) ?? 0,
@@ -101,24 +102,25 @@ async function fetchPlantFromDb(plantId: string): Promise<PlantWithDetail | null
 }
 
 export function usePlant(plantId: string | undefined) {
-  // Try static data first
-  const staticPlant = plantId ? plants.find(p => p.id === plantId) : undefined;
-  const staticDetail = staticPlant ? plantDetails[staticPlant.id] : undefined;
-
+  // La ficha SIEMPRE sale de la base de datos. Antes se miraba primero el array
+  // de prueba de `data/plants.ts` y, si habia coincidencia, la consulta ni se
+  // lanzaba (`enabled: ... && !staticPlant`). Seis fichas del prototipo tapaban
+  // asi el catalogo real: `magnolia-laevifolia` se vendia a 90 EUR cuando en la
+  // base valia 22 y tenia stock 0, y otras cinco slugs inexistentes pintaban una
+  // pagina de producto con boton de compra en vez de un "no encontrada". Un
+  // respaldo que se consulta ANTES de la fuente real no es un respaldo: es la
+  // fuente. El precio y el stock no pueden salir de un fichero del repositorio.
   const { data: dbResult, isLoading, error } = useQuery({
     queryKey: ["plant", plantId],
     queryFn: () => fetchPlantFromDb(plantId!),
-    enabled: !!plantId && !staticPlant,
+    enabled: !!plantId,
     staleTime: 5 * 60 * 1000,
   });
 
-  const plant = staticPlant || dbResult?.plant || null;
-  const detail = staticPlant ? staticDetail : dbResult?.detail;
-
   return {
-    plant,
-    detail,
-    loading: !staticPlant && isLoading,
+    plant: dbResult?.plant ?? null,
+    detail: dbResult?.detail,
+    loading: isLoading,
     error: error as Error | null,
   };
 }

@@ -127,9 +127,8 @@ const PrivacyPolicy = () => {
               </p>
               <ul className="space-y-2 text-muted-foreground text-sm list-disc pl-5">
                 <li><strong className="text-foreground">Pasarela de pago:</strong> Stripe Payments</li>
-                <li><strong className="text-foreground">Proveedor de hosting e infraestructura:</strong> Lovable Cloud, Supabase</li>
+                <li><strong className="text-foreground">Proveedor de hosting e infraestructura:</strong> Supabase</li>
                 <li><strong className="text-foreground">Email y comunicaciones:</strong> HubSpot</li>
-                <li><strong className="text-foreground">Analítica:</strong> Lovable Analytics</li>
                 <li><strong className="text-foreground">Transporte y mensajería:</strong> DHL, Correos, MRW, UPS</li>
               </ul>
               <p className="text-muted-foreground mt-3 text-sm">

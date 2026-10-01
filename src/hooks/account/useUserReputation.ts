@@ -88,12 +88,22 @@ export function useUserBadges(userId: string | undefined) {
   });
 }
 
-export function useVerificationStatus(
+/**
+ * Verificacion APROBADA de un objetivo, mire quien mire: es el distintivo
+ * publico. No confundir con `useVerificationStatus` de `useVerification.ts`,
+ * que mira la solicitud PROPIA del usuario y tambien cuenta las pendientes.
+ *
+ * Las dos se llamaban igual y las dos se reexportaban con `export *` desde
+ * `hooks/account/index.ts`: el nombre quedaba ambiguo y el barril no exportaba
+ * ninguna de las dos. Ademas compartian prefijo de `queryKey` sin compartir
+ * resultado, asi que una habria servido la respuesta cacheada de la otra.
+ */
+export function useApprovedVerification(
   targetType: string,
   targetId: string | undefined
 ) {
   return useQuery({
-    queryKey: ["verification-status", targetType, targetId],
+    queryKey: ["verification-approved", targetType, targetId],
     queryFn: async () => {
       if (!targetId) return null;
       const { data, error } = await supabase

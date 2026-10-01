@@ -105,6 +105,13 @@ vi.mock("@/hooks/checkout/useShippingQuote", () => ({
 }));
 
 // Mock useOwnedPlants for CheckoutSuccess
+// Sin pedido confirmado todavia: la pantalla cae al tramo que muestra el
+// identificador de sesion. Sin este mock el hook se queda en `isLoading` para
+// siempre contra el cliente de Supabase simulado y solo se pinta el spinner.
+vi.mock("@/hooks/checkout/useOrderBySession", () => ({
+  useOrderBySession: () => ({ data: null, isLoading: false, error: null }),
+}));
+
 vi.mock("@/hooks/collection/useOwnedPlants", () => ({
   useOwnedPlants: () => ({ data: [], isLoading: false }),
 }));

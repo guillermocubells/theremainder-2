@@ -5,6 +5,10 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "destination": "https://siemsknmxdcufuissqza.supabase.co/functions/v1/sitemap"
+    },
+    {
       "source": "/((?!assets/|lovable-uploads/|favicon|robots\\.txt|sitemap|sw\\.js|workbox-|manifest|pwa-).*)",
       "destination": "/index.html"
     }
